@@ -11,6 +11,8 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/labels"
+	"k8s.io/apimachinery/pkg/selection"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/kubernetes/scheme"
@@ -72,7 +74,14 @@ func main() {
 
 	go informer.Start(ctx.Done())
 	// setup provider
-	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister())
+
+	requirement, err := labels.NewRequirement("itzloop.dev/virtual-kubelet", selection.Exists, []string{})
+	if err != nil {
+		panic(err)
+	}
+
+	selector := labels.NewSelector().Add(*requirement)
+	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector)
 
 	// create event recorded
 	eb := record.NewBroadcaster()
