@@ -14,6 +14,7 @@ import (
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/kubernetes/scheme"
+	corev1client "k8s.io/client-go/kubernetes/typed/core/v1"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/record"
@@ -66,17 +67,17 @@ func main() {
 		panic(err)
 	}
 
+	// create informer
+	informer := informers.NewSharedInformerFactoryWithOptions(client, time.Second*15, informers.WithNamespace(ns))
+
+	go informer.Start(ctx.Done())
 	// setup provider
-	p := provider.NewPodLifecycleHandlerImpl()
+	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister())
 
 	// create event recorded
 	eb := record.NewBroadcaster()
 	eb.StartLogging(log.GetLogger(ctx).Infof)
-	//eb.StartRecordingToSink(&corev1client.EventSinkImpl{Interface: client.CoreV1().Events(ns)})
-
-	// create informer
-	informer := informers.NewSharedInformerFactory(client, time.Second*15)
-	go informer.Start(ctx.Done())
+	eb.StartRecordingToSink(&corev1client.EventSinkImpl{Interface: client.CoreV1().Events(ns)})
 
 	// setup pod controller
 	pc, err := node.NewPodController(node.PodControllerConfig{
