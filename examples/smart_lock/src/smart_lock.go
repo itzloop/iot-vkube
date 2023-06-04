@@ -3,15 +3,21 @@ package smart_lock
 import "sync"
 
 type SmartLock struct {
+	name   string
 	mu     sync.Mutex
 	locked bool
 }
 
-func NewSmartLock(initial bool) *SmartLock {
+func NewSmartLock(name string, initial bool) *SmartLock {
 	return &SmartLock{
+		name:   name,
 		mu:     sync.Mutex{},
 		locked: initial,
 	}
+}
+
+func (l *SmartLock) Name() string {
+	return l.name
 }
 
 func (l *SmartLock) Lock() error {

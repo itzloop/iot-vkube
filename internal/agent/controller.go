@@ -1,4 +1,4 @@
-package hook
+package agent
 
 import (
 	"github.com/itzloop/iot-vkube/internal/store"

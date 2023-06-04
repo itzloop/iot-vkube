@@ -60,8 +60,6 @@ func (x Hook) UrlAndMethod(base, controllerName, deviceName string) (string, str
 	return "", ""
 }
 
-func (x Hook) Method() string
-
 func ParseHook(hook string) Hook {
 	hookVal, ok := HookValues[hook]
 	if !ok {

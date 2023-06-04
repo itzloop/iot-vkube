@@ -1,7 +1,8 @@
-package hook
+package agent
 
 import (
 	"context"
+	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/internal/utils"
@@ -26,7 +27,7 @@ func NewService(store store.Store, addr string) *Service {
 func (service *Service) Start(ctx context.Context) error {
 	group, groupCtx := errgroup.WithContext(ctx)
 	group.Go(service.httpServer)
-	group.Go(func() error { return service.hooksWorker(groupCtx, time.Second*15) })
+	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*15) })
 
 	go func() {
 		<-groupCtx.Done()
@@ -52,10 +53,10 @@ func (service *Service) Close() error {
 }
 
 // TODO
-// TODO hooksWorker should call following endpoints periodically
+// TODO agentWorker should call following endpoints periodically
 // - controller readiness
 // - device readiness
-func (service *Service) hooksWorker(ctx context.Context, interval time.Duration) error {
+func (service *Service) agentWorker(ctx context.Context, interval time.Duration) error {
 	ticker := time.Tick(interval)
 	logrus.WithField("interval", interval.String()).Info("starting hooks worker")
 	defer logrus.Info("exiting hooks worker")
@@ -69,9 +70,27 @@ func (service *Service) hooksWorker(ctx context.Context, interval time.Duration)
 			if err != nil {
 				return err
 			}
+
 			for _, controller := range controllers {
-				for _, hook := range controller.RegisteredHooks {
-					// TODO doRequest(hook)
+				// check controller and device readiness
+				url := fmt.Sprintf("http://%s/controllers/%s", service.addr, controller.Name)
+				var res ControllerBody
+				if err = doGetRequest(url, &res); err != nil {
+					return err
+				}
+
+				// TODO what to do when controller is not reacy
+				if !res.Readiness {
+					fmt.Println("controller is not ready")
+					continue
+				}
+
+				for _, dev := range res.Devices {
+					// TODO what to do when device is not ready
+					if !dev.Readiness {
+						fmt.Println("device is not ready")
+						continue
+					}
 				}
 			}
 

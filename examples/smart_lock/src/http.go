@@ -64,17 +64,15 @@ func (s *server) add(w http.ResponseWriter, r *http.Request) {
 
 	_, err = s.lc.CreateLock(deviceName.(string))
 	if err != nil {
-		handleError(w, http.StatusNotFound, "device not found")
+		handleError(w, http.StatusConflict, "device already exists")
 		return
 	}
 
 	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode(map[string]interface{}{
-		"status": "created",
-	})
+	w.Write([]byte{})
 }
 
-func (s *server) status(w http.ResponseWriter, r *http.Request) {
+func (s *server) get(w http.ResponseWriter, r *http.Request) {
 	l := s.getDevice(w, r)
 	if l == nil {
 		return
@@ -86,10 +84,60 @@ func (s *server) status(w http.ResponseWriter, r *http.Request) {
 		st = "unlocked"
 	}
 
+	readiness, err := l.Readiness()
+	if err != nil {
+		handleError(w, http.StatusInternalServerError, fmt.Sprintf("failed to get readiness of device: %v", readiness))
+		return
+	}
+
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(map[string]interface{}{
-		"status": st,
+		"name":      l.Name(),
+		"get":       st,
+		"readiness": readiness,
 	})
+}
+
+func (s *server) update(w http.ResponseWriter, r *http.Request) {
+	l := s.getDevice(w, r)
+	if l == nil {
+		return
+	}
+
+	bodyBytes, err := io.ReadAll(r.Body)
+	if err != nil {
+		handleError(w, http.StatusBadRequest, fmt.Sprintf("failed to read body: %v", err))
+		return
+	}
+
+	body := struct {
+		Lock bool `json:"lock,omitempty"`
+	}{}
+
+	if err = json.Unmarshal(bodyBytes, &body); err != nil {
+		handleError(w, http.StatusBadRequest, fmt.Sprintf("failed to marshal body: %v", err))
+		return
+	}
+
+	if body.Lock {
+		if err = l.Lock(); err != nil {
+			handleError(w, http.StatusBadRequest, fmt.Sprintf("failed to lock: %v", err))
+			return
+		}
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(map[string]interface{}{
+			"status": "locked",
+		})
+	} else {
+		if err = l.UnLock(); err != nil {
+			handleError(w, http.StatusBadRequest, fmt.Sprintf("failed to unlock: %v", err))
+			return
+		}
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(map[string]interface{}{
+			"status": "unlocked",
+		})
+	}
 }
 
 func (s *server) lock(w http.ResponseWriter, r *http.Request) {
@@ -105,7 +153,7 @@ func (s *server) lock(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(map[string]interface{}{
-		"status": "locked",
+		"get": "locked",
 	})
 }
 
@@ -122,8 +170,46 @@ func (s *server) unlock(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(map[string]interface{}{
-		"status": "unlocked",
+		"get": "unlocked",
 	})
+}
+
+func (s *server) list(w http.ResponseWriter, r *http.Request) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	resp := struct {
+		Name      string `json:"name,omitempty"`
+		Readiness bool   `json:"readiness,omitempty"`
+		Devices   []struct {
+			Name      string `json:"name,omitempty"`
+			Readiness bool   `json:"readiness,omitempty"`
+		} `json:"devices,omitempty"`
+	}{
+		Name:      s.lc.name,
+		Readiness: true,
+	}
+
+	devices, err := s.lc.ListLocks()
+	if err != nil {
+		handleError(w, http.StatusInternalServerError, fmt.Sprintf("failed to list locks: %v", err))
+		return
+	}
+
+	for _, device := range devices {
+		readiness, err := device.Readiness()
+		if err != nil {
+			handleError(w, http.StatusInternalServerError, fmt.Sprintf("failed to get readiness of lock: %v", err))
+			return
+		}
+		resp.Devices = append(resp.Devices, struct {
+			Name      string `json:"name,omitempty"`
+			Readiness bool   `json:"readiness,omitempty"`
+		}{Name: device.Name(), Readiness: readiness})
+	}
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(resp)
 }
 
 func (s *server) readiness(w http.ResponseWriter, r *http.Request) {
@@ -141,27 +227,31 @@ func (s *server) readiness(w http.ResponseWriter, r *http.Request) {
 func RunServer(addr, controllerName string) {
 	fmt.Printf("server is listening on %s\n", addr)
 	srv := server{lc: NewLockController(controllerName)}
-	funcs := map[string]func(http.ResponseWriter, *http.Request){
-		"status":    srv.status,
-		"lock":      srv.lock,
-		"unlock":    srv.unlock,
-		"readiness": srv.readiness,
-	}
-	methods := map[string]string{
-		"status":    http.MethodGet,
-		"lock":      http.MethodPatch,
-		"unlock":    http.MethodPatch,
-		"readiness": http.MethodGet,
-	}
 
 	r := mux.NewRouter()
-	for name, f := range funcs {
-		p := fmt.Sprintf("/%s/{%s}/%s", srv.lc.name, deviceNameKey, name)
-		r.HandleFunc(p, f).Methods(methods[name])
-	}
+	controllerRouter := r.
+		PathPrefix(fmt.Sprintf("/controllers/%s", srv.lc.name)).
+		Subrouter()
 
-	r.HandleFunc(fmt.Sprintf("/%s", srv.lc.name), srv.add).
+	devicesRouter := controllerRouter.
+		PathPrefix("/devices").
+		Subrouter()
+
+	devicesRouter.
+		HandleFunc("", srv.add).
 		Methods(http.MethodPost)
+
+	devicesRouter.
+		HandleFunc("/{device_name}", srv.get).
+		Methods(http.MethodGet)
+
+	devicesRouter.
+		HandleFunc("/{device_name}", srv.update).
+		Methods(http.MethodPatch)
+
+	controllerRouter.HandleFunc("", srv.list).
+		Methods(http.MethodGet)
+
 	r.Use(loggingMiddleware)
 
 	http.Handle("/", r)

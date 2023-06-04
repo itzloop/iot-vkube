@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/itzloop/iot-vkube/internal/hook"
+	"github.com/itzloop/iot-vkube/internal/agent"
 	"github.com/sirupsen/logrus"
 	"os"
 	"os/signal"
@@ -24,5 +24,5 @@ func main() {
 		os.Exit(0)
 	}()
 
-	hook.NewService(nil, ":5000").Start(ctx)
+	agent.NewService(nil, ":5000").Start(ctx)
 }
