@@ -16,23 +16,24 @@ import (
 )
 
 type PodLifecycleHandlerImpl struct {
-	addr      string
-	podLister v1.PodLister
-	selector  labels.Selector
-	service   *agent.Service
+	addr            string
+	podLister       v1.PodLister
+	selector        labels.Selector
+	callbackService agent.CallbackService
 }
 
-func NewPodLifecycleHandlerImpl(addr string, lister v1.PodLister, selector labels.Selector, service *agent.Service) *PodLifecycleHandlerImpl {
-	return &PodLifecycleHandlerImpl{
-		addr:      addr,
-		podLister: lister,
-		selector:  selector,
-		service:   service,
+func NewPodLifecycleHandlerImpl(addr string, lister v1.PodLister, selector labels.Selector, service agent.CallbackService) *PodLifecycleHandlerImpl {
+	p := &PodLifecycleHandlerImpl{
+		addr:            addr,
+		podLister:       lister,
+		selector:        selector,
+		callbackService: service,
 	}
 
-	// TODO start the service
-	// TODO register service
-	// Close the service
+	// TODO register callback
+	p.callbackService.RegisterCallbacks(p.AgentServiceCallBacks())
+
+	return p
 }
 
 func (p *PodLifecycleHandlerImpl) CreatePod(ctx context.Context, pod *corev1.Pod) error {

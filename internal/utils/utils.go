@@ -2,8 +2,11 @@ package utils
 
 import (
 	"context"
+	"fmt"
 	"github.com/sirupsen/logrus"
 	"net/http"
+	"strings"
+	"time"
 )
 
 func LoggingMiddleware(next http.Handler) http.Handler {
@@ -40,4 +43,30 @@ func ContextWithEntry(ctx context.Context, entry *logrus.Entry) context.Context 
 	}
 
 	return context.WithValue(ctx, "entry", entry)
+}
+
+func WaitWithThreeDots(msg string, delay time.Duration) {
+	start := time.Now()
+	ticker := time.NewTicker(time.Millisecond * 250)
+	defer ticker.Stop()
+
+	dots := 0
+	maxDots := 3
+	for time.Since(start) <= delay {
+		select {
+		case <-ticker.C:
+			dots = (dots + 1) % (maxDots + 1)
+			fmt.Printf("%s\r", strings.Repeat(" ", maxDots+len(msg)))
+			fmt.Printf("%s%s\r", msg, strings.Repeat(".", dots))
+		}
+	}
+}
+
+func makeDots(dots int) string {
+	str := ""
+	for i := 0; i < dots; i++ {
+		str += "."
+	}
+
+	return str
 }

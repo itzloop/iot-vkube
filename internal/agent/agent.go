@@ -21,6 +21,10 @@ type Service struct {
 	callbacks *ServiceCallBacks
 }
 
+type CallbackService interface {
+	RegisterCallbacks(cb *ServiceCallBacks)
+}
+
 func NewService(store store.Store, addr string, callbacks *ServiceCallBacks, hooks []string) *Service {
 	srv := &Service{store: store, addr: addr, hooks: hooks}
 	srv.RegisterCallbacks(callbacks)

@@ -7,9 +7,12 @@ import (
 	"github.com/itzloop/iot-vkube/internal/agent"
 	"github.com/itzloop/iot-vkube/internal/provider"
 	"github.com/itzloop/iot-vkube/internal/store"
+	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/pkg/errors"
+	"github.com/sirupsen/logrus"
 	"github.com/virtual-kubelet/virtual-kubelet/log"
 	"github.com/virtual-kubelet/virtual-kubelet/node"
+	"golang.org/x/sync/errgroup"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -38,6 +41,8 @@ func main() {
 		ns             string
 	)
 
+	group, ctx := errgroup.WithContext(ctx)
+
 	flag.StringVar(&kubeConfigPath, "kubeconfig", "/home/loop/.kube/config", "kubernetes cluster config")
 	flag.StringVar(&ns, "namespace", "default", "kubernetes namespace")
 	flag.StringVar(&ns, "n", "default", "kubernetes namespace")
@@ -46,9 +51,13 @@ func main() {
 	sig := make(chan os.Signal, 1)
 	signal.Notify(sig, syscall.SIGTERM, syscall.SIGINT, syscall.SIGHUP)
 	go func(sig <-chan os.Signal) {
-		<-sig
-		fmt.Println("received interrupt signal...")
+		s := <-sig
+		logrus.WithField("signal", s.String()).Info("received interrupt, quitting gracefully")
 		cancel()
+
+		s = <-sig
+		logrus.WithField("signal", s.String()).Info("force quit")
+		os.Exit(0)
 	}(sig)
 
 	client, err := newKubernetesClient(kubeConfigPath)
@@ -73,10 +82,11 @@ func main() {
 
 	// create informer
 	informer := informers.NewSharedInformerFactoryWithOptions(client, time.Second*15, informers.WithNamespace(ns))
-
-	go informer.Start(ctx.Done())
+	group.Go(func() error {
+		informer.Start(ctx.Done())
+		return nil
+	})
 	// setup provider
-
 	requirement, err := labels.NewRequirement("itzloop.dev/virtual-kubelet", selection.Exists, []string{})
 	if err != nil {
 		panic(err)
@@ -87,6 +97,10 @@ func main() {
 	// TODO store
 	st := store.NewLocalStoreImpl()
 	service := agent.NewService(st, ":8080", nil, []string{"localhost:5000"})
+	group.Go(func() error {
+		return service.Start(ctx)
+	})
+
 	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, service)
 
 	// create event recorded
@@ -115,23 +129,21 @@ func main() {
 		panic(err)
 	}
 
-	// TODO how to use vkube/api
+	group.Go(func() error {
+		return pc.Run(ctx, 5)
+	})
 
-	go func() {
-		if err := pc.Run(ctx, 5); err != nil {
-			fmt.Println("failed to run pc", err)
-		}
-	}()
-
-	go func() {
-		if err := nc.Run(ctx); err != nil {
-			fmt.Println("failed to run nc", err)
-		}
-	}()
+	group.Go(func() error {
+		return nc.Run(ctx)
+	})
 
 	fmt.Println("setup complete")
-	<-ctx.Done()
-	fmt.Println("done")
+
+	if err := group.Wait(); err != nil {
+		logrus.WithField("error", err).Error("one of goroutines has been stopped")
+		cancel()
+		utils.WaitWithThreeDots("cleaning up", time.Second*2)
+	}
 }
 
 func getNodeSpec(name, version string) (*corev1.Node, error) {
