@@ -4,7 +4,9 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/itzloop/iot-vkube/internal/agent"
 	"github.com/itzloop/iot-vkube/internal/provider"
+	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/pkg/errors"
 	"github.com/virtual-kubelet/virtual-kubelet/log"
 	"github.com/virtual-kubelet/virtual-kubelet/node"
@@ -81,7 +83,11 @@ func main() {
 	}
 
 	selector := labels.NewSelector().Add(*requirement)
-	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector)
+
+	// TODO store
+	st := store.NewLocalStoreImpl()
+	service := agent.NewService(st, ":8080", nil, []string{"localhost:5000"})
+	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, service)
 
 	// create event recorded
 	eb := record.NewBroadcaster()

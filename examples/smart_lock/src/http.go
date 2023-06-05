@@ -184,10 +184,14 @@ func (s *server) list(w http.ResponseWriter, r *http.Request) {
 		Devices   []struct {
 			Name      string `json:"name,omitempty"`
 			Readiness bool   `json:"readiness,omitempty"`
-		} `json:"devices,omitempty"`
+		} `json:"devices"`
 	}{
 		Name:      s.lc.name,
 		Readiness: true,
+		Devices: []struct {
+			Name      string `json:"name,omitempty"`
+			Readiness bool   `json:"readiness,omitempty"`
+		}{},
 	}
 
 	devices, err := s.lc.ListLocks()
@@ -212,6 +216,24 @@ func (s *server) list(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(resp)
 }
 
+func (s *server) listControllers(w http.ResponseWriter, r *http.Request) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	resp := []struct {
+		Name      string `json:"name,omitempty"`
+		Readiness bool   `json:"readiness,omitempty"`
+	}{
+		{
+			Name:      s.lc.name,
+			Readiness: true,
+		},
+	}
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(resp)
+}
+
 func (s *server) readiness(w http.ResponseWriter, r *http.Request) {
 	l := s.getDevice(w, r)
 	if l == nil {
@@ -229,6 +251,7 @@ func RunServer(addr, controllerName string) {
 	srv := server{lc: NewLockController(controllerName)}
 
 	r := mux.NewRouter()
+
 	controllerRouter := r.
 		PathPrefix(fmt.Sprintf("/controllers/%s", srv.lc.name)).
 		Subrouter()

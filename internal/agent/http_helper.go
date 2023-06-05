@@ -8,15 +8,23 @@ import (
 	"net/http"
 )
 
+type ControllerListBody struct {
+	Controllers []ControllerBody
+}
+
+type DeviceListBody struct {
+	ControllerBody
+	Devices []DeviceBody `json:"devices,omitempty"`
+}
+
 type ControllerBody struct {
-	Name      string
-	Readiness bool
-	Devices   []DeviceBody
+	Name      string `json:"name,omitempty"`
+	Readiness bool   `json:"readiness,omitempty"`
 }
 
 type DeviceBody struct {
-	Name      string
-	Readiness bool
+	Name      string `json:"name,omitempty"`
+	Readiness bool   `json:"readiness,omitempty"`
 }
 
 func doGetRequest(url string, response interface{}) error {

@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/itzloop/iot-vkube/internal/agent"
 	"github.com/pkg/errors"
 	"io"
 	corev1 "k8s.io/api/core/v1"
@@ -18,14 +19,20 @@ type PodLifecycleHandlerImpl struct {
 	addr      string
 	podLister v1.PodLister
 	selector  labels.Selector
+	service   *agent.Service
 }
 
-func NewPodLifecycleHandlerImpl(addr string, lister v1.PodLister, selector labels.Selector) *PodLifecycleHandlerImpl {
+func NewPodLifecycleHandlerImpl(addr string, lister v1.PodLister, selector labels.Selector, service *agent.Service) *PodLifecycleHandlerImpl {
 	return &PodLifecycleHandlerImpl{
 		addr:      addr,
 		podLister: lister,
 		selector:  selector,
+		service:   service,
 	}
+
+	// TODO start the service
+	// TODO register service
+	// Close the service
 }
 
 func (p *PodLifecycleHandlerImpl) CreatePod(ctx context.Context, pod *corev1.Pod) error {

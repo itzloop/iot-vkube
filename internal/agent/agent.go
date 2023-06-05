@@ -2,7 +2,6 @@ package agent
 
 import (
 	"context"
-	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/internal/utils"
@@ -16,18 +15,56 @@ type Service struct {
 	store store.Store
 	addr  string
 
-	server *http.Server
+	hooks []string
+
+	server    *http.Server
+	callbacks *ServiceCallBacks
 }
 
-func NewService(store store.Store, addr string) *Service {
-	return &Service{store: store, addr: addr}
+func NewService(store store.Store, addr string, callbacks *ServiceCallBacks, hooks []string) *Service {
+	srv := &Service{store: store, addr: addr, hooks: hooks}
+	srv.RegisterCallbacks(callbacks)
+	return srv
+}
+
+func (service *Service) RegisterCallbacks(cb *ServiceCallBacks) {
+	var defaultCB = DefaultServiceCallBacks()
+	if cb == nil {
+		cb = defaultCB
+	}
+
+	if cb.OnNewController == nil {
+		cb.OnNewController = defaultCB.OnNewController
+	}
+
+	if cb.OnMissingController == nil {
+		cb.OnMissingController = defaultCB.OnMissingController
+	}
+
+	if cb.OnExistingController == nil {
+		cb.OnExistingController = defaultCB.OnExistingController
+	}
+
+	if cb.OnNewDevice == nil {
+		cb.OnNewDevice = defaultCB.OnNewDevice
+	}
+
+	if cb.OnMissingDevice == nil {
+		cb.OnMissingDevice = defaultCB.OnMissingDevice
+	}
+
+	if cb.OnExistingDevice == nil {
+		cb.OnExistingDevice = defaultCB.OnExistingDevice
+	}
+
+	service.callbacks = cb
 }
 
 // TODO
 func (service *Service) Start(ctx context.Context) error {
 	group, groupCtx := errgroup.WithContext(ctx)
 	group.Go(service.httpServer)
-	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*15) })
+	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*5) })
 
 	go func() {
 		<-groupCtx.Done()
@@ -57,43 +94,27 @@ func (service *Service) Close() error {
 // - controller readiness
 // - device readiness
 func (service *Service) agentWorker(ctx context.Context, interval time.Duration) error {
+	spot := "agentWorker"
 	ticker := time.Tick(interval)
-	logrus.WithField("interval", interval.String()).Info("starting hooks worker")
-	defer logrus.Info("exiting hooks worker")
+	entry := utils.GetEntryFromContext(ctx)
+	entry = entry.WithFields(logrus.Fields{
+		"spot":     spot,
+		"interval": interval.String(),
+	})
+
+	ctx = utils.ContextWithEntry(ctx, entry)
+
+	entry.Info("starting hooks worker")
+	defer entry.Info("exiting hooks worker")
 	for {
 		select {
 		case <-ticker:
-			// get controllers
-			// then for each controller call the registered hooks
-			// TODO maybe use worker pool for calling multiple controllers at a time
-			controllers, err := service.store.GetControllers(ctx)
-			if err != nil {
-				return err
-			}
-
-			for _, controller := range controllers {
-				// check controller and device readiness
-				url := fmt.Sprintf("http://%s/controllers/%s", service.addr, controller.Name)
-				var res ControllerBody
-				if err = doGetRequest(url, &res); err != nil {
-					return err
-				}
-
-				// TODO what to do when controller is not reacy
-				if !res.Readiness {
-					fmt.Println("controller is not ready")
+			entry.Info("updating state")
+			for _, hook := range service.hooks {
+				if err := service.diff(ctx, hook); err != nil {
 					continue
 				}
-
-				for _, dev := range res.Devices {
-					// TODO what to do when device is not ready
-					if !dev.Readiness {
-						fmt.Println("device is not ready")
-						continue
-					}
-				}
 			}
-
 		case <-ctx.Done():
 			return nil
 		}

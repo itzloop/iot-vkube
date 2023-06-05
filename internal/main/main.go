@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"github.com/itzloop/iot-vkube/internal/agent"
+	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/sirupsen/logrus"
 	"os"
 	"os/signal"
@@ -24,5 +25,5 @@ func main() {
 		os.Exit(0)
 	}()
 
-	agent.NewService(nil, ":5000").Start(ctx)
+	agent.NewService(store.NewLocalStoreImpl(), ":8080", nil, []string{"localhost:5000"}).Start(ctx)
 }
