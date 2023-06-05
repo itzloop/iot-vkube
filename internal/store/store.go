@@ -8,13 +8,19 @@ import (
 )
 
 type Store interface {
+	ReadOnlyStore
 	RegisterController(ctx context.Context, controller types.Controller) error
 	RegisterDevice(ctx context.Context, controllerName string, device types.Device) error
-	GetDevices(ctx context.Context, controllerName string) ([]types.Device, error)
 	UpdateDevice(ctx context.Context, controllerName string, device types.Device) error
+	UpdateController(ctx context.Context, controller types.Controller) error
+}
+
+type ReadOnlyStore interface {
+	GetDevice(ctx context.Context, controllerName, deviceName string) (types.Device, error)
+	GetDevices(ctx context.Context, controllerName string) ([]types.Device, error)
+	GetController(ctx context.Context, controllerName string) (types.Controller, error)
 	GetControllers(ctx context.Context) ([]types.Controller, error)
 	GetControllersMap(ctx context.Context) (map[string]types.Controller, error)
-	UpdateController(ctx context.Context, controller types.Controller) error
 }
 
 type LocalStoreImpl struct {
@@ -47,8 +53,7 @@ func (l *LocalStoreImpl) RegisterDevice(ctx context.Context, controllerName stri
 	l.mu.Lock()
 	defer l.mu.Unlock()
 	c.Devices = append(c.Devices, device)
-
-	return nil
+	return l.updateControllerUnsafe(ctx, c)
 }
 
 func (l *LocalStoreImpl) GetDevices(ctx context.Context, controllerName string) ([]types.Device, error) {
@@ -60,6 +65,23 @@ func (l *LocalStoreImpl) GetDevices(ctx context.Context, controllerName string) 
 	l.mu.Lock()
 	defer l.mu.Unlock()
 	return c.Devices, nil
+}
+
+func (l *LocalStoreImpl) GetDevice(ctx context.Context, controllerName, deviceName string) (types.Device, error) {
+	devices, err := l.GetDevices(ctx, controllerName)
+	if err != nil {
+		return types.Device{}, nil
+	}
+
+	l.mu.Lock()
+	defer l.mu.Unlock()
+	for _, device := range devices {
+		if device.Name == deviceName {
+			return device, nil
+		}
+	}
+
+	return types.Device{}, errors.New("device not found")
 }
 
 func (l *LocalStoreImpl) UpdateDevice(ctx context.Context, controllerName string, device types.Device) error {
@@ -85,7 +107,7 @@ func (l *LocalStoreImpl) UpdateDevice(ctx context.Context, controllerName string
 	// remove old device
 	controller.Devices = append(controller.Devices[:index], controller.Devices[index+1:]...)
 	controller.Devices = append(controller.Devices, device)
-	return nil
+	return l.updateControllerUnsafe(ctx, controller)
 }
 
 func (l *LocalStoreImpl) GetControllers(ctx context.Context) ([]types.Controller, error) {
@@ -120,6 +142,10 @@ func (l *LocalStoreImpl) UpdateController(ctx context.Context, controller types.
 	l.mu.Lock()
 	defer l.mu.Unlock()
 
+	return l.updateControllerUnsafe(ctx, controller)
+}
+
+func (l *LocalStoreImpl) updateControllerUnsafe(ctx context.Context, controller types.Controller) error {
 	_, loaded := l.db.Load(controller.Name)
 	if !loaded {
 		return errors.New("controller does not exist")

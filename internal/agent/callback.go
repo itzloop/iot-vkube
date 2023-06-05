@@ -2,62 +2,58 @@ package agent
 
 import (
 	"context"
+	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
 )
 
-type ServiceCallBacks struct {
-	OnNewController      func(ctx context.Context, controller types.Controller) error
-	OnMissingController  func(ctx context.Context, controller types.Controller) error
-	OnExistingController func(ctx context.Context, controller types.Controller) error
-	OnNewDevice          func(ctx context.Context, device types.Device) error
-	OnMissingDevice      func(ctx context.Context, device types.Device) error
-	OnExistingDevice     func(ctx context.Context, device types.Device) error
-}
-
-func DefaultServiceCallBacks() *ServiceCallBacks {
-	return &ServiceCallBacks{
-		OnNewController:      DefaultOnNewController,
-		OnMissingController:  DefaultOnMissingController,
-		OnExistingController: DefaultOnExistingController,
-		OnNewDevice:          DefaultOnNewDevice,
-		OnMissingDevice:      DefaultOnMissingDevice,
-		OnExistingDevice:     DefaultOnExistingDevice,
+func (service *Service) ServiceCallBacks() *callback.ServiceCallBacks {
+	return &callback.ServiceCallBacks{
+		OnNewController:      service.OnNewController,
+		OnMissingController:  service.OnMissingController,
+		OnExistingController: service.OnExistingController,
+		OnNewDevice:          service.OnNewDevice,
+		OnMissingDevice:      service.OnMissingDevice,
+		OnExistingDevice:     service.OnExistingDevice,
 	}
 }
 
-func DefaultOnNewController(ctx context.Context, controller types.Controller) error {
-	spot := "DefaultOnNewController"
+func (service *Service) OnNewController(ctx context.Context, controller types.Controller) error {
+	spot := "agent/OnNewController"
+	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
+	entry.Info("invoking callback")
+
+	// TODO notify controller
+	return service.store.RegisterController(ctx, controller)
+}
+func (service *Service) OnMissingController(ctx context.Context, controller types.Controller) error {
+	spot := "agent/OnMissingController"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
-func DefaultOnMissingController(ctx context.Context, controller types.Controller) error {
-	spot := "DefaultOnMissingController"
+func (service *Service) OnExistingController(ctx context.Context, controller types.Controller) error {
+	spot := "agent/OnExistingController"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
-func DefaultOnExistingController(ctx context.Context, controller types.Controller) error {
-	spot := "DefaultOnExistingController"
+func (service *Service) OnNewDevice(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "agent/OnNewDevice"
+	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
+	entry.Info("invoking callback")
+
+	// TODO notify controller
+	return service.store.RegisterDevice(ctx, controllerName, device)
+}
+func (service *Service) OnMissingDevice(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "agent/OnMissingDevice"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
-func DefaultOnNewDevice(ctx context.Context, device types.Device) error {
-	spot := "DefaultOnNewDevice"
-	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
-	entry.Info("invoking callback")
-	return nil
-}
-func DefaultOnMissingDevice(ctx context.Context, device types.Device) error {
-	spot := "DefaultOnMissingDevice"
-	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
-	entry.Info("invoking callback")
-	return nil
-}
-func DefaultOnExistingDevice(ctx context.Context, device types.Device) error {
-	spot := "DefaultOnExistingDevice"
+func (service *Service) OnExistingDevice(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "agent/OnExistingDevice"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil

@@ -2,13 +2,13 @@ package provider
 
 import (
 	"context"
-	"github.com/itzloop/iot-vkube/internal/agent"
+	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
 )
 
-func (p *PodLifecycleHandlerImpl) AgentServiceCallBacks() *agent.ServiceCallBacks {
-	return &agent.ServiceCallBacks{
+func (p *PodLifecycleHandlerImpl) ServiceCallBacks() *callback.ServiceCallBacks {
+	return &callback.ServiceCallBacks{
 		OnNewController:      p.OnNewController,
 		OnMissingController:  p.OnMissingController,
 		OnExistingController: p.OnExistingController,
@@ -19,37 +19,37 @@ func (p *PodLifecycleHandlerImpl) AgentServiceCallBacks() *agent.ServiceCallBack
 }
 
 func (p *PodLifecycleHandlerImpl) OnNewController(ctx context.Context, controller types.Controller) error {
-	spot := "OnNewController"
+	spot := "provider/OnNewController"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
 func (p *PodLifecycleHandlerImpl) OnMissingController(ctx context.Context, controller types.Controller) error {
-	spot := "OnMissingController"
+	spot := "provider/OnMissingController"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
 func (p *PodLifecycleHandlerImpl) OnExistingController(ctx context.Context, controller types.Controller) error {
-	spot := "OnExistingController"
+	spot := "provider/OnExistingController"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
-func (p *PodLifecycleHandlerImpl) OnNewDevice(ctx context.Context, device types.Device) error {
-	spot := "OnNewDevice"
+func (p *PodLifecycleHandlerImpl) OnNewDevice(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "provider/OnNewDevice"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
-func (p *PodLifecycleHandlerImpl) OnMissingDevice(ctx context.Context, device types.Device) error {
-	spot := "OnMissingDevice"
+func (p *PodLifecycleHandlerImpl) OnMissingDevice(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "provider/OnMissingDevice"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
 }
-func (p *PodLifecycleHandlerImpl) OnExistingDevice(ctx context.Context, device types.Device) error {
-	spot := "OnExistingDevice"
+func (p *PodLifecycleHandlerImpl) OnExistingDevice(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "provider/OnExistingDevice"
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil

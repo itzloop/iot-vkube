@@ -277,6 +277,8 @@ func RunServer(addr, controllerName string) {
 
 	r.Use(loggingMiddleware)
 
+	r.PathPrefix("/controllers").HandlerFunc(srv.listControllers)
+
 	http.Handle("/", r)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }

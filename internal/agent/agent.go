@@ -3,6 +3,7 @@ package agent
 import (
 	"context"
 	"github.com/gorilla/mux"
+	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/sirupsen/logrus"
@@ -18,23 +19,27 @@ type Service struct {
 	hooks []string
 
 	server    *http.Server
-	callbacks *ServiceCallBacks
+	callbacks *callback.ServiceCallBacks
 }
 
-type CallbackService interface {
-	RegisterCallbacks(cb *ServiceCallBacks)
-}
-
-func NewService(store store.Store, addr string, callbacks *ServiceCallBacks, hooks []string) *Service {
+func NewService(store store.Store, addr string, hooks []string) *Service {
 	srv := &Service{store: store, addr: addr, hooks: hooks}
-	srv.RegisterCallbacks(callbacks)
+
+	// register incoming callbacks
+	srv.RegisterCallbacks(nil)
+
 	return srv
 }
 
-func (service *Service) RegisterCallbacks(cb *ServiceCallBacks) {
-	var defaultCB = DefaultServiceCallBacks()
+func (service *Service) RegisterToCallbacks(cb callback.Callback) {
+	cb.RegisterCallbacks(service.ServiceCallBacks())
+}
+
+func (service *Service) RegisterCallbacks(cb *callback.ServiceCallBacks) {
+	var defaultCB = callback.DefaultServiceCallBacks()
 	if cb == nil {
-		cb = defaultCB
+		service.callbacks = defaultCB
+		return
 	}
 
 	if cb.OnNewController == nil {
@@ -68,7 +73,7 @@ func (service *Service) RegisterCallbacks(cb *ServiceCallBacks) {
 func (service *Service) Start(ctx context.Context) error {
 	group, groupCtx := errgroup.WithContext(ctx)
 	group.Go(service.httpServer)
-	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*5) })
+	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*30) })
 
 	go func() {
 		<-groupCtx.Done()

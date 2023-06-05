@@ -39,6 +39,7 @@ func main() {
 		ctx, cancel    = context.WithCancel(context.Background())
 		kubeConfigPath string
 		ns             string
+		logLevel       string
 	)
 
 	group, ctx := errgroup.WithContext(ctx)
@@ -46,7 +47,15 @@ func main() {
 	flag.StringVar(&kubeConfigPath, "kubeconfig", "/home/loop/.kube/config", "kubernetes cluster config")
 	flag.StringVar(&ns, "namespace", "default", "kubernetes namespace")
 	flag.StringVar(&ns, "n", "default", "kubernetes namespace")
+	flag.StringVar(&logLevel, "log-level", logrus.TraceLevel.String(), "log level")
 	flag.Parse()
+
+	// set log level
+	if lvl, err := logrus.ParseLevel(logLevel); err != nil {
+		logrus.Fatalln(err)
+	} else {
+		logrus.SetLevel(lvl)
+	}
 
 	sig := make(chan os.Signal, 1)
 	signal.Notify(sig, syscall.SIGTERM, syscall.SIGINT, syscall.SIGHUP)
@@ -96,12 +105,16 @@ func main() {
 
 	// TODO store
 	st := store.NewLocalStoreImpl()
-	service := agent.NewService(st, ":8080", nil, []string{"localhost:5000"})
+	service := agent.NewService(st, ":8080", []string{"localhost:5000"})
+	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, st)
+
+	// register callbacks
+	service.RegisterToCallbacks(p)
+	p.RegisterToCallbacks(service)
+
 	group.Go(func() error {
 		return service.Start(ctx)
 	})
-
-	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, service)
 
 	// create event recorded
 	eb := record.NewBroadcaster()

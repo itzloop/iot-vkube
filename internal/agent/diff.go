@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
+	"github.com/sirupsen/logrus"
 )
 
 type controllerDiffModel struct {
@@ -23,8 +24,10 @@ func (service *Service) diff(ctx context.Context, hook string) error {
 	var remoteControllersMap = map[string]ControllerBody{}
 	controllersUrl := fmt.Sprintf("http://%s/controllers", hook)
 	if err := doGetRequest(controllersUrl, &remoteControllers); err != nil {
-		entry.WithField("error", err).
-			Error("failed to get remote controllers ")
+		entry.WithFields(logrus.Fields{
+			"error": err,
+			"url":   controllersUrl,
+		}).Error("failed to get remote controllers ")
 		return err
 	}
 
@@ -235,7 +238,7 @@ func (service *Service) processDeviceDiff(ctx context.Context, controllerName st
 	// for each new device, add it to cluster
 	for _, newDevice := range d.NewDevices {
 		// TODO a callback from provider to update cluster. for now update local store
-		if err = service.callbacks.OnNewDevice(utils.ContextWithEntry(ctx, entry.WithField("callback", "OnNewDevice")), newDevice); err != nil {
+		if err = service.callbacks.OnNewDevice(utils.ContextWithEntry(ctx, entry.WithField("callback", "OnNewDevice")), controllerName, newDevice); err != nil {
 			return
 		}
 
@@ -248,7 +251,7 @@ func (service *Service) processDeviceDiff(ctx context.Context, controllerName st
 	// for each missing device, change it's state to NOT-READY
 	for _, missingDevice := range d.MissingDevices {
 		// TODO a callback from provider to update cluster. for now update local store
-		if err = service.callbacks.OnMissingDevice(utils.ContextWithEntry(ctx, entry.WithField("callback", "OnMissingDevice")), missingDevice); err != nil {
+		if err = service.callbacks.OnMissingDevice(utils.ContextWithEntry(ctx, entry.WithField("callback", "OnMissingDevice")), controllerName, missingDevice); err != nil {
 			return
 		}
 
@@ -262,7 +265,7 @@ func (service *Service) processDeviceDiff(ctx context.Context, controllerName st
 	// for each existing device, use it's readiness state and update the cluster
 	for _, existingDevice := range d.ExistingDevices {
 		// TODO a callback from provider to update cluster. for now update local store
-		if err = service.callbacks.OnExistingDevice(utils.ContextWithEntry(ctx, entry.WithField("callback", "OnExistingDevice")), existingDevice); err != nil {
+		if err = service.callbacks.OnExistingDevice(utils.ContextWithEntry(ctx, entry.WithField("callback", "OnExistingDevice")), controllerName, existingDevice); err != nil {
 			return
 		}
 

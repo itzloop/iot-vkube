@@ -61,12 +61,3 @@ func WaitWithThreeDots(msg string, delay time.Duration) {
 		}
 	}
 }
-
-func makeDots(dots int) string {
-	str := ""
-	for i := 0; i < dots; i++ {
-		str += "."
-	}
-
-	return str
-}
