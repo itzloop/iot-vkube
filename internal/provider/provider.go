@@ -2,7 +2,6 @@ package provider
 
 import (
 	"context"
-	"fmt"
 	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/internal/utils"
@@ -10,9 +9,10 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	corev1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
+	"k8s.io/client-go/kubernetes/scheme"
 	v1 "k8s.io/client-go/listers/core/v1"
+	"k8s.io/client-go/tools/record"
 )
 
 type PodLifecycleHandlerImpl struct {
@@ -23,23 +23,27 @@ type PodLifecycleHandlerImpl struct {
 
 	// callbacks
 	cbs *callback.ServiceCallBacks
+
+	// event recorder
+	recorder record.EventRecorder
 }
 
 func NewPodLifecycleHandlerImpl(
 	addr string,
 	lister v1.PodLister,
 	selector labels.Selector,
-	store store.ReadOnlyStore) *PodLifecycleHandlerImpl {
+	store store.ReadOnlyStore,
+	broadcaster record.EventBroadcaster) *PodLifecycleHandlerImpl {
+
+	recorder := broadcaster.NewRecorder(scheme.Scheme, corev1.EventSource{Component: "IoT-Provider"})
 
 	p := &PodLifecycleHandlerImpl{
 		addr:      addr,
 		podLister: lister,
 		selector:  selector,
 		store:     store,
+		recorder:  recorder,
 	}
-
-	//// register to agent callbacks
-	//p.agentCallback.RegisterCallbacks(p.ServiceCallBacks())
 
 	// register incoming callbacks
 	p.RegisterCallbacks(nil)
@@ -160,7 +164,7 @@ func (p *PodLifecycleHandlerImpl) UpdatePod(ctx context.Context, pod *corev1.Pod
 
 	pod, err := p.GetPod(ctx, pod.Namespace, pod.Name)
 	if err != nil {
-		fmt.Println("pod already exists, ignoring...")
+		entry.WithField("error", err).Info("pod already exists, ignoring...")
 		return nil
 	}
 
@@ -178,10 +182,23 @@ func (p *PodLifecycleHandlerImpl) DeletePod(ctx context.Context, pod *corev1.Pod
 		"name":      pod.Name,
 		"namespace": pod.Namespace,
 	})
-
 	ctx = utils.ContextWithEntry(ctx, entry)
+
+	controllerName, ok := pod.Annotations["controllerName"]
+	if !ok {
+		err := errors.New("label 'controllerName' is missing")
+		entry.WithField("error", err).Error("failed to read controllerName")
+		return err
+	}
+
+	device, err := p.store.GetDevice(ctx, controllerName, pod.Name)
+	if err != nil {
+		entry.WithField("error", err).Error("device does not exist")
+		return err
+	}
+
 	entry.Trace("deleting pod")
-	return nil
+	return p.cbs.OnDeviceDeleted(ctx, controllerName, device)
 }
 
 // GetPod just uses the pod lister to get the pod from kuber
@@ -195,7 +212,8 @@ func (p *PodLifecycleHandlerImpl) GetPod(ctx context.Context, namespace, name st
 
 	ctx = utils.ContextWithEntry(ctx, entry)
 	entry.Trace("getting pod")
-	return p.podLister.Pods(namespace).Get(name)
+	pod, err := p.podLister.Pods(namespace).Get(name)
+	return pod, err
 }
 
 func (p *PodLifecycleHandlerImpl) GetPodStatus(ctx context.Context, namespace, name string) (*corev1.PodStatus, error) {
@@ -229,58 +247,34 @@ func (p *PodLifecycleHandlerImpl) GetPodStatus(ctx context.Context, namespace, n
 		return nil, err
 	}
 
-	var (
-		status corev1.ConditionStatus
-		phase  corev1.PodPhase
-	)
-	if device.Ready {
-		status = corev1.ConditionTrue
-		phase = corev1.PodRunning
-	} else {
-		status = corev1.ConditionFalse
-		phase = corev1.PodPending
-	}
+	setPodPhase(pod, device)
+	status := getConditionStatus(pod, device)
 
 	entry = entry.WithFields(logrus.Fields{
 		"readiness": device.Ready,
 		"status":    status,
-		"phase":     phase,
+		"phase":     pod.Status.Phase,
 	})
+	entry.Trace("pod status")
 
-	entry.Trace("setting status")
+	changed := setPodConditions(status, pod)
+	setPodContainerStatuses(pod, device)
 
-	pod.Status.Message = "TODO: what goes here?"
-	pod.Status.Phase = phase
-
-	// get last condition check if it's different from what we have now
-	// if yes then update the condition otherwise ignore it
-	conditions := pod.Status.Conditions
-	lastCondition := conditions[len(conditions)-1]
-	if lastCondition.Status != status {
-		pod.Status.Conditions = append(pod.Status.Conditions, corev1.PodCondition{
-			Type:   corev1.PodReady,
-			Status: status,
-		})
+	if !changed {
+		return &pod.Status, nil
 	}
 
-	pod.Status.ContainerStatuses = nil
-	for _, container := range pod.Spec.Containers {
-		started := true
-		pod.Status.ContainerStatuses = append(pod.Status.ContainerStatuses, corev1.ContainerStatus{
-			Name: container.Name,
-			State: corev1.ContainerState{
-				Running: &corev1.ContainerStateRunning{
-					StartedAt: metav1.Now(),
-				},
-			},
-			Ready:        true,
-			RestartCount: 0,
-			Image:        container.Image,
-			Started:      &started,
-		})
+	// send event if status changed
+	if status == corev1.ConditionTrue {
+		// send ready event
+		p.recorder.Event(pod, corev1.EventTypeNormal, "ReasonReady", "successfully checked device readiness")
+	} else {
+		// send not ready event
+		p.recorder.Event(pod, corev1.EventTypeWarning, "ReasonNotReady", "couldn't check device readiness")
 	}
 
 	return &pod.Status, nil
+
 }
 func (p *PodLifecycleHandlerImpl) GetPods(ctx context.Context) ([]*corev1.Pod, error) {
 	spot := "GetPods"

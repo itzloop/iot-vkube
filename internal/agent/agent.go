@@ -119,10 +119,8 @@ func (service *Service) agentWorker(ctx context.Context, interval time.Duration)
 		select {
 		case <-ticker:
 			entry.Info("updating state")
-			for _, hook := range service.hooks {
-				if err := service.diff(ctx, hook); err != nil {
-					continue
-				}
+			if err := service.diff(ctx); err != nil {
+				continue
 			}
 		case <-ctx.Done():
 			return nil
@@ -133,6 +131,10 @@ func (service *Service) agentWorker(ctx context.Context, interval time.Duration)
 // TODO httpServer should handle following endpoints:
 // - register controller
 func (service *Service) httpServer() error {
+	spot := "agent/httpServer"
+	entry := logrus.WithFields(logrus.Fields{"spot": spot, "addr": service.addr})
+	entry.Info("server is starting...")
+
 	r := mux.NewRouter()
 	service.setupControllerRoutes(r.PathPrefix("/controllers").Subrouter())
 	r.Use(utils.LoggingMiddleware)
@@ -141,10 +143,16 @@ func (service *Service) httpServer() error {
 		Addr:    service.addr,
 		Handler: r,
 	}
-	entry := logrus.WithField("addr", service.addr)
-	entry.Info("server is starting...")
-	defer entry.Info("exiting http server")
-	return service.server.ListenAndServe()
+
+	err := service.server.ListenAndServe()
+	if err != nil {
+		if err == http.ErrServerClosed {
+			entry.WithField("error", err).Info("http server closed")
+			return nil
+		}
+	}
+
+	return nil
 }
 
 func (service *Service) setupControllerRoutes(controllerRoute *mux.Router) {

@@ -17,6 +17,7 @@ type ServiceCallBacks struct {
 	OnNewDevice          func(ctx context.Context, controllerName string, device types.Device) error
 	OnMissingDevice      func(ctx context.Context, controllerName string, device types.Device) error
 	OnExistingDevice     func(ctx context.Context, controllerName string, device types.Device) error
+	OnDeviceDeleted      func(ctx context.Context, controllerName string, device types.Device) error
 }
 
 func DefaultServiceCallBacks() *ServiceCallBacks {

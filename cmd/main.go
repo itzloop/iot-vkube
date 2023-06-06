@@ -95,18 +95,23 @@ func main() {
 		informer.Start(ctx.Done())
 		return nil
 	})
+
+	// create event recorded
+	eb := record.NewBroadcaster()
+	eb.StartLogging(log.GetLogger(ctx).Infof)
+	eb.StartRecordingToSink(&corev1client.EventSinkImpl{Interface: client.CoreV1().Events(ns)})
+
 	// setup provider
 	requirement, err := labels.NewRequirement("itzloop.dev/virtual-kubelet", selection.Exists, []string{})
 	if err != nil {
 		panic(err)
 	}
-
 	selector := labels.NewSelector().Add(*requirement)
 
-	// TODO store
+	// create provider
 	st := store.NewLocalStoreImpl()
 	service := agent.NewService(st, ":8080", []string{"localhost:5000"})
-	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, st)
+	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, st, eb)
 
 	// register callbacks
 	service.RegisterToCallbacks(p)
@@ -115,11 +120,6 @@ func main() {
 	group.Go(func() error {
 		return service.Start(ctx)
 	})
-
-	// create event recorded
-	eb := record.NewBroadcaster()
-	eb.StartLogging(log.GetLogger(ctx).Infof)
-	eb.StartRecordingToSink(&corev1client.EventSinkImpl{Interface: client.CoreV1().Events(ns)})
 
 	// setup pod controller
 	pc, err := node.NewPodController(node.PodControllerConfig{

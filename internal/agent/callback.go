@@ -15,6 +15,7 @@ func (service *Service) ServiceCallBacks() *callback.ServiceCallBacks {
 		OnNewDevice:          service.OnNewDevice,
 		OnMissingDevice:      service.OnMissingDevice,
 		OnExistingDevice:     service.OnExistingDevice,
+		OnDeviceDeleted:      service.OnDeviceDeleted,
 	}
 }
 
@@ -57,4 +58,13 @@ func (service *Service) OnExistingDevice(ctx context.Context, controllerName str
 	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
 	entry.Info("invoking callback")
 	return nil
+}
+
+func (service *Service) OnDeviceDeleted(ctx context.Context, controllerName string, device types.Device) error {
+	spot := "agent/OnDeviceDeleted"
+	entry := utils.GetEntryFromContext(ctx).WithField("spot", spot)
+	entry.Info("invoking callback")
+
+	// TODO notify controller
+	return service.store.DeleteDevice(ctx, controllerName, device)
 }

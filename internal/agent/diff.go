@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
-	"github.com/sirupsen/logrus"
 )
 
 type controllerDiffModel struct {
@@ -14,41 +13,41 @@ type controllerDiffModel struct {
 	ExistingControllers map[string]types.Controller
 }
 
-func (service *Service) diff(ctx context.Context, hook string) error {
+func (service *Service) diff(ctx context.Context) error {
 	spot := "diff"
 	ctx = utils.ContextWithSpot(ctx, spot)
 	entry := utils.GetEntryFromContext(ctx)
 
-	// get remote controllers
-	var remoteControllers []ControllerBody
-	var remoteControllersMap = map[string]ControllerBody{}
-	controllersUrl := fmt.Sprintf("http://%s/controllers", hook)
-	if err := doGetRequest(controllersUrl, &remoteControllers); err != nil {
-		entry.WithFields(logrus.Fields{
-			"error": err,
-			"url":   controllersUrl,
-		}).Error("failed to get remote controllers ")
-		return err
-	}
+	//// get remote controllers
+	//var remoteControllers []ControllerBody
+	//var remoteControllersMap = map[string]ControllerBody{}
+	//controllersUrl := fmt.Sprintf("http://%s/controllers", hook)
+	//if err := doGetRequest(controllersUrl, &remoteControllers); err != nil {
+	//	entry.WithFields(logrus.Fields{
+	//		"error": err,
+	//		"url":   controllersUrl,
+	//	}).Error("failed to get remote controllers ")
+	//	return err
+	//}
 
-	// convert remote controllers to map
-	for _, controller := range remoteControllers {
-		remoteControllersMap[controller.Name] = controller
-	}
+	//// convert remote controllers to map
+	//for _, controller := range remoteControllers {
+	//	remoteControllersMap[controller.Name] = controller
+	//}
 
 	// get local controllers
-	localControllers, err := service.store.GetControllersMap(ctx)
-	if err != nil {
-		entry.WithField("error", err).
-			Error("failed to get local controllers ")
-		return err
-	}
-
-	if err = service.processControllerDiff(ctx, service.controllerDiff(ctx, localControllers, remoteControllersMap)); err != nil {
-		entry.WithField("error", err).
-			Error("failed to get process controllerDiff")
-		return err
-	}
+	//localControllers, err := service.store.GetControllersMap(ctx)
+	//if err != nil {
+	//	entry.WithField("error", err).
+	//		Error("failed to get local controllers ")
+	//	return err
+	//}
+	//
+	//if err = service.processControllerDiff(ctx, service.controllerDiff(ctx, localControllers, remoteControllersMap)); err != nil {
+	//	entry.WithField("error", err).
+	//		Error("failed to get process controllerDiff")
+	//	return err
+	//}
 
 	// now that controllers are synced get the controllerDiff for devices on each controller
 	controllers, err := service.store.GetControllers(ctx)
@@ -64,11 +63,17 @@ func (service *Service) diff(ctx context.Context, hook string) error {
 			remoteDevicesMap = map[string]DeviceBody{}
 			localDevicesMap  = map[string]types.Device{}
 		)
-		devicesUrl := fmt.Sprintf("http://%s/controllers/%s", hook, controller.Name)
+		devicesUrl := fmt.Sprintf("http://%s/controllers/%s", controller.Host, controller.Name)
 		if err := doGetRequest(devicesUrl, &remoteDevices); err != nil {
 			entry.WithField("error", err).
-				Error("failed to get remote devices")
-			continue
+				Debug("failed to get remote devices, change readiness of all devices connected to this controller")
+			// change readiness of all devices connected to this controller
+			for _, device := range controller.Devices {
+				remoteDevicesMap[device.Name] = DeviceBody{
+					Name:      device.Name,
+					Readiness: false,
+				}
+			}
 		}
 
 		// convert remote controllers to map
@@ -208,7 +213,10 @@ func (service *Service) deviceDiff(ctx context.Context, local map[string]types.D
 			localDevice.Ready = remoteDevice.Readiness
 			existingDevices[remoteDevice.Name] = localDevice
 		} else {
-			newDevices[remoteDevice.Name] = localDevice
+			newDevices[remoteDevice.Name] = types.Device{
+				Name:  remoteDevice.Name,
+				Ready: remoteDevice.Readiness,
+			}
 		}
 	}
 
@@ -217,8 +225,8 @@ func (service *Service) deviceDiff(ctx context.Context, local map[string]types.D
 		remoteDevice, ok := remote[localDevice.Name]
 		if !ok {
 			missingDevices[remoteDevice.Name] = types.Device{
-				Name:  remoteDevice.Name,
-				Ready: remoteDevice.Readiness,
+				Name:  localDevice.Name,
+				Ready: localDevice.Ready,
 			}
 		}
 	}

@@ -1,0 +1,80 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lock1
+  annotations:
+    controllerName: "lc3"
+    controllerAddress: "localhost:5003"
+spec:
+  containers:
+    - image: sinashk/smart_lock
+      name: lock1
+  dnsPolicy: ClusterFirst
+  nodeSelector:
+    kubernetes.io/role: agent
+    kubernetes.io/os: linux
+    type: virtual-kubelet
+  tolerations:
+    - key: itzloop.dev/virtual-kubelet
+      operator: Exists
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lock2
+  annotations:
+    controllerName: "lc3"
+    controllerAddress: "localhost:5003"
+spec:
+  containers:
+    - image: sinashk/smart_lock
+      name: lock2
+  dnsPolicy: ClusterFirst
+  nodeSelector:
+    kubernetes.io/role: agent
+    kubernetes.io/os: linux
+    type: virtual-kubelet
+  tolerations:
+    - key: itzloop.dev/virtual-kubelet
+      operator: Exists
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lock3
+  annotations:
+    controllerName: "lc3"
+    controllerAddress: "localhost:5003"
+spec:
+  containers:
+    - image: sinashk/smart_lock
+      name: lock3
+  dnsPolicy: ClusterFirst
+  nodeSelector:
+    kubernetes.io/role: agent
+    kubernetes.io/os: linux
+    type: virtual-kubelet
+  tolerations:
+    - key: itzloop.dev/virtual-kubelet
+      operator: Exists
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lock4
+  annotations:
+    controllerName: "lc3"
+    controllerAddress: "localhost:5003"
+spec:
+  containers:
+    - image: sinashk/smart_lock
+      name: lock4
+  dnsPolicy: ClusterFirst
+  nodeSelector:
+    kubernetes.io/role: agent
+    kubernetes.io/os: linux
+    type: virtual-kubelet
+  tolerations:
+    - key: itzloop.dev/virtual-kubelet
+      operator: Exists

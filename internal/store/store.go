@@ -13,6 +13,7 @@ type Store interface {
 	RegisterDevice(ctx context.Context, controllerName string, device types.Device) error
 	UpdateDevice(ctx context.Context, controllerName string, device types.Device) error
 	UpdateController(ctx context.Context, controller types.Controller) error
+	DeleteDevice(ctx context.Context, name string, device types.Device) error
 }
 
 type ReadOnlyStore interface {
@@ -82,6 +83,26 @@ func (l *LocalStoreImpl) GetDevice(ctx context.Context, controllerName, deviceNa
 	}
 
 	return types.Device{}, errors.New("device not found")
+}
+
+func (l *LocalStoreImpl) DeleteDevice(ctx context.Context, controllerName string, device types.Device) error {
+	c, err := l.GetController(ctx, controllerName)
+	if err != nil {
+		return err
+	}
+
+	l.mu.Lock()
+	defer l.mu.Unlock()
+
+	for i, d := range c.Devices {
+		if d.Name == device.Name {
+			c.Devices = append(c.Devices[:i], c.Devices[i+1:]...)
+			l.db.Store(controllerName, c)
+			return nil
+		}
+	}
+
+	return errors.New("device not found")
 }
 
 func (l *LocalStoreImpl) UpdateDevice(ctx context.Context, controllerName string, device types.Device) error {
