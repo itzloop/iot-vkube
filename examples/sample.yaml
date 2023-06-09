@@ -5,7 +5,7 @@ metadata:
   # deviceName
   name: lock1
   annotations:
-    controllerName: "lc1"
+    controllerName: "lc1" 
     controllerAddress: "localhost:5000"
     # TODO is this a better solution
     # http://<controllerAddress>/<devicesPath>
