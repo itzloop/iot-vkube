@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	controllerName := flag.String("cname", "lc1", "controller name")
+	addr := flag.String("addr", ":5000", "server bind address")
 	flag.Parse()
-	smart_lock.RunServer(":5000", *controllerName)
+	smart_lock.RunServer(*addr)
 }
