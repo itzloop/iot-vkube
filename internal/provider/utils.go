@@ -84,7 +84,7 @@ func setPodContainerStatuses(pod *corev1.Pod, device types.Device) {
 						StartedAt: metav1.Now(),
 					},
 				},
-				Ready:        device.Ready,
+				Ready:        device.Readiness,
 				RestartCount: 0,
 				Image:        container.Image,
 				Started:      &started,
@@ -99,7 +99,7 @@ func setPodContainerStatuses(pod *corev1.Pod, device types.Device) {
 
 				// found the container
 				// if the status has changed then update it	otherwise ignore it
-				if cs.Ready == device.Ready {
+				if cs.Ready == device.Readiness {
 					break
 				}
 
@@ -110,7 +110,7 @@ func setPodContainerStatuses(pod *corev1.Pod, device types.Device) {
 							StartedAt: metav1.Now(),
 						},
 					},
-					Ready:        device.Ready,
+					Ready:        device.Readiness,
 					RestartCount: 0,
 					Image:        container.Image,
 					Started:      &started,
@@ -124,7 +124,7 @@ func setPodPhase(pod *corev1.Pod, device types.Device) {
 	var (
 		phase corev1.PodPhase
 	)
-	if device.Ready {
+	if device.Readiness {
 		phase = corev1.PodRunning
 	} else {
 		phase = corev1.PodPending
@@ -138,7 +138,7 @@ func getConditionStatus(pod *corev1.Pod, device types.Device) corev1.ConditionSt
 	var (
 		status corev1.ConditionStatus
 	)
-	if device.Ready {
+	if device.Readiness {
 		status = corev1.ConditionTrue
 	} else {
 		status = corev1.ConditionFalse

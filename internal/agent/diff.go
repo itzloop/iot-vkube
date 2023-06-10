@@ -113,14 +113,14 @@ func (service *Service) controllerDiff(ctx context.Context, local map[string]typ
 		if ok {
 			// get readiness from remote
 			// TODO maybe handle some metadata later
-			localController.Ready = remoteController.Readiness
+			localController.Readiness = remoteController.Readiness
 			existingControllers[remoteController.Name] = localController
 		} else {
 			newControllers[remoteController.Name] = types.Controller{
 				// TODO Host:    ,
 				// TODO Meta:    nil,
-				Name:  remoteController.Name,
-				Ready: remoteController.Readiness,
+				Name:      remoteController.Name,
+				Readiness: remoteController.Readiness,
 			}
 		}
 	}
@@ -166,7 +166,7 @@ func (service *Service) processControllerDiff(ctx context.Context, d controllerD
 			return
 		}
 		// update local store
-		missingController.Ready = false
+		missingController.Readiness = false
 		if err = service.store.UpdateController(ctx, missingController); err != nil {
 			return
 		}
@@ -210,12 +210,12 @@ func (service *Service) deviceDiff(ctx context.Context, local map[string]types.D
 		if ok {
 			// get readiness from remote
 			// TODO maybe handle some metadata later
-			localDevice.Ready = remoteDevice.Readiness
+			localDevice.Readiness = remoteDevice.Readiness
 			existingDevices[remoteDevice.Name] = localDevice
 		} else {
 			newDevices[remoteDevice.Name] = types.Device{
-				Name:  remoteDevice.Name,
-				Ready: remoteDevice.Readiness,
+				Name:      remoteDevice.Name,
+				Readiness: remoteDevice.Readiness,
 			}
 		}
 	}
@@ -225,8 +225,8 @@ func (service *Service) deviceDiff(ctx context.Context, local map[string]types.D
 		remoteDevice, ok := remote[localDevice.Name]
 		if !ok {
 			missingDevices[remoteDevice.Name] = types.Device{
-				Name:  localDevice.Name,
-				Ready: localDevice.Ready,
+				Name:      localDevice.Name,
+				Readiness: localDevice.Readiness,
 			}
 		}
 	}
@@ -264,7 +264,7 @@ func (service *Service) processDeviceDiff(ctx context.Context, controllerName st
 		}
 
 		// update local store
-		missingDevice.Ready = false
+		missingDevice.Readiness = false
 		if err = service.store.UpdateDevice(ctx, controllerName, missingDevice); err != nil {
 			return
 		}

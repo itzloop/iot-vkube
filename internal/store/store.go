@@ -14,6 +14,7 @@ type Store interface {
 	UpdateDevice(ctx context.Context, controllerName string, device types.Device) error
 	UpdateController(ctx context.Context, controller types.Controller) error
 	DeleteDevice(ctx context.Context, name string, device types.Device) error
+	DeleteController(ctx context.Context, name string) error
 }
 
 type ReadOnlyStore interface {
@@ -37,6 +38,10 @@ func NewLocalStoreImpl() *LocalStoreImpl {
 }
 
 func (l *LocalStoreImpl) RegisterController(ctx context.Context, controller types.Controller) error {
+	if controller.Devices == nil {
+		controller.Devices = []types.Device{}
+	}
+
 	_, loaded := l.db.LoadOrStore(controller.Name, controller)
 	if loaded {
 		return errors.New("controller exists")
@@ -65,6 +70,11 @@ func (l *LocalStoreImpl) GetDevices(ctx context.Context, controllerName string) 
 
 	l.mu.Lock()
 	defer l.mu.Unlock()
+
+	if c.Devices == nil {
+		return []types.Device{}, nil
+	}
+
 	return c.Devices, nil
 }
 
@@ -138,6 +148,10 @@ func (l *LocalStoreImpl) GetControllers(ctx context.Context) ([]types.Controller
 		return true
 	})
 
+	if controllers == nil {
+		controllers = []types.Controller{}
+	}
+
 	return controllers, nil
 }
 
@@ -164,6 +178,15 @@ func (l *LocalStoreImpl) UpdateController(ctx context.Context, controller types.
 	defer l.mu.Unlock()
 
 	return l.updateControllerUnsafe(ctx, controller)
+}
+
+func (l *LocalStoreImpl) DeleteController(ctx context.Context, name string) error {
+	_, loaded := l.db.LoadAndDelete(name)
+	if !loaded {
+		return errors.New("controller does not exist")
+	}
+
+	return nil
 }
 
 func (l *LocalStoreImpl) updateControllerUnsafe(ctx context.Context, controller types.Controller) error {

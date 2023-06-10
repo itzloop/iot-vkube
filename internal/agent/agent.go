@@ -73,7 +73,7 @@ func (service *Service) RegisterCallbacks(cb *callback.ServiceCallBacks) {
 func (service *Service) Start(ctx context.Context) error {
 	group, groupCtx := errgroup.WithContext(ctx)
 	group.Go(service.httpServer)
-	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*30) })
+	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*10) })
 
 	go func() {
 		<-groupCtx.Done()

@@ -8,6 +8,7 @@ const drawer = ref(false)
 
 const routePath = ref('IoT Dashboard')
 
+// TODO make this a component
 watch(router.currentRoute, (p) => {
   if (p.fullPath === '/') {
     routePath.value = 'IoT Dashboard'
@@ -15,23 +16,17 @@ watch(router.currentRoute, (p) => {
   }
 
   const splited = p.fullPath.split('/')
-  let str = "IoT Dashboard"
-  console.log(p)
+  let str = 'IoT Dashboard'
   for (let i = 0; i < splited.length; i++) {
     str += `${splited[i].substring(0, 1).toUpperCase() + splited[i].substring(1)}`
-    if ( i < splited.length - 1) {
+    if (i < splited.length - 1) {
       str += ' > '
     }
-    
-    
   }
   for (let s of splited) {
-    
-
   }
 
   routePath.value = str
-  
 })
 </script>
 

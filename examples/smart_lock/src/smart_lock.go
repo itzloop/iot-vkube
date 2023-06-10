@@ -4,14 +4,14 @@ import "sync"
 
 type SmartLock struct {
 	name   string
-	mu     sync.Mutex
+	mu     *sync.Mutex
 	locked bool
 }
 
 func NewSmartLock(name string, initial bool) *SmartLock {
 	return &SmartLock{
 		name:   name,
-		mu:     sync.Mutex{},
+		mu:     &sync.Mutex{},
 		locked: initial,
 	}
 }

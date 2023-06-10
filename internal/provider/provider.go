@@ -2,6 +2,7 @@ package provider
 
 import (
 	"context"
+	"encoding/json"
 	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/internal/utils"
@@ -118,10 +119,10 @@ func (p *PodLifecycleHandlerImpl) CreatePod(ctx context.Context, pod *corev1.Pod
 	if err != nil {
 		entry.WithField("error", err).Info("controller not found. notifying agent...")
 		controller = types.Controller{
-			Host:  controllerAddress,
-			Meta:  pod.Labels,
-			Name:  controllerName,
-			Ready: false,
+			Host:      controllerAddress,
+			Meta:      pod.Labels,
+			Name:      controllerName,
+			Readiness: false,
 		}
 		err = p.cbs.OnNewController(ctx, controller)
 		if err != nil {
@@ -136,9 +137,9 @@ func (p *PodLifecycleHandlerImpl) CreatePod(ctx context.Context, pod *corev1.Pod
 
 		// device does not exist
 		err = p.cbs.OnNewDevice(ctx, controllerName, types.Device{
-			Meta:  pod.Labels,
-			Name:  pod.Name,
-			Ready: false,
+			Meta:      pod.Labels,
+			Name:      pod.Name,
+			Readiness: false,
 		})
 		if err != nil {
 			entry.WithField("error", err).Error("failed to invoke callback OnNewDevice")
@@ -213,6 +214,13 @@ func (p *PodLifecycleHandlerImpl) GetPod(ctx context.Context, namespace, name st
 	ctx = utils.ContextWithEntry(ctx, entry)
 	entry.Trace("getting pod")
 	pod, err := p.podLister.Pods(namespace).Get(name)
+
+	pJson, err := json.Marshal(pod)
+	if err != nil {
+		return nil, err
+	}
+
+	entry.Trace(string(pJson))
 	return pod, err
 }
 
@@ -251,7 +259,7 @@ func (p *PodLifecycleHandlerImpl) GetPodStatus(ctx context.Context, namespace, n
 	status := getConditionStatus(pod, device)
 
 	entry = entry.WithFields(logrus.Fields{
-		"readiness": device.Ready,
+		"readiness": device.Readiness,
 		"status":    status,
 		"phase":     pod.Status.Phase,
 	})

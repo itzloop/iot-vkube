@@ -206,7 +206,7 @@ func getNodeSpec(name, version string) (*corev1.Node, error) {
 func nodeConditions() []corev1.NodeCondition {
 	return []corev1.NodeCondition{
 		{
-			Type:               "Ready",
+			Type:               "Readiness",
 			Status:             corev1.ConditionTrue,
 			LastHeartbeatTime:  v1.Now(),
 			LastTransitionTime: v1.Now(),
