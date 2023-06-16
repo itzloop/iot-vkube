@@ -1,0 +1,17 @@
+2023-06-13 01:13:52.521 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'testContinuousRun' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-06-13 01:13:52.820 [info] Started initializing default profile extensions in extensions installation folder. file:///root/.vscode/extensions
+2023-06-13 01:13:52.998 [info] Completed initializing default profile extensions in extensions installation folder. file:///root/.vscode/extensions
+2023-06-13 01:13:53.488 [error] Could not find category with ID: Intermediate: Error: Could not find category with ID: Intermediate
+    at vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:2511:62056
+    at g.invoke (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:93:145)
+    at o.deliver (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:93:2121)
+    at s.fire (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:93:1729)
+    at e.WalkthroughsService.progressStep (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:1959:21997)
+    at e.WalkthroughsService.ab (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:1959:24139)
+    at vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:1959:22658
+    at Array.forEach (<anonymous>)
+    at e.WalkthroughsService._registerWalkthrough (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:1959:22476)
+    at vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:1959:15180
+    at Array.forEach (<anonymous>)
+    at e.WalkthroughsService.R (vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:1959:14925)
+2023-06-13 01:13:55.708 [info] [perf] Render performance baseline is 23ms

@@ -1,0 +1,2357 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.13)  16 JUN 2023 22:39
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/loop/p/iot-vkube/docs/main.tex
+(/home/loop/p/iot-vkube/docs/main.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (./IUST-Thesis.cls
+
+LaTeX Warning: You have requested document class `IUST-Thesis',
+               but the document class provides `VThesis'.
+
+Document Class: VThesis 10/21/2011 v0.4 Persian thesis document class in XeLaTeX for University of Tabriz projects/theses/dissertations
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@chapter=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)) (./commands.tex (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen141
+\ar@mcellbox=\box51
+\extrarowheight=\dimen142
+\NC@list=\toks16
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box52
+) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen143
+\TX@old@table=\dimen144
+\TX@old@col=\dimen145
+\TX@target=\dimen146
+\TX@delta=\dimen147
+\TX@cols=\count190
+\TX@ftn=\toks17
+) (/usr/share/texmf-dist/tex/latex/easy/easytable.sty
+Document Style `easytable' v1.0 <2001/06/13>.
+(/usr/share/texmf-dist/tex/latex/easy/easy.sty
+Document Style `easy' v1.1 <2001/05/31>.
+Package: easy 2001/05/31 v1.1
+\@easy@level=\count191
+\@easy@ncol=\count192
+\@easy@nrow=\count193
+\@easy@cnt=\count194
+\@easy@boxviii=\box53
+\@easy@minxviii=\dimen148
+\@easy@minyviii=\dimen149
+\@easy@maxxviii=\dimen150
+\@easy@maxyviii=\dimen151
+\@easy@boxvii=\box54
+\@easy@minxvii=\dimen152
+\@easy@minyvii=\dimen153
+\@easy@maxxvii=\dimen154
+\@easy@maxyvii=\dimen155
+\@easy@boxvi=\box55
+\@easy@minxvi=\dimen156
+\@easy@minyvi=\dimen157
+\@easy@maxxvi=\dimen158
+\@easy@maxyvi=\dimen159
+\@easy@boxv=\box56
+\@easy@minxv=\dimen160
+\@easy@minyv=\dimen161
+\@easy@maxxv=\dimen162
+\@easy@maxyv=\dimen163
+\@easy@boxiv=\box57
+\@easy@minxiv=\dimen164
+\@easy@minyiv=\dimen165
+\@easy@maxxiv=\dimen166
+\@easy@maxyiv=\dimen167
+\@easy@boxiii=\box58
+\@easy@minxiii=\dimen168
+\@easy@minyiii=\dimen169
+\@easy@maxxiii=\dimen170
+\@easy@maxyiii=\dimen171
+\@easy@boxii=\box59
+\@easy@minxii=\dimen172
+\@easy@minyii=\dimen173
+\@easy@maxxii=\dimen174
+\@easy@maxyii=\dimen175
+\@easy@boxi=\box60
+\@easy@minxi=\dimen176
+\@easy@minyi=\dimen177
+\@easy@maxxi=\dimen178
+\@easy@maxyi=\dimen179
+\@easy@hsizexxx=\dimen180
+\@easy@vsizexxx=\dimen181
+\@easy@hsizexxix=\dimen182
+\@easy@vsizexxix=\dimen183
+\@easy@hsizexxviii=\dimen184
+\@easy@vsizexxviii=\dimen185
+\@easy@hsizexxvii=\dimen186
+\@easy@vsizexxvii=\dimen187
+\@easy@hsizexxvi=\dimen188
+\@easy@vsizexxvi=\dimen189
+\@easy@hsizexxv=\dimen190
+\@easy@vsizexxv=\dimen191
+\@easy@hsizexxiv=\dimen192
+\@easy@vsizexxiv=\dimen193
+\@easy@hsizexxiii=\dimen194
+\@easy@vsizexxiii=\dimen195
+\@easy@hsizexxii=\dimen196
+\@easy@vsizexxii=\dimen197
+\@easy@hsizexxi=\dimen198
+\@easy@vsizexxi=\dimen199
+\@easy@hsizexx=\dimen256
+\@easy@vsizexx=\dimen257
+\@easy@hsizexix=\dimen258
+\@easy@vsizexix=\dimen259
+\@easy@hsizexviii=\dimen260
+\@easy@vsizexviii=\dimen261
+\@easy@hsizexvii=\dimen262
+\@easy@vsizexvii=\dimen263
+\@easy@hsizexvi=\dimen264
+\@easy@vsizexvi=\dimen265
+\@easy@hsizexv=\dimen266
+\@easy@vsizexv=\dimen267
+\@easy@hsizexiv=\dimen268
+\@easy@vsizexiv=\dimen269
+\@easy@hsizexiii=\dimen270
+\@easy@vsizexiii=\dimen271
+\@easy@hsizexii=\dimen272
+\@easy@vsizexii=\dimen273
+\@easy@hsizexi=\dimen274
+\@easy@vsizexi=\dimen275
+\@easy@hsizex=\dimen276
+\@easy@vsizex=\dimen277
+\@easy@hsizeix=\dimen278
+\@easy@vsizeix=\dimen279
+\@easy@hsizeviii=\dimen280
+\@easy@vsizeviii=\dimen281
+\@easy@hsizevii=\dimen282
+\@easy@vsizevii=\dimen283
+\@easy@hsizevi=\dimen284
+\@easy@vsizevi=\dimen285
+\@easy@hsizev=\dimen286
+\@easy@vsizev=\dimen287
+\@easy@hsizeiv=\dimen288
+\@easy@vsizeiv=\dimen289
+\@easy@hsizeiii=\dimen290
+\@easy@vsizeiii=\dimen291
+\@easy@hsizeii=\dimen292
+\@easy@vsizeii=\dimen293
+\@easy@hsizei=\dimen294
+\@easy@vsizei=\dimen295
+\@easy@dash@len=\dimen296
+\@easy@dash@sep=\dimen297
+)
+Package: easytable 2001/05/31v1.1
+\@tab@size@rule=\dimen298
+\@tab@size@dash=\dimen299
+) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks18
+\labelindent=\skip52
+\enit@outerparindent=\dimen300
+\enit@toks=\toks19
+\enit@inbox=\box61
+\enit@count@id=\count195
+\enitdp@description=\count196
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen301
+\lightrulewidth=\dimen302
+\cmidrulewidth=\dimen303
+\belowrulesep=\dimen304
+\belowbottomsep=\dimen305
+\aboverulesep=\dimen306
+\abovetopsep=\dimen307
+\cmidrulesep=\dimen308
+\cmidrulekern=\dimen309
+\defaultaddspace=\dimen310
+\@cmidla=\count197
+\@cmidlb=\count198
+\@aboverulesep=\dimen311
+\@belowrulesep=\dimen312
+\@thisruleclass=\count199
+\@lastruleclass=\count266
+\@thisrulewidth=\dimen313
+) (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box62
+\beforetitleunit=\skip53
+\aftertitleunit=\skip54
+\ttl@plus=\dimen314
+\ttl@minus=\dimen315
+\ttl@toksa=\toks20
+\titlewidth=\dimen316
+\titlewidthlast=\dimen317
+\titlewidthfirst=\dimen318
+) (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip55
+\bibsep=\skip56
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count267
+) (/usr/share/texmf-dist/tex/latex/totcount/totcount.sty
+Package: totcount 2011/01/25 v1.2 package for gettingthe total value of LaTeX counters
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+))
+\c@chapter@totc=\count268
+ (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip57
+\thm@postskip=\skip58
+\thm@headsep=\skip59
+\dth@everypar=\toks27
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip60
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen319
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen320
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count269
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count270
+\leftroot@=\count271
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count272
+\DOTSCASE@=\count273
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box63
+\strutbox@=\box64
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen321
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count274
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count275
+\dotsspace@=\muskip16
+\c@parentequation=\count276
+\dspbrk@lvl=\count277
+\tag@help=\toks30
+\row@=\count278
+\column@=\count279
+\maxfields@=\count280
+\andhelp@=\toks31
+\eqnshift@=\dimen322
+\alignsep@=\dimen323
+\tagshift@=\dimen324
+\tagwidth@=\dimen325
+\totwidth@=\dimen326
+\lineht@=\dimen327
+\@envbody=\toks32
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count281
+\Gm@cntv=\count282
+\c@Gm@tempcnt=\count283
+\Gm@bindingoffset=\dimen328
+\Gm@wd@mp=\dimen329
+\Gm@odd@mp=\dimen330
+\Gm@even@mp=\dimen331
+\Gm@layoutwidth=\dimen332
+\Gm@layoutheight=\dimen333
+\Gm@layouthoffset=\dimen334
+\Gm@layoutvoffset=\dimen335
+\Gm@dimlist=\toks34
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen336
+\Gin@req@width=\dimen337
+) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip63
+\fb@frw=\dimen338
+\fb@frh=\dimen339
+\FrameRule=\dimen340
+\FrameSep=\dimen341
+) (/usr/share/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2023/03/07 v2.0a lastpage: 2.09 or 2e? (HMM)
+ (/usr/share/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2023/03/07 v2.0a Decide which 2e lastpage version to use (HMM)
+ (/usr/share/texmf-dist/tex/latex/lastpage/lastpagemodern.sty
+Package: lastpagemodern 2023-03-07 v2.0a Refers to last page's name (HMM; JPG)
+) 
+)) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count284
+)
+\@linkdim=\dimen342
+\Hy@linkcounter=\count285
+\Hy@pagecounter=\count286
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count287
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count288
+ (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen343
+ (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count289
+\Field@Width=\dimen344
+\Fld@charsize=\dimen345
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring ON on input line 6060.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count290
+\c@Item=\count291
+\c@Hfootnote=\count292
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
+ (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box65
+\c@Hy@AnnotLevel=\count293
+\HyField@AnnotCount=\count294
+\Fld@listcount=\count295
+\c@bookmark@seq@number=\count296
+ (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip64
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip65
+\f@nch@O@elh=\skip66
+\f@nch@O@erh=\skip67
+\f@nch@O@olh=\skip68
+\f@nch@O@orh=\skip69
+\f@nch@O@elf=\skip70
+\f@nch@O@erf=\skip71
+\f@nch@O@olf=\skip72
+\f@nch@O@orf=\skip73
+) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count297
+\float@exts=\toks35
+\float@box=\box66
+\@float@everytoks=\toks36
+\@floatcapt=\box67
+) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks37
+\c@algorithm=\count298
+) (/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count299
+\c@ALG@rem=\count300
+\c@ALG@nested=\count301
+\ALG@tlm=\skip74
+\ALG@thistlm=\skip75
+\c@ALG@Lnr=\count302
+\c@ALG@blocknr=\count303
+\c@ALG@storecount=\count304
+\c@ALG@tmpcounter=\count305
+\ALG@tmplength=\skip76
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip77
+\subfigcapskip=\skip78
+\subfigcaptopadj=\dimen346
+\subfigbottomskip=\skip79
+\subfigcapmargin=\dimen347
+\subfiglabelskip=\skip80
+\c@subfigure=\count306
+\c@lofdepth=\count307
+\c@subtable=\count308
+\c@lotdepth=\count309
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip81
+\subfig@bottom=\skip82
+) (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip83
+\cftbeforetoctitleskip=\skip84
+\cftaftertoctitleskip=\skip85
+\cftbeforepartskip=\skip86
+\cftpartnumwidth=\skip87
+\cftpartindent=\skip88
+\cftbeforechapskip=\skip89
+\cftchapindent=\skip90
+\cftchapnumwidth=\skip91
+\cftbeforesecskip=\skip92
+\cftsecindent=\skip93
+\cftsecnumwidth=\skip94
+\cftbeforesubsecskip=\skip95
+\cftsubsecindent=\skip96
+\cftsubsecnumwidth=\skip97
+\cftbeforesubsubsecskip=\skip98
+\cftsubsubsecindent=\skip99
+\cftsubsubsecnumwidth=\skip100
+\cftbeforeparaskip=\skip101
+\cftparaindent=\skip102
+\cftparanumwidth=\skip103
+\cftbeforesubparaskip=\skip104
+\cftsubparaindent=\skip105
+\cftsubparanumwidth=\skip106
+\cftbeforeloftitleskip=\skip107
+\cftafterloftitleskip=\skip108
+\cftbeforefigskip=\skip109
+\cftfigindent=\skip110
+\cftfignumwidth=\skip111
+\cftbeforelottitleskip=\skip112
+\cftafterlottitleskip=\skip113
+\cftbeforetabskip=\skip114
+\cfttabindent=\skip115
+\cfttabnumwidth=\skip116
+\cftbeforesubfigskip=\skip117
+\cftsubfigindent=\skip118
+\cftsubfignumwidth=\skip119
+\cftbeforesubtabskip=\skip120
+\cftsubtabindent=\skip121
+\cftsubtabnumwidth=\skip122
+) (/usr/share/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/share/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+\openout3 = `main.idx'.
+
+
+Writing index file main.idx
+(/usr/local/share/texmf/tex/xelatex/xepersian/xepersian.sty
+Package: xepersian 2022/10/30 v24.8 (Release Women, Life, and Freedom) Persian typesetting in XeLaTeX
+ (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count310
+\l__pdf_internal_box=\box68
+\g__pdf_backend_object_int=\count311
+\g__pdf_backend_annotation_int=\count312
+\g__pdf_backend_link_int=\count313
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+ (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count314
+\l__fontspec_language_int=\count315
+\l__fontspec_strnum_int=\count316
+\l__fontspec_tmp_int=\count317
+\l__fontspec_tmpa_int=\count318
+\l__fontspec_tmpb_int=\count319
+\l__fontspec_tmpc_int=\count320
+\l__fontspec_em_int=\count321
+\l__fontspec_emdef_int=\count322
+\l__fontspec_strong_int=\count323
+\l__fontspec_strongdef_int=\count324
+\l__fontspec_tmpa_dim=\dimen348
+\l__fontspec_tmpb_dim=\dimen349
+\l__fontspec_tmpc_dim=\dimen350
+ (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/share/texmf/tex/xelatex/xepersian/xepersian-persiancal.sty
+Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
+\XePersian@i=\count325
+\XePersian@y=\count326
+\XePersian@m=\count327
+\XePersian@d=\count328
+\XePersian@latini=\count329
+\XePersian@persiani=\count330
+\XePersian@latinii=\count331
+\XePersian@persianii=\count332
+\XePersian@latiniii=\count333
+\XePersian@persianiii=\count334
+\XePersian@latiniv=\count335
+\XePersian@persianiv=\count336
+\XePersian@latinv=\count337
+\XePersian@persianv=\count338
+\XePersian@latinvi=\count339
+\XePersian@persianvi=\count340
+\XePersian@latinvii=\count341
+\XePersian@persianvii=\count342
+\XePersian@latinviii=\count343
+\XePersian@persianviii=\count344
+\XePersian@latinix=\count345
+\XePersian@persianix=\count346
+\XePersian@latinx=\count347
+\XePersian@persianx=\count348
+\XePersian@latinxi=\count349
+\XePersian@persianxi=\count350
+\XePersian@latinxii=\count351
+\XePersian@persianxii=\count352
+\XePersian@persianxiii=\count353
+\XePersian@temp=\count354
+\XePersian@temptwo=\count355
+\XePersian@tempthree=\count356
+\XePersian@yModHundred=\count357
+\XePersian@thirtytwo=\count358
+\XePersian@dn=\count359
+\XePersian@sn=\count360
+\XePersian@mminusone=\count361
+) (/usr/local/share/texmf/tex/xelatex/xepersian/xepersian-mathdigitspec.sty
+Package: xepersian-mathdigitspec 2022/05/20 v1.2.0 Unicode Persian math digits in XeLaTeX
+) (/usr/share/texmf-dist/tex/xelatex/bidi/bidi.sty
+Package: bidi 2023/01/18 v39.7 (Release Serge Lang) Bidirectional typesetting in plain TeX and LaTeX
+
+****************************************************
+* 
+* bidi package (Bidirectional typesetting in
+* plain TeX and LaTeX, using XeTeX engine)
+* 
+* Description: A convenient interface for
+* typesetting bidirectional texts in plain TeX
+* and LaTeX. The package includes adaptations
+* for use with many other commonly-used packages.
+* 
+* Copyright (c) 2007--2023 Vafa Khalighi
+* Copyright (c) 2018--2020 bidi-tex GitHub organization
+* 
+* v39.7 (Release Serge Lang), 2023/01/18
+* 
+* License: LaTeX Project Public License, version
+* 1.3c or higher (your choice)
+* 
+* Location on CTAN: /macros/xetex/latex/bidi
+* 
+* Issue tracker: https://github.com/kvafa/bidi/issues
+* 
+* Discussions: https://github.com/kvafa/bidi/discussions
+* 
+* Primary author of bidi package: Vafa Khalighi.
+* 
+****************************************************
+(/usr/share/texmf-dist/tex/xelatex/bidi/biditools.sty
+Package: biditools 2022/06/15 v2.3 Programming tools for bidi package
+\@bidi@envbody=\toks38
+\@bidi@emptytoks=\toks39
+\bidi@poscount=\count362
+\bidi@tempcountb=\count363
+\bidi@temptoksa=\toks40
+\bidi@temptoksb=\toks41
+\bidi@dummies=\count364
+\bidi@are@these@correct=\toks42
+\bidi@toks@lista=\toks43
+\bidi@toks@listb=\toks44
+\bidi@stack@length=\count365
+\bidi@empty@stack=\toks45
+\bidi@looprepeat@depth=\count366
+) (/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
+ (/usr/share/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count367
+Package zref Info: New property: abspage on input line 65.
+) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks46
+\XKV@tempa@toks=\toks47
+)
+\XKV@depth=\count368
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\@bidi@copyins@=\insert252
+ (/usr/share/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
+File: latex-xetex-bidi.def 2022/07/04 v1.4.9 bidi adaptations for `latex.ltx' for XeTeX engine
+\bidi@n@everypar=\toks48
+\bidi@column@check@number=\count369
+ (/usr/share/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
+File: footnote-xetex-bidi.def 2023/01/18 v1.2 bidi footnote macros for XeTeX engine
+\c@footdir@label=\count370
+\footdir@toks=\toks49
+) (/usr/share/texmf-dist/tex/xelatex/bidi/book-xetex-bidi.def
+File: book-xetex-bidi.def 2017/06/09 v1.0 bidi adaptations for standard book class for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/amsmath-xetex-bidi.def
+File: amsmath-xetex-bidi.def 2020/05/16 v1.2 bidi adaptations for amsmath package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
+File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/amsthm-xetex-bidi.def
+File: amsthm-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for amsthm package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/float-xetex-bidi.def
+File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/graphicx-xetex-bidi.def
+File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/geometry-xetex-bidi.def
+File: geometry-xetex-bidi.def 2017/01/14 v0.2 bidi adaptations for geometry package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/tabularx-xetex-bidi.def
+File: tabularx-xetex-bidi.def 2014/11/08 v0.1 bidi adaptations for tabularx package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/hyperref-xetex-bidi.def
+File: hyperref-xetex-bidi.def 2018/11/11 v1.1 bidi adaptations for hyperref package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/fancyhdr-xetex-bidi.def
+File: fancyhdr-xetex-bidi.def 2018/02/15 v0.7 bidi adaptations for fancyhdr package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/framed-xetex-bidi.def
+File: framed-xetex-bidi.def 2012/06/05 v0.3 bidi adaptations for framed package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/titlesec-xetex-bidi.def
+File: titlesec-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for titlesec package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/array-xetex-bidi.def
+File: array-xetex-bidi.def 2015/11/07 v0.3 bidi adaptations for array package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/subfigure-xetex-bidi.def
+File: subfigure-xetex-bidi.def 2010/03/01 v0.1 bidi adaptations for subfigure package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/natbib-xetex-bidi.def
+File: natbib-xetex-bidi.def 2017/06/09 v0.2 bidi adaptations for natbib package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/tocbibind-xetex-bidi.def
+File: tocbibind-xetex-bidi.def 2017/06/09 v0.4 bidi adaptations for tocbibind package for XeTeX engine
+) (/usr/share/texmf-dist/tex/xelatex/bidi/tocloft-xetex-bidi.def
+File: tocloft-xetex-bidi.def 2010/07/25 v0.2 bidi adaptations for tocloft package for XeTeX engine
+)) (/usr/share/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def
+File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the last package loaded
+)
+\bidi@digits=\count371
+\bidi@digits@charclass=\XeTeXcharclass1
+\bidi@sepmark@charclass=\XeTeXcharclass2
+)
+****************************************************
+* 
+* xepersian package (Persian for LaTeX, using XeTeX engine)
+* 
+* Description: The package supports Persian
+* typesetting, using fonts provided in the
+* distribution.
+* 
+* Copyright (c) 2008--2022 Vafa Khalighi
+* Copyright (c) 2018--2020 bidi-tex GitHub Organization
+* 
+* v24.8 (Release Women, Life, and Freedom), 2022/10/30
+* 
+* License: LaTeX Project Public License, version
+* 1.3c or higher (your choice)
+* 
+* Location on CTAN: /macros/xetex/latex/xepersian
+* 
+* Issue tracker: https://github.com/kvafa/xepersian/issues
+* 
+* Discussions: https://github.com/kvafa/xepersian/discussions
+* 
+* Primary author of xepersian package: Vafa Khalighi.
+* 
+****************************************************
+\xepersian@tcl=\count372
+\xepersian@ilg=\dimen351
+\xepersian@strutilg=\dimen352
+(/usr/local/share/texmf/tex/xelatex/xepersian/loadingorder-xepersian.def
+File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is the last package loaded
+) (/usr/local/share/texmf/tex/xelatex/xepersian/footnote-xepersian.def
+File: footnote-xepersian.def 2017/08/09 v0.6 footnote macros for xepersian package
+) (/usr/local/share/texmf/tex/xelatex/xepersian/algorithm-xepersian.def
+File: algorithm-xepersian.def 2010/07/25 v0.2 adaptations for algorithm package
+) (/usr/local/share/texmf/tex/xelatex/xepersian/enumitem-xepersian.def
+File: enumitem-xepersian.def 2017/09/06 v0.1 adaptations for enumitem package
+) (/usr/local/share/texmf/tex/xelatex/xepersian/framed-xepersian.def
+File: framed-xepersian.def 2012/06/05 v0.1 xepersian adaptations for framed package for XeTeX engine
+) (/usr/local/share/texmf/tex/xelatex/xepersian/hyperref-xepersian.def
+File: hyperref-xepersian.def 2022/10/30 v0.8 xepersian adaptations for hyperref package
+) (/usr/local/share/texmf/tex/xelatex/xepersian/natbib-xepersian.def
+File: natbib-xepersian.def 2011/08/01 v0.1 adaptations for natbib package
+LaTeX Info: Redefining \Latincite on input line 245.
+) (/usr/local/share/texmf/tex/xelatex/xepersian/tocloft-xepersian.def
+File: tocloft-xepersian.def 2010/07/25 v0.1 bilingual captions for tocloft package
+) (/usr/local/share/texmf/tex/xelatex/xepersian/url-xepersian.def
+File: url-xepersian.def 2022/02/18 v0.1 adaptations for url package
+) (/usr/local/share/texmf/tex/xelatex/xepersian/book-xepersian.def
+File: book-xepersian.def 2010/07/25 v0.2 adaptations for standard book class
+) (/usr/share/texmf-dist/tex/xelatex/bidi/extrafootnotefeatures-xetex-bidi.def
+File: extrafootnotefeatures-xetex-bidi.def 2023/01/18 v2.5 bidi extra footnote features for XeTeX engine
+\bidi@columnwidth=\dimen353
+\footmarkwidth=\skip123
+\footinsdim=\skip124
+\bidi@absolutepage@count=\count373
+\bidi@absolutefootnote@count=\count374
+\footinsv@r=\insert251
+\footinsv@l=\insert250
+\@mpfootinsv@r=\insert249
+\@mpfootinsv@l=\insert248
+\m@m@k=\count375
+\m@m@h=\dimen354
+\m@mipn@skip=\skip125
+) (/usr/local/share/texmf/tex/xelatex/xepersian/extrafootnotefeatures-xepersian.def
+File: extrafootnotefeatures-xepersian.def 2012/01/01 v0.2 footnote macros for extrafootnotefeatures option of xepersian package
+)
+
+Package fontspec Info: Font family 'lmroman10-regular(0)' created for font
+(fontspec)             'lmroman10-regular' with options
+(fontspec)             [Ligatures=TeX,Path,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic},SmallCapsFont={lmromancaps10-regular},SlantedFont={lmromanslant10-regular},BoldSlantedFont={lmromanslant10-bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[lmroman10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[lmroman10-bold]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[lmroman10-italic]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->"[lmromanslant10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[lmroman10-bolditalic]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->"[lmromanslant10-bold]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt;mapping=tex-text;"
+
+)
+
+Package fontspec Info: Font family 'IRNazanin.ttf(0)' created for font
+(fontspec)             'IRNazanin.ttf' with options
+(fontspec)             [RawFeature={script=arab},Ligatures=PersianTeX,Scale=1,BoldFont={*Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[IRNazaninBold.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 58.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+
+Package fontspec Info: Font family 'IRNazanin.ttf(1)' created for font
+(fontspec)             'IRNazanin.ttf' with options [Ligatures=TeX,Scale=1].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[IRNazanin.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+LaTeX Info: Redefining \latinfont on input line 60.
+
+Package fontspec Info: Font family 'IRNazanin.ttf(2)' created for font
+(fontspec)             'IRNazanin.ttf' with options
+(fontspec)             [RawFeature={script=arab},Ligatures=PersianTeX,Scale=1].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+\c@definition=\count376
+
+
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 96.
+
+\mylenprt=\skip126
+\mylenchp=\skip127
+\mylenapp=\skip128
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 139.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/bx/n' in size <14.4> not available
+(Font)              Font shape `TU/IRNazanin.ttf(0)/b/n' tried instead on input line 139.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 139.
+Font mapping `persian-tex-text.tec' for font `[IRNazaninBold.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/bx/n' in size <12> not available
+(Font)              Font shape `TU/IRNazanin.ttf(0)/b/n' tried instead on input line 140.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 140.
+Font mapping `persian-tex-text.tec' for font `[IRNazaninBold.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+) (/usr/share/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
+\FN@temptoken=\toks50
+\footnotemargin=\dimen355
+\@outputbox@depth=\dimen356
+Package footmisc Info: Declaring symbol style bringhurst on input line 695.
+Package footmisc Info: Declaring symbol style chicago on input line 703.
+Package footmisc Info: Declaring symbol style wiley on input line 712.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+Package footmisc Info: Declaring symbol style lamport* on input line 743.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 764.
+) (/usr/share/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+ (/usr/share/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+ (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+) (/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+ (/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\g__um_fam_int=\count377
+\g__um_fonts_used_int=\count378
+\l__um_primecount_int=\count379
+\g__um_primekern_muskip=\muskip18
+ (/usr/share/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip129
+\multirow@cntb=\count380
+\multirow@dima=\skip130
+\bigstrutjot=\dimen357
+)
+
+LaTeX Warning: Unused global option(s):
+    [oneside,openany].
+
+(./main.aux (./sections/intro.aux) (./sections/basics.aux) (./sections/related.aux) (./sections/method.aux) (./sections/eval.aux) (./sections/concl.aux) (./dicfa2en.aux) (./dicen2fa.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 426.79135pt, 99.58464pt)
+* v-part:(T,H,B)=(113.81102pt, 617.4248pt, 113.81102pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=617.4248pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=9.66724pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+ (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 21.
+ (./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/IRNazanin.ttf(0)/m/n on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/IRNazanin.ttf(0)/m/it on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/IRNazanin.ttf(0)/b/n on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 21.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 21.
+
+Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.2->"[latinmodern-math.otf]/OT:script=math;language=dflt;"<7.2-10.2>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-7.2>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 21.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 21.
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =8.124pt\relax \fontdimen 9\font =4.728pt\relax
+(fontspec)             \fontdimen 10\font =5.328pt\relax \fontdimen 11\font
+(fontspec)             =8.232pt\relax \fontdimen 12\font =4.14pt\relax
+(fontspec)             \fontdimen 13\font =4.356pt\relax \fontdimen 14\font
+(fontspec)             =4.356pt\relax \fontdimen 15\font =3.468pt\relax
+(fontspec)             \fontdimen 16\font =2.964pt\relax \fontdimen 17\font
+(fontspec)             =2.964pt\relax \fontdimen 18\font =3.0pt\relax
+(fontspec)             \fontdimen 19\font =2.4pt\relax \fontdimen 22\font
+(fontspec)             =3.0pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.2->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<7.2-10.2>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =8.124pt\relax \fontdimen 9\font
+(fontspec)             =4.728pt\relax \fontdimen 10\font =5.328pt\relax
+(fontspec)             \fontdimen 11\font =8.232pt\relax \fontdimen 12\font
+(fontspec)             =4.14pt\relax \fontdimen 13\font =4.356pt\relax
+(fontspec)             \fontdimen 14\font =4.356pt\relax \fontdimen 15\font
+(fontspec)             =3.468pt\relax \fontdimen 16\font =2.964pt\relax
+(fontspec)             \fontdimen 17\font =2.964pt\relax \fontdimen 18\font
+(fontspec)             =3.0pt\relax \fontdimen 19\font =2.4pt\relax \fontdimen
+(fontspec)             22\font =3.0pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =8.124pt\relax \fontdimen 9\font
+(fontspec)             =4.728pt\relax \fontdimen 10\font =5.328pt\relax
+(fontspec)             \fontdimen 11\font =8.232pt\relax \fontdimen 12\font
+(fontspec)             =4.14pt\relax \fontdimen 13\font =4.356pt\relax
+(fontspec)             \fontdimen 14\font =4.356pt\relax \fontdimen 15\font
+(fontspec)             =3.468pt\relax \fontdimen 16\font =2.964pt\relax
+(fontspec)             \fontdimen 17\font =2.964pt\relax \fontdimen 18\font
+(fontspec)             =3.0pt\relax \fontdimen 19\font =2.4pt\relax \fontdimen
+(fontspec)             22\font =3.0pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 21.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 21.
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.48pt\relax \fontdimen 9\font =2.4pt\relax
+(fontspec)             \fontdimen 10\font =2.004pt\relax \fontdimen 11\font
+(fontspec)             =1.332pt\relax \fontdimen 12\font =7.2pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.2->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<7.2-10.2>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.48pt\relax \fontdimen 9\font
+(fontspec)             =2.4pt\relax \fontdimen 10\font =2.004pt\relax
+(fontspec)             \fontdimen 11\font =1.332pt\relax \fontdimen 12\font
+(fontspec)             =7.2pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.48pt\relax \fontdimen 9\font
+(fontspec)             =2.4pt\relax \fontdimen 10\font =2.004pt\relax
+(fontspec)             \fontdimen 11\font =1.332pt\relax \fontdimen 12\font
+(fontspec)             =7.2pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 21.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 21.
+ (./faTitle.tex
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 37.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(2)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 37.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 37.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/b/n' will be
+(Font)              scaled to size 17.28pt on input line 37.
+Font mapping `persian-tex-text.tec' for font `[IRNazaninBold.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+ [1
+
+]
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(2)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 39.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.00128pt on input line 45.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.40088pt on input line 45.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.00064pt on input line 45.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.99872pt on input line 45.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.3991pt on input line 45.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 56.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/it' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/n' instead on input line 56.
+
+[1]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 57.
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 57.
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[][]
+ []
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 63.
+
+[3]
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 8.4pt on input line 127.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 127.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 127.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 127.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 127.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 127.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 127.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 127.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 127.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 127.
+ [4])
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 25.
+Font mapping `persian-tex-text.tec' for font `[IRNazaninBold.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+ (./main.toc
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 25.
+ [5
+
+]
+
+Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page ج undefined on input line 67.
+
+
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page ج undefined on input line 69.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 80.
+
+[6]
+
+Package natbib Warning: Citation `zhang2019bertscore' on page چ undefined on input line 82.
+
+)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 27.
+
+[7] (./main.lof [8])
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 28.
+
+[9] (./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+ [10]
+\openout2 = `sections/intro.aux'.
+
+ (./sections/intro.tex
+فصل 1.
+[1
+
+
+]
+File: figs/Intro_objective_train.png Graphic file (type bmp)
+<figs/Intro_objective_train.png>
+)
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 35.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 35.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2]
+\openout2 = `sections/basics.aux'.
+
+ (./sections/basics.tex
+فصل 2.
+
+Package natbib Warning: Citation `tensorflow2015-whitepaper' on page 3 undefined on input line 44.
+
+
+Package natbib Warning: Citation `NEURIPS2019_9015' on page 3 undefined on input line 47.
+
+[3
+
+
+
+
+]
+
+Package natbib Warning: Citation `sontag1995computational' on page 4 undefined on input line 70.
+
+File: figs/RNN_ARC_1.png Graphic file (type bmp)
+<figs/RNN_ARC_1.png>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 83.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 83.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+File: figs/LSTM_ARC_1.png Graphic file (type bmp)
+<figs/LSTM_ARC_1.png>
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 112.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 112.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 157.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 157.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6]
+File: figs/GRU_ARC_1.png Graphic file (type bmp)
+<figs/GRU_ARC_1.png>
+File: figs/enc_dec.png Graphic file (type bmp)
+<figs/enc_dec.png>
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 206.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 206.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(1)/b/n' undefined
+(Font)              using `TU/IRNazanin.ttf(1)/m/n' instead on input line 223.
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 223.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 223.
+
+Package natbib Warning: Citation `DBLP:journals/corr/BahdanauCB14' on page 8 undefined on input line 227.
+
+File: figs/bahdanau_attn_1.jpeg Graphic file (type bmp)
+<figs/bahdanau_attn_1.jpeg>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 237.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 237.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 260.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 260.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9]
+
+Package natbib Warning: Citation `luong-etal-2015-effective' on page 10 undefined on input line 290.
+
+
+Overfull \hbox (0.27505pt too wide) in paragraph at lines 288--297
+[][] [][] \TU/IRNazanin.ttf(0)/m/it/12 در سال 2015، مقاله‌ای دیگر [\TU/IRNazanin.ttf(0)/b/n/12 ? \TU/IRNazanin.ttf(0)/m/it/12 ] مدل مکانیزم دیگری ارائه داد. از آنجایی که هدف مکانیزم توجه، محاسبه شباهت‌های[]
+ []
+
+
+Package natbib Warning: Citation `cheng-etal-2016-long' on page 10 undefined on input line 317.
+
+
+LaTeX Warning: Reference `fig:self_attention' on page 10 undefined on input line 323.
+
+File: figs/self_attn_1.png Graphic file (type bmp)
+<figs/self_attn_1.png>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 330.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 330.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
+
+Package natbib Warning: Citation `NIPS2017_3f5ee243' on page 11 undefined on input line 341.
+
+File: figs/transformers_arc_1.png Graphic file (type bmp)
+<figs/transformers_arc_1.png>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 368.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 368.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
+File: figs/multihead_attn_1.png Graphic file (type bmp)
+<figs/multihead_attn_1.png>
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 395.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 395.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 456.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 456.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
+(Font)              scaled to size 17.28pt on input line 462.
+File: figs/single_stream_arc.png Graphic file (type bmp)
+<figs/single_stream_arc.png>
+File: figs/dual_stream_arc.png Graphic file (type bmp)
+<figs/dual_stream_arc.png>
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 510.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(1)/m/it' undefined
+(Font)              using `TU/IRNazanin.ttf(1)/m/n' instead on input line 510.
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 510.
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 510.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14])
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 36.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 36.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
+\openout2 = `sections/related.aux'.
+
+ (./sections/related.tex
+فصل 3.
+
+Overfull \hbox (8.98209pt too wide) in paragraph at lines 11--18
+[][] [][] \TU/IRNazanin.ttf(0)/m/it/12 در این فصل به معرفی کارهای مشابه و شرح رویکردهای مورد استفاده برای حل مساله‌ی پرسش‌و‌پاسخ تصویری می‌پردازیم.[]
+ []
+
+Missing character: There is no ̊ (U+030A) in font [IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+
+Package natbib Warning: Citation `fukui-etal-2016-multimodal' on page 16 undefined on input line 41.
+
+File: figs/BiPooling.png Graphic file (type bmp)
+<figs/BiPooling.png>
+[16
+
+
+
+
+]
+
+Package natbib Warning: Citation `kim2016hadamard' on page 17 undefined on input line 54.
+
+
+Package natbib Warning: Citation `yang2016stacked' on page 17 undefined on input line 69.
+
+
+Package natbib Warning: Citation `NIPS2016_9dcb88e0' on page 17 undefined on input line 72.
+
+
+Package natbib Warning: Citation `nguyen2018improved' on page 17 undefined on input line 75.
+
+File: figs/stacked_attention.png Graphic file (type bmp)
+<figs/stacked_attention.png>
+
+Overfull \hbox (5.95865pt too wide) in paragraph at lines 66--94
+[][] [][] \TU/IRNazanin.ttf(0)/m/it/12 تا قبل از اینکه معماری‌های تبدیل‌کننده معرفی شوند،‌ محققان از مکانیزم توجه بر شبکه‌های عصبی بازگشتی و شبکه‌های[]
+ []
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 96.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 96.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+
+Package natbib Warning: Citation `teney2017graph' on page 18 undefined on input line 107.
+
+File: figs/object_relation.png Graphic file (type bmp)
+<figs/object_relation.png>
+
+Package natbib Warning: Citation `gao2015you' on page 18 undefined on input line 135.
+
+
+Package natbib Warning: Citation `wu2016ask' on page 18 undefined on input line 137.
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 18 undefined on input line 142.
+
+
+Package natbib Warning: Citation `pmlr-v139-cho21a' on page 18 undefined on input line 147.
+
+
+Package natbib Warning: Citation `VQA' on page 18 undefined on input line 156.
+
+File: figs/VL-BART.png Graphic file (type bmp)
+<figs/VL-BART.png>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 163.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 163.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+
+Package natbib Warning: Citation `zellers2019recognition' on page 19 undefined on input line 175.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 187.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 187.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+File: figs/VCR.png Graphic file (type bmp)
+<figs/VCR.png>
+
+
+Package natbib Warning: Citation `li2018vqa' on page 20 undefined on input line 196.
+
+
+Package natbib Warning: Citation `schwenk2022okvqa' on page 20 undefined on input line 206.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 209.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 209.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20])
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 37.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 37.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+\openout2 = `sections/method.aux'.
+
+ (./sections/method.tex
+فصل 4.
+
+Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 22 undefined on input line 11.
+
+
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 22 undefined on input line 13.
+
+File: figs/model architecture.png Graphic file (type bmp)
+<figs/model architecture.png>
+[22
+
+
+
+
+]
+File: figs/tokenization.png Graphic file (type bmp)
+<figs/tokenization.png>
+
+
+Package natbib Warning: Citation `anderson2018bottom' on page 23 undefined on input line 82.
+
+
+Package natbib Warning: Citation `ren2015faster' on page 23 undefined on input line 85.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 102.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 102.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+
+Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 24 undefined on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 105.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 105.
+
+File: figs/lxmert.png Graphic file (type bmp)
+<figs/lxmert.png>
+
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 24 undefined on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 132.
+
+
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 24 undefined on input line 141.
+
+File: figs/VisualBERT.png Graphic file (type bmp)
+<figs/VisualBERT.png>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 156.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 156.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+File: figs/Autoregressive.png Graphic file (type bmp)
+<figs/Autoregressive.png>
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 180.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 180.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25])
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+\openout2 = `sections/eval.aux'.
+
+ (./sections/eval.tex
+فصل 5.
+
+Package natbib Warning: Citation `papineni2002bleu' on page 27 undefined on input line 31.
+
+
+Package natbib Warning: Citation `lin2004rouge' on page 27 undefined on input line 32.
+
+
+Package natbib Warning: Citation `banerjee2005meteor' on page 27 undefined on input line 34.
+
+[27
+
+
+
+
+]
+
+Package natbib Warning: Citation `zhang2019bertscore' on page 28 undefined on input line 50.
+
+
+Package natbib Warning: Citation `zhang2019bertscore' on page 28 undefined on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 58.
+
+
+Overfull \hbox (3.35709pt too wide) in paragraph at lines 61--72
+[]\TU/IRNazanin.ttf(0)/m/it/12 روش‌های رایج موجود که شباهت نحوی توکن‌ها را محاسبه می‌کنند، BERTScore بر محاسبه شباهت معنایی بین توکن‌های[]
+ []
+
+
+Package natbib Warning: Citation `shin2016color' on page 28 undefined on input line 119.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 122.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 122.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+
+Package natbib Warning: Citation `VQA' on page 29 undefined on input line 128.
+
+
+Package natbib Warning: Citation `caesar2018coco' on page 29 undefined on input line 130.
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 175.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 207.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/b/n' will be
+(Font)              scaled to size 6.0pt on input line 207.
+Font mapping `persian-tex-text.tec' for font `[IRNazaninBold.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
+(Font)              scaled to size 6.0pt on input line 207.
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 212.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 212.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 269.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 302.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 302.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 376.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 376.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 394.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 394.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+File: figs/472228.jpg Graphic file (type bmp)
+<figs/472228.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[][][][][][]
+ []
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 498.
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 498.
+Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
+File: figs/485799.jpg Graphic file (type bmp)
+<figs/485799.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[][][]\TU/IRNazanin.ttf(1)/m/n/10.95 Q: what color is the[][]
+ []
+
+File: figs/571585.jpg Graphic file (type bmp)
+<figs/571585.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[][][][][][]
+ []
+
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
+(Font)              scaled to size 10.95pt on input line 510.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95116pt on input line 512.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.00085pt on input line 512.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 512.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.99915pt on input line 512.
+File: figs/error.jpg Graphic file (type bmp)
+<figs/error.jpg>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 525.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 525.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33])
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+\openout2 = `sections/concl.aux'.
+
+ (./sections/concl.tex
+فصل 6.
+[36
+
+
+
+
+])
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 40.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 40.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX,Scale=0.8].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[0.8]"Times New
+(fontspec)             Roman/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[0.8]"Times New
+(fontspec)             Roman/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[0.8]"Times New
+(fontspec)             Roman/I/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.8]"Times New
+(fontspec)             Roman/BI/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Info: Redefining \latinfont on input line 47.
+\openout2 = `dicfa2en.aux'.
+
+ (./dicfa2en.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 4--62
+[][]
+ []
+
+[38
+
+
+
+
+]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 62.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 62.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39]
+\openout2 = `dicen2fa.aux'.
+
+ (./dicen2fa.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 5--63
+[][]
+ []
+
+[40
+
+
+
+
+]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 63.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41] (./main.ind) (./enTitle.tex
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 31.
+ [42
+
+
+
+]
+File: logo-en.pdf Graphic file (type pdf)
+<use logo-en.pdf>
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 31.
+ [43])
+
+Package natbib Warning: There were undefined citations.
+
+
+enddocument/afterlastpage: lastpage setting LastPage.
+(./main.aux (./sections/intro.aux) (./sections/basics.aux) (./sections/related.aux) (./sections/method.aux) (./sections/eval.aux) (./sections/concl.aux) (./dicfa2en.aux) (./dicen2fa.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E4E590CDB6A8176BB0B1891C2421781A;13375.
+ ) 
+Here is how much of TeX's memory you used:
+ 22867 strings out of 476683
+ 431304 string characters out of 5809790
+ 1886018 words of memory out of 5000000
+ 42530 multiletter control sequences out of 15000+600000
+ 520219 words of font info for 129 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 92i,16n,115p,1388b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.xdv (54 pages, 733324 bytes).
