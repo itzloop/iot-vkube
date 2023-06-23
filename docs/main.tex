@@ -1,0 +1,68 @@
+% !TeX document-id = {3ccf434d-8187-4348-af82-ed6ccf391a39}
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex main
+% 	 bibtex8 -W -c cp1256fa main
+%      xindy -L persian -C utf8 -M texindy main
+% 	 xelatex main
+% 	 xelatex main
+% End of Commands
+
+\documentclass[oneside,openany,bsc]{IUST-Thesis}
+
+\input{commands}
+
+\usepackage[bottom]{footmisc}
+\usepackage{unicode-math}
+\usepackage{multirow}
+
+% \usepackage[noend]{algpseudocode}
+
+\begin{document}
+
+\pagenumbering{harfi}
+\input{faTitle}
+\tableofcontents
+
+\newpage
+\listoffigures \newpage
+\listoftables  \newpage
+% \addcontentsline{toc}{chapter}{\listalgorithmname}
+% \listofalgorithms \newpage
+% \input{acronyms}
+
+\pagestyle{fancy}
+\include{sections/intro}
+\include{sections/basics}
+\include{sections/related}
+\include{sections/method}
+\include{sections/eval}
+\include{sections/concl}
+
+
+\pagestyle{empty}
+{
+    % \settextfont[Scale=1,BoldFont={* Bold}]{Times New Roman}
+    \setlatintextfont[Scale=0.8]{Times New Roman}
+    \onehalfspacing
+    % \bibliographystyle{acm-fa}%{chicago-fa}%{plainnat-fa}%
+    \bibliographystyle{ieeetr-fa}%{chicago-fa}%{plainnat-fa}%
+    % \bibliography{MyReferences}
+}
+
+\pagestyle{fancy}
+
+% \appendix
+
+% \include{appendix1}
+% \include{appendix2}
+
+%\baselineskip=.75cm
+\onehalfspacing
+\include{dicfa2en}
+\include{dicen2fa}
+\printindex
+\input{enTitle}
+\label{LastPage}
+
+\end{document}

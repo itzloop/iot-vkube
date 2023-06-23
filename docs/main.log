@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.13)  16 JUN 2023 22:39
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.13)  23 JUN 2023 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1277,28 +1277,26 @@ LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 
 [3]
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
-(Font)              scaled to size 8.4pt on input line 127.
+(Font)              scaled to size 8.4pt on input line 131.
 Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 127.
+(Font)              scaled to size 10.0pt on input line 131.
 Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 127.
+(Font)              scaled to size 10.00107pt on input line 131.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 127.
+(Font)              scaled to size 7.00075pt on input line 131.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 127.
+(Font)              scaled to size 5.00053pt on input line 131.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 127.
+(Font)              scaled to size 9.99893pt on input line 131.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 127.
+(Font)              scaled to size 6.99925pt on input line 131.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 127.
+(Font)              scaled to size 4.99947pt on input line 131.
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 127.
+(Font)              scaled to size 7.0pt on input line 131.
 Font mapping `persian-tex-text.tec' for font `[IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;' not found.
-LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 127.
  [4])
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/b/n' will be
 (Font)              scaled to size 24.88pt on input line 25.
@@ -1350,13 +1348,41 @@ LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 
  (./sections/intro.tex
 فصل 1.
+
+Package natbib Warning: Citation `He_2016_CVPR' on page 1 undefined on input line 16.
+
+
+Package natbib Warning: Citation `Redmon_2016_CVPR' on page 1 undefined on input line 18.
+
+
+Package natbib Warning: Citation `He_2015_ICCV' on page 1 undefined on input line 21.
+
+
+Package natbib Warning: Citation `VQA' on page 1 undefined on input line 35.
+
 [1
 
 
 ]
 File: figs/Intro_objective_train.png Graphic file (type bmp)
 <figs/Intro_objective_train.png>
-)
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 76.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 76.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2])
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 35.
@@ -1372,25 +1398,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2]
+[3]
 \openout2 = `sections/basics.aux'.
 
  (./sections/basics.tex
 فصل 2.
 
-Package natbib Warning: Citation `tensorflow2015-whitepaper' on page 3 undefined on input line 44.
+Package natbib Warning: Citation `tensorflow2015-whitepaper' on page 4 undefined on input line 44.
 
 
-Package natbib Warning: Citation `NEURIPS2019_9015' on page 3 undefined on input line 47.
+Package natbib Warning: Citation `NEURIPS2019_9015' on page 4 undefined on input line 47.
 
-[3
+[4
 
 
 
 
 ]
 
-Package natbib Warning: Citation `sontag1995computational' on page 4 undefined on input line 70.
+Package natbib Warning: Citation `sontag1995computational' on page 5 undefined on input line 70.
 
 File: figs/RNN_ARC_1.png Graphic file (type bmp)
 <figs/RNN_ARC_1.png>
@@ -1409,7 +1435,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4]
+[5]
 File: figs/LSTM_ARC_1.png Graphic file (type bmp)
 <figs/LSTM_ARC_1.png>
 
@@ -1428,7 +1454,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
+[6]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 157.
@@ -1444,7 +1470,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6]
+[7]
 File: figs/GRU_ARC_1.png Graphic file (type bmp)
 <figs/GRU_ARC_1.png>
 File: figs/enc_dec.png Graphic file (type bmp)
@@ -1465,7 +1491,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
+[8]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(1)/b/n' undefined
 (Font)              using `TU/IRNazanin.ttf(1)/m/n' instead on input line 223.
@@ -1475,7 +1501,7 @@ LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 223.
 
-Package natbib Warning: Citation `DBLP:journals/corr/BahdanauCB14' on page 8 undefined on input line 227.
+Package natbib Warning: Citation `DBLP:journals/corr/BahdanauCB14' on page 9 undefined on input line 227.
 
 File: figs/bahdanau_attn_1.jpeg Graphic file (type bmp)
 <figs/bahdanau_attn_1.jpeg>
@@ -1494,7 +1520,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
+[9]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 260.
@@ -1510,9 +1536,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]
+[10]
 
-Package natbib Warning: Citation `luong-etal-2015-effective' on page 10 undefined on input line 290.
+Package natbib Warning: Citation `luong-etal-2015-effective' on page 11 undefined on input line 290.
 
 
 Overfull \hbox (0.27505pt too wide) in paragraph at lines 288--297
@@ -1520,10 +1546,10 @@ Overfull \hbox (0.27505pt too wide) in paragraph at lines 288--297
  []
 
 
-Package natbib Warning: Citation `cheng-etal-2016-long' on page 10 undefined on input line 317.
+Package natbib Warning: Citation `cheng-etal-2016-long' on page 11 undefined on input line 317.
 
 
-LaTeX Warning: Reference `fig:self_attention' on page 10 undefined on input line 323.
+LaTeX Warning: Reference `fig:self_attention' on page 11 undefined on input line 323.
 
 File: figs/self_attn_1.png Graphic file (type bmp)
 <figs/self_attn_1.png>
@@ -1542,9 +1568,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[11]
 
-Package natbib Warning: Citation `NIPS2017_3f5ee243' on page 11 undefined on input line 341.
+Package natbib Warning: Citation `NIPS2017_3f5ee243' on page 12 undefined on input line 341.
 
 File: figs/transformers_arc_1.png Graphic file (type bmp)
 <figs/transformers_arc_1.png>
@@ -1563,7 +1589,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[12]
 File: figs/multihead_attn_1.png Graphic file (type bmp)
 <figs/multihead_attn_1.png>
 
@@ -1582,7 +1608,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[13]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 456.
@@ -1598,7 +1624,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[14]
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 462.
 File: figs/single_stream_arc.png Graphic file (type bmp)
@@ -1627,7 +1653,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14])
+[15])
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 36.
@@ -1643,7 +1669,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15]
+[16]
 \openout2 = `sections/related.aux'.
 
  (./sections/related.tex
@@ -1655,27 +1681,27 @@ Overfull \hbox (8.98209pt too wide) in paragraph at lines 11--18
 
 Missing character: There is no ̊ (U+030A) in font [IRNazanin.ttf]/OT:language=dflt;script=arab;mapping=persian-tex-text;!
 
-Package natbib Warning: Citation `fukui-etal-2016-multimodal' on page 16 undefined on input line 41.
+Package natbib Warning: Citation `fukui-etal-2016-multimodal' on page 17 undefined on input line 41.
 
 File: figs/BiPooling.png Graphic file (type bmp)
 <figs/BiPooling.png>
-[16
+[17
 
 
 
 
 ]
 
-Package natbib Warning: Citation `kim2016hadamard' on page 17 undefined on input line 54.
+Package natbib Warning: Citation `kim2016hadamard' on page 18 undefined on input line 54.
 
 
-Package natbib Warning: Citation `yang2016stacked' on page 17 undefined on input line 69.
+Package natbib Warning: Citation `yang2016stacked' on page 18 undefined on input line 69.
 
 
-Package natbib Warning: Citation `NIPS2016_9dcb88e0' on page 17 undefined on input line 72.
+Package natbib Warning: Citation `NIPS2016_9dcb88e0' on page 18 undefined on input line 72.
 
 
-Package natbib Warning: Citation `nguyen2018improved' on page 17 undefined on input line 75.
+Package natbib Warning: Citation `nguyen2018improved' on page 18 undefined on input line 75.
 
 File: figs/stacked_attention.png Graphic file (type bmp)
 <figs/stacked_attention.png>
@@ -1699,26 +1725,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
+[18]
 
-Package natbib Warning: Citation `teney2017graph' on page 18 undefined on input line 107.
+Package natbib Warning: Citation `teney2017graph' on page 19 undefined on input line 107.
 
 File: figs/object_relation.png Graphic file (type bmp)
 <figs/object_relation.png>
 
-Package natbib Warning: Citation `gao2015you' on page 18 undefined on input line 135.
+Package natbib Warning: Citation `gao2015you' on page 19 undefined on input line 135.
 
 
-Package natbib Warning: Citation `wu2016ask' on page 18 undefined on input line 137.
+Package natbib Warning: Citation `wu2016ask' on page 19 undefined on input line 137.
 
 
-Package natbib Warning: Citation `wang2021simvlm' on page 18 undefined on input line 142.
+Package natbib Warning: Citation `wang2021simvlm' on page 19 undefined on input line 142.
 
 
-Package natbib Warning: Citation `pmlr-v139-cho21a' on page 18 undefined on input line 147.
+Package natbib Warning: Citation `pmlr-v139-cho21a' on page 19 undefined on input line 147.
 
 
-Package natbib Warning: Citation `VQA' on page 18 undefined on input line 156.
+Package natbib Warning: Citation `VQA' on page 19 undefined on input line 156.
 
 File: figs/VL-BART.png Graphic file (type bmp)
 <figs/VL-BART.png>
@@ -1737,9 +1763,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
+[19]
 
-Package natbib Warning: Citation `zellers2019recognition' on page 19 undefined on input line 175.
+Package natbib Warning: Citation `zellers2019recognition' on page 20 undefined on input line 175.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
@@ -1756,15 +1782,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19]
+[20]
 File: figs/VCR.png Graphic file (type bmp)
 <figs/VCR.png>
 
 
-Package natbib Warning: Citation `li2018vqa' on page 20 undefined on input line 196.
+Package natbib Warning: Citation `li2018vqa' on page 21 undefined on input line 196.
 
 
-Package natbib Warning: Citation `schwenk2022okvqa' on page 20 undefined on input line 206.
+Package natbib Warning: Citation `schwenk2022okvqa' on page 21 undefined on input line 206.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
@@ -1781,7 +1807,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20])
+[21])
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 37.
@@ -1797,20 +1823,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21]
+[22]
 \openout2 = `sections/method.aux'.
 
  (./sections/method.tex
 فصل 4.
 
-Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 22 undefined on input line 11.
+Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 23 undefined on input line 11.
 
 
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 22 undefined on input line 13.
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 23 undefined on input line 13.
 
 File: figs/model architecture.png Graphic file (type bmp)
 <figs/model architecture.png>
-[22
+[23
 
 
 
@@ -1820,10 +1846,10 @@ File: figs/tokenization.png Graphic file (type bmp)
 <figs/tokenization.png>
 
 
-Package natbib Warning: Citation `anderson2018bottom' on page 23 undefined on input line 82.
+Package natbib Warning: Citation `anderson2018bottom' on page 24 undefined on input line 82.
 
 
-Package natbib Warning: Citation `ren2015faster' on page 23 undefined on input line 85.
+Package natbib Warning: Citation `ren2015faster' on page 24 undefined on input line 85.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
@@ -1840,9 +1866,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23]
+[24]
 
-Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 24 undefined on input line 105.
+Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 25 undefined on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1872,10 +1898,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\new@ifnextchar' on input line 105.
 
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 113.
 File: figs/lxmert.png Graphic file (type bmp)
 <figs/lxmert.png>
 
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 24 undefined on input line 132.
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 25 undefined on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1906,7 +1934,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\new@ifnextchar' on input line 132.
 
 
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 24 undefined on input line 141.
+Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 25 undefined on input line 141.
 
 File: figs/VisualBERT.png Graphic file (type bmp)
 <figs/VisualBERT.png>
@@ -1925,7 +1953,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24]
+[25]
 File: figs/Autoregressive.png Graphic file (type bmp)
 <figs/Autoregressive.png>
 
@@ -1944,7 +1972,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25])
+[26])
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
@@ -1960,31 +1988,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
+[27]
 \openout2 = `sections/eval.aux'.
 
  (./sections/eval.tex
 فصل 5.
 
-Package natbib Warning: Citation `papineni2002bleu' on page 27 undefined on input line 31.
+Package natbib Warning: Citation `papineni2002bleu' on page 28 undefined on input line 31.
 
 
-Package natbib Warning: Citation `lin2004rouge' on page 27 undefined on input line 32.
+Package natbib Warning: Citation `lin2004rouge' on page 28 undefined on input line 32.
 
 
-Package natbib Warning: Citation `banerjee2005meteor' on page 27 undefined on input line 34.
+Package natbib Warning: Citation `banerjee2005meteor' on page 28 undefined on input line 34.
 
-[27
+[28
 
 
 
 
 ]
 
-Package natbib Warning: Citation `zhang2019bertscore' on page 28 undefined on input line 50.
+Package natbib Warning: Citation `zhang2019bertscore' on page 29 undefined on input line 50.
 
 
-Package natbib Warning: Citation `zhang2019bertscore' on page 28 undefined on input line 58.
+Package natbib Warning: Citation `zhang2019bertscore' on page 29 undefined on input line 58.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2020,7 +2048,7 @@ Overfull \hbox (3.35709pt too wide) in paragraph at lines 61--72
  []
 
 
-Package natbib Warning: Citation `shin2016color' on page 28 undefined on input line 119.
+Package natbib Warning: Citation `shin2016color' on page 29 undefined on input line 119.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
@@ -2037,12 +2065,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28]
+[29]
 
-Package natbib Warning: Citation `VQA' on page 29 undefined on input line 128.
+Package natbib Warning: Citation `VQA' on page 30 undefined on input line 128.
 
 
-Package natbib Warning: Citation `caesar2018coco' on page 29 undefined on input line 130.
+Package natbib Warning: Citation `caesar2018coco' on page 30 undefined on input line 130.
 
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(0)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 175.
@@ -2069,7 +2097,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29]
+[30]
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 269.
 
@@ -2088,30 +2116,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30]
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 376.
-
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 376.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [31]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 394.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 376.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 394.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 376.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2121,6 +2133,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 394.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 394.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
 File: figs/472228.jpg Graphic file (type bmp)
 <figs/472228.jpg>
 
@@ -2179,23 +2207,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33])
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
-
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[34]
+[34])
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
@@ -2212,11 +2224,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 39.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
 \openout2 = `sections/concl.aux'.
 
  (./sections/concl.tex
 فصل 6.
-[36
+[37
 
 
 
@@ -2237,7 +2265,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[37]
+[38]
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX,Scale=0.8].
@@ -2267,7 +2295,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--62
 [][]
  []
 
-[38
+[39
 
 
 
@@ -2288,7 +2316,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39]
+[40]
 \openout2 = `dicen2fa.aux'.
 
  (./dicen2fa.tex)
@@ -2296,7 +2324,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--63
 [][]
  []
 
-[40
+[41
 
 
 
@@ -2317,10 +2345,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41] (./main.ind) (./enTitle.tex
+[42] (./main.ind) (./enTitle.tex
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
 (Font)              scaled to size 17.28pt on input line 31.
- [42
+ [43
 
 
 
@@ -2329,7 +2357,7 @@ File: logo-en.pdf Graphic file (type pdf)
 <use logo-en.pdf>
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
 (Font)              scaled to size 24.88pt on input line 31.
- [43])
+ [44])
 
 Package natbib Warning: There were undefined citations.
 
@@ -2346,12 +2374,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E4E590CDB6A8176BB0B1891C2421781A;13375.
  ) 
 Here is how much of TeX's memory you used:
- 22867 strings out of 476683
- 431304 string characters out of 5809790
+ 22868 strings out of 476683
+ 431337 string characters out of 5809790
  1886018 words of memory out of 5000000
- 42530 multiletter control sequences out of 15000+600000
+ 42531 multiletter control sequences out of 15000+600000
  520219 words of font info for 129 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  92i,16n,115p,1388b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.xdv (54 pages, 733324 bytes).
+Output written on main.xdv (55 pages, 740764 bytes).

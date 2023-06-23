@@ -1,28 +1,28 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1-1}{\ignorespaces یک نمونه از جفت پرسش‌ و تصویر همراه با پاسخ مورد انتظار}}{2}{figure.1.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces معماری کلی شبکه‌های عصبی بازگشتی}}{4}{figure.2.1}%
-\contentsline {figure}{\numberline {2-2}{\ignorespaces معماری حافظه کوتاه‌مدت طولانی‌مدت}}{5}{figure.2.2}%
-\contentsline {figure}{\numberline {2-3}{\ignorespaces معماری شبکه واحد بازگشتی دروازه‌دار}}{7}{figure.2.3}%
-\contentsline {figure}{\numberline {2-4}{\ignorespaces نمونه‌ای از معماری‌ کدگذار-کدگشا برای حل مسئله ترجمه ماشینی}}{8}{figure.2.4}%
-\contentsline {figure}{\numberline {2-5}{\ignorespaces مکانیزم توجه باهدانا در ترجمه ماشینی}}{9}{figure.2.5}%
-\contentsline {figure}{\numberline {2-6}{\ignorespaces نمونه‌ای از توجه به خود در یک جمله}}{11}{figure.2.6}%
-\contentsline {figure}{\numberline {2-7}{\ignorespaces مدل‌ تبدیل‌شونده و معماری آن‌}}{12}{figure.2.7}%
-\contentsline {figure}{\numberline {2-8}{\ignorespaces توجه چندسر و توجه مقیاس‌شده بر پایه ضرب داخلی}}{13}{figure.2.8}%
-\contentsline {figure}{\numberline {2-9}{\ignorespaces نمونه‌ای از یک مدل تک‌جریان}}{14}{figure.2.9}%
-\contentsline {figure}{\numberline {2-10}{\ignorespaces نمونه‌ای از یک مدل دوجریان}}{15}{figure.2.10}%
+\contentsline {figure}{\numberline {2-1}{\ignorespaces معماری کلی شبکه‌های عصبی بازگشتی}}{5}{figure.2.1}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces معماری حافظه کوتاه‌مدت طولانی‌مدت}}{6}{figure.2.2}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces معماری شبکه واحد بازگشتی دروازه‌دار}}{8}{figure.2.3}%
+\contentsline {figure}{\numberline {2-4}{\ignorespaces نمونه‌ای از معماری‌ کدگذار-کدگشا برای حل مسئله ترجمه ماشینی}}{9}{figure.2.4}%
+\contentsline {figure}{\numberline {2-5}{\ignorespaces مکانیزم توجه باهدانا در ترجمه ماشینی}}{10}{figure.2.5}%
+\contentsline {figure}{\numberline {2-6}{\ignorespaces نمونه‌ای از توجه به خود در یک جمله}}{12}{figure.2.6}%
+\contentsline {figure}{\numberline {2-7}{\ignorespaces مدل‌ تبدیل‌شونده و معماری آن‌}}{13}{figure.2.7}%
+\contentsline {figure}{\numberline {2-8}{\ignorespaces توجه چندسر و توجه مقیاس‌شده بر پایه ضرب داخلی}}{14}{figure.2.8}%
+\contentsline {figure}{\numberline {2-9}{\ignorespaces نمونه‌ای از یک مدل تک‌جریان}}{15}{figure.2.9}%
+\contentsline {figure}{\numberline {2-10}{\ignorespaces نمونه‌ای از یک مدل دوجریان}}{16}{figure.2.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces روش \lr {MCB} برای ادغام تصویر و زبان}}{17}{figure.3.1}%
-\contentsline {figure}{\numberline {3-2}{\ignorespaces توجه پشته‌ای برای حل مسئله پرسش‌وپاسخ تصویری}}{18}{figure.3.2}%
-\contentsline {figure}{\numberline {3-3}{\ignorespaces حل پرسش‌وپاسخ تصویری با ساختارهای گرافی}}{18}{figure.3.3}%
-\contentsline {figure}{\numberline {3-4}{\ignorespaces چهارچوب یکپارچه ارائه شده برای حل مسائل چند ماژول به روش تولید متن}}{19}{figure.3.4}%
-\contentsline {figure}{\numberline {3-5}{\ignorespaces نمونه‌ای مجموعه داده \lr {VCR} که علاوه بر ارائه پاسخ، نیازمند ارائه دلیلی برای پاسخ است}}{20}{figure.3.5}%
+\contentsline {figure}{\numberline {3-1}{\ignorespaces روش \lr {MCB} برای ادغام تصویر و زبان}}{18}{figure.3.1}%
+\contentsline {figure}{\numberline {3-2}{\ignorespaces توجه پشته‌ای برای حل مسئله پرسش‌وپاسخ تصویری}}{19}{figure.3.2}%
+\contentsline {figure}{\numberline {3-3}{\ignorespaces حل پرسش‌وپاسخ تصویری با ساختارهای گرافی}}{19}{figure.3.3}%
+\contentsline {figure}{\numberline {3-4}{\ignorespaces چهارچوب یکپارچه ارائه شده برای حل مسائل چند ماژول به روش تولید متن}}{20}{figure.3.4}%
+\contentsline {figure}{\numberline {3-5}{\ignorespaces نمونه‌ای مجموعه داده \lr {VCR} که علاوه بر ارائه پاسخ، نیازمند ارائه دلیلی برای پاسخ است}}{21}{figure.3.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces شمای کلی سیستم پرسش‌و‌پاسخ تصویری}}{22}{figure.4.1}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces نمونه‌ای از کارکرد Tokenizer}}{23}{figure.4.2}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces معماری مدل LXMERT همراه با ورودی و خروجی}}{24}{figure.4.3}%
-\contentsline {figure}{\numberline {4-4}{\ignorespaces میزان توجه بخش متن به تصاویر در VisualBERT}}{25}{figure.4.4}%
-\contentsline {figure}{\numberline {4-5}{\ignorespaces ساختار مدل \lr {Autoregressive Decoder}}}{26}{figure.4.5}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces شمای کلی سیستم پرسش‌و‌پاسخ تصویری}}{23}{figure.4.1}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces نمونه‌ای از کارکرد Tokenizer}}{24}{figure.4.2}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces معماری مدل LXMERT همراه با ورودی و خروجی}}{25}{figure.4.3}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces میزان توجه بخش متن به تصاویر در VisualBERT}}{26}{figure.4.4}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces ساختار مدل \lr {Autoregressive Decoder}}}{27}{figure.4.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces نتایج ارزیابی انسانی}}{34}{figure.5.1}%
+\contentsline {figure}{\numberline {5-1}{\ignorespaces نتایج ارزیابی انسانی}}{35}{figure.5.1}%
 \addvspace {10\p@ }

@@ -5,106 +5,106 @@
 \contentsline {paragraph}{}{1}{paragraph*.3}%
 \contentsline {section}{\numberline {1-2}اهداف پژوهش}{2}{section.1.2}%
 \contentsline {paragraph}{}{2}{paragraph*.4}%
-\contentsline {section}{\numberline {1-3}ساختار گزارش}{2}{section.1.3}%
-\contentsline {paragraph}{}{2}{paragraph*.5}%
-\contentsline {chapter}{\numberline {2}مفاهیم پایه}{3}{chapter.2}%
-\contentsline {section}{\numberline {2-1}مقدمه}{3}{section.2.1}%
-\contentsline {paragraph}{}{3}{paragraph*.6}%
-\contentsline {section}{\numberline {2-2}شبکه‌های عصبی مصنوعی}{3}{section.2.2}%
-\contentsline {paragraph}{}{3}{paragraph*.7}%
-\contentsline {section}{\numberline {2-3}شبکه‌های عصبی بازگشتی}{4}{section.2.3}%
-\contentsline {paragraph}{}{4}{paragraph*.8}%
-\contentsline {subsection}{\numberline {2-3-1} حافظه طولانی کوتا‌ه‌مدت }{5}{subsection.2.3.1}%
-\contentsline {paragraph}{}{5}{paragraph*.9}%
-\contentsline {subsection}{\numberline {2-3-2} واحد بازگشتی دروازه‌دار }{6}{subsection.2.3.2}%
-\contentsline {paragraph}{}{6}{paragraph*.10}%
-\contentsline {section}{\numberline {2-4}مدل‌های دنباله‌به‌دنباله}{8}{section.2.4}%
-\contentsline {paragraph}{}{8}{paragraph*.11}%
-\contentsline {section}{\numberline {2-5}مکانیزم توجه}{8}{section.2.5}%
-\contentsline {paragraph}{}{8}{paragraph*.12}%
-\contentsline {subsection}{\numberline {2-5-1} مکانیزم توجه باهدانا (\lr {Bahdanau}) }{9}{subsection.2.5.1}%
-\contentsline {paragraph}{}{9}{paragraph*.13}%
-\contentsline {subsection}{\numberline {2-5-2} مکانیزم توجه لوآنگ (\lr {Luong}) }{10}{subsection.2.5.2}%
-\contentsline {paragraph}{}{10}{paragraph*.14}%
-\contentsline {subsection}{\numberline {2-5-3} مکانیزم توجه به خود }{10}{subsection.2.5.3}%
-\contentsline {paragraph}{}{10}{paragraph*.15}%
-\contentsline {section}{\numberline {2-6} مدل‌های transformer و مکانیزم توجه آن‌ها }{11}{section.2.6}%
-\contentsline {paragraph}{}{11}{paragraph*.16}%
-\contentsline {section}{\numberline {2-7} مدل‌های زبان و تصویر بر پایه \lr {BERT} }{14}{section.2.7}%
-\contentsline {paragraph}{}{14}{paragraph*.17}%
-\contentsline {subsection}{\numberline {2-7-1} مدل‌های تک‌جریان }{14}{subsection.2.7.1}%
-\contentsline {paragraph}{}{14}{paragraph*.18}%
-\contentsline {subsection}{\numberline {2-7-2} مدل‌های دوجریان }{15}{subsection.2.7.2}%
-\contentsline {paragraph}{}{15}{paragraph*.19}%
-\contentsline {section}{\numberline {2-8}جمع‌بندی}{15}{section.2.8}%
-\contentsline {paragraph}{}{15}{paragraph*.20}%
-\contentsline {chapter}{\numberline {3}کارهای مرتبط}{16}{chapter.3}%
-\contentsline {section}{\numberline {3-1}مقدمه}{16}{section.3.1}%
-\contentsline {paragraph}{}{16}{paragraph*.21}%
-\contentsline {section}{\numberline {3-2} روش‌های متفاوت حل مسئله پرسش‌وپاسخ تصویری }{16}{section.3.2}%
-\contentsline {paragraph}{}{16}{paragraph*.22}%
-\contentsline {subsection}{\numberline {3-2-1} روش‌های بر پایه \lr {Bilinear Pooling} }{16}{subsection.3.2.1}%
-\contentsline {paragraph}{}{16}{paragraph*.23}%
-\contentsline {subsection}{\numberline {3-2-2} روش‌های بر پایه توجه }{17}{subsection.3.2.2}%
-\contentsline {paragraph}{}{17}{paragraph*.24}%
-\contentsline {subsection}{\numberline {3-2-3} ادغام روابط اشیاء }{18}{subsection.3.2.3}%
-\contentsline {paragraph}{}{18}{paragraph*.25}%
-\contentsline {section}{\numberline {3-3} تولید پاسخ برای پرسش‌و‌پاسخ تصویری }{19}{section.3.3}%
-\contentsline {paragraph}{}{19}{paragraph*.26}%
-\contentsline {section}{\numberline {3-4}مجموعه داده‌های منتشر شده در پرسش‌وپاسخ تصویری}{20}{section.3.4}%
-\contentsline {paragraph}{}{20}{paragraph*.27}%
-\contentsline {section}{\numberline {3-5} مدل‌های از پیش آموزش‌ داده‌شده}{21}{section.3.5}%
-\contentsline {paragraph}{}{21}{paragraph*.28}%
-\contentsline {chapter}{\numberline {4}روش پیشنهادی}{22}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{22}{section.4.1}%
-\contentsline {paragraph}{}{22}{paragraph*.29}%
-\contentsline {section}{\numberline {4-2} معماری سیستم }{22}{section.4.2}%
-\contentsline {paragraph}{}{22}{paragraph*.30}%
-\contentsline {section}{\numberline {4-3} ورودی اولیه و خروجی نهایی }{23}{section.4.3}%
-\contentsline {paragraph}{}{23}{paragraph*.31}%
-\contentsline {section}{\numberline {4-4} مدل Encoder }{24}{section.4.4}%
-\contentsline {paragraph}{}{24}{paragraph*.32}%
-\contentsline {subsection}{\numberline {4-4-1} مدل LXMERT \cite {tan-bansal-2019-lxmert} }{24}{subsection.4.4.1}%
-\contentsline {paragraph}{}{24}{paragraph*.33}%
-\contentsline {subsection}{\numberline {4-4-2} مدل VisualBERT \cite {li-etal-2020-bert-vision} }{25}{subsection.4.4.2}%
-\contentsline {paragraph}{}{25}{paragraph*.34}%
-\contentsline {section}{\numberline {4-5} مدل Decoder }{25}{section.4.5}%
-\contentsline {paragraph}{}{25}{paragraph*.35}%
-\contentsline {section}{\numberline {4-6}جمع‌بندی}{26}{section.4.6}%
-\contentsline {paragraph}{}{26}{paragraph*.36}%
-\contentsline {chapter}{\numberline {5}ارزیابی روش پیشنهادی}{27}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{27}{section.5.1}%
-\contentsline {paragraph}{}{27}{paragraph*.37}%
-\contentsline {section}{\numberline {5-2} معیارهای برپایه شباهت نحوی }{27}{section.5.2}%
-\contentsline {paragraph}{}{27}{paragraph*.38}%
-\contentsline {section}{\numberline {5-3} معیارهای برپایه بردارهای تعبیه }{28}{section.5.3}%
-\contentsline {paragraph}{}{28}{paragraph*.39}%
-\contentsline {subsection}{\numberline {5-3-1} معیار BERTScore \cite {zhang2019bertscore} }{28}{subsection.5.3.1}%
-\contentsline {paragraph}{}{28}{paragraph*.40}%
-\contentsline {subsection}{\numberline {5-3-2} معیار Score Average }{28}{subsection.5.3.2}%
-\contentsline {paragraph}{}{28}{paragraph*.41}%
-\contentsline {section}{\numberline {5-4} مجموعه‌داده‌ی مورد استفاده }{29}{section.5.4}%
-\contentsline {paragraph}{}{29}{paragraph*.42}%
-\contentsline {section}{\numberline {5-5} نتایج ارزیابی سیستم پیشنهادی }{29}{section.5.5}%
-\contentsline {paragraph}{}{29}{paragraph*.43}%
-\contentsline {subsection}{\numberline {5-5-1}ارزیابی و مقایسه معماری‌های ارجح}{29}{subsection.5.5.1}%
-\contentsline {paragraph}{}{29}{paragraph*.44}%
-\contentsline {subsection}{\numberline {5-5-2}مقایسه شبکه‌های عصبی بازگشتی}{30}{subsection.5.5.2}%
-\contentsline {paragraph}{}{30}{paragraph*.45}%
-\contentsline {subsection}{\numberline {5-5-3}ارزیابی و مقایسه شبکه‌های عصبی بازگشتی و مکانیزم توجه سراسری}{30}{subsection.5.5.3}%
-\contentsline {paragraph}{}{30}{paragraph*.46}%
-\contentsline {subsection}{\numberline {5-5-4}ارزیابی و مقایسه مدل‌های برپایه تبدیل‌شونده‌ها}{31}{subsection.5.5.4}%
-\contentsline {paragraph}{}{31}{paragraph*.47}%
-\contentsline {section}{\numberline {5-6}ارزیابی انسانی}{32}{section.5.6}%
-\contentsline {paragraph}{}{32}{paragraph*.48}%
-\contentsline {section}{\numberline {5-7}جمع‌بندی}{35}{section.5.7}%
-\contentsline {paragraph}{}{35}{paragraph*.49}%
-\contentsline {chapter}{\numberline {6}نتیجه‌گیری و کارهای آینده}{36}{chapter.6}%
-\contentsline {section}{\numberline {6-1}نتیجه‌گیری}{36}{section.6.1}%
-\contentsline {paragraph}{}{36}{paragraph*.50}%
-\contentsline {section}{\numberline {6-2}دستاوردها}{37}{section.6.2}%
-\contentsline {paragraph}{}{37}{paragraph*.51}%
-\contentsline {section}{\numberline {6-3}کارهای آینده}{37}{section.6.3}%
-\contentsline {paragraph}{}{37}{paragraph*.52}%
-\contentsline {chapter}{واژه‌نامه فارسی به انگلیسی}{38}{chapter*.53}%
-\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{40}{chapter*.54}%
+\contentsline {section}{\numberline {1-3}ساختار گزارش}{3}{section.1.3}%
+\contentsline {paragraph}{}{3}{paragraph*.5}%
+\contentsline {chapter}{\numberline {2}مفاهیم پایه}{4}{chapter.2}%
+\contentsline {section}{\numberline {2-1}مقدمه}{4}{section.2.1}%
+\contentsline {paragraph}{}{4}{paragraph*.6}%
+\contentsline {section}{\numberline {2-2}شبکه‌های عصبی مصنوعی}{4}{section.2.2}%
+\contentsline {paragraph}{}{4}{paragraph*.7}%
+\contentsline {section}{\numberline {2-3}شبکه‌های عصبی بازگشتی}{5}{section.2.3}%
+\contentsline {paragraph}{}{5}{paragraph*.8}%
+\contentsline {subsection}{\numberline {2-3-1} حافظه طولانی کوتا‌ه‌مدت }{6}{subsection.2.3.1}%
+\contentsline {paragraph}{}{6}{paragraph*.9}%
+\contentsline {subsection}{\numberline {2-3-2} واحد بازگشتی دروازه‌دار }{7}{subsection.2.3.2}%
+\contentsline {paragraph}{}{7}{paragraph*.10}%
+\contentsline {section}{\numberline {2-4}مدل‌های دنباله‌به‌دنباله}{9}{section.2.4}%
+\contentsline {paragraph}{}{9}{paragraph*.11}%
+\contentsline {section}{\numberline {2-5}مکانیزم توجه}{9}{section.2.5}%
+\contentsline {paragraph}{}{9}{paragraph*.12}%
+\contentsline {subsection}{\numberline {2-5-1} مکانیزم توجه باهدانا (\lr {Bahdanau}) }{10}{subsection.2.5.1}%
+\contentsline {paragraph}{}{10}{paragraph*.13}%
+\contentsline {subsection}{\numberline {2-5-2} مکانیزم توجه لوآنگ (\lr {Luong}) }{11}{subsection.2.5.2}%
+\contentsline {paragraph}{}{11}{paragraph*.14}%
+\contentsline {subsection}{\numberline {2-5-3} مکانیزم توجه به خود }{11}{subsection.2.5.3}%
+\contentsline {paragraph}{}{11}{paragraph*.15}%
+\contentsline {section}{\numberline {2-6} مدل‌های transformer و مکانیزم توجه آن‌ها }{12}{section.2.6}%
+\contentsline {paragraph}{}{12}{paragraph*.16}%
+\contentsline {section}{\numberline {2-7} مدل‌های زبان و تصویر بر پایه \lr {BERT} }{15}{section.2.7}%
+\contentsline {paragraph}{}{15}{paragraph*.17}%
+\contentsline {subsection}{\numberline {2-7-1} مدل‌های تک‌جریان }{15}{subsection.2.7.1}%
+\contentsline {paragraph}{}{15}{paragraph*.18}%
+\contentsline {subsection}{\numberline {2-7-2} مدل‌های دوجریان }{16}{subsection.2.7.2}%
+\contentsline {paragraph}{}{16}{paragraph*.19}%
+\contentsline {section}{\numberline {2-8}جمع‌بندی}{16}{section.2.8}%
+\contentsline {paragraph}{}{16}{paragraph*.20}%
+\contentsline {chapter}{\numberline {3}کارهای مرتبط}{17}{chapter.3}%
+\contentsline {section}{\numberline {3-1}مقدمه}{17}{section.3.1}%
+\contentsline {paragraph}{}{17}{paragraph*.21}%
+\contentsline {section}{\numberline {3-2} روش‌های متفاوت حل مسئله پرسش‌وپاسخ تصویری }{17}{section.3.2}%
+\contentsline {paragraph}{}{17}{paragraph*.22}%
+\contentsline {subsection}{\numberline {3-2-1} روش‌های بر پایه \lr {Bilinear Pooling} }{17}{subsection.3.2.1}%
+\contentsline {paragraph}{}{17}{paragraph*.23}%
+\contentsline {subsection}{\numberline {3-2-2} روش‌های بر پایه توجه }{18}{subsection.3.2.2}%
+\contentsline {paragraph}{}{18}{paragraph*.24}%
+\contentsline {subsection}{\numberline {3-2-3} ادغام روابط اشیاء }{19}{subsection.3.2.3}%
+\contentsline {paragraph}{}{19}{paragraph*.25}%
+\contentsline {section}{\numberline {3-3} تولید پاسخ برای پرسش‌و‌پاسخ تصویری }{20}{section.3.3}%
+\contentsline {paragraph}{}{20}{paragraph*.26}%
+\contentsline {section}{\numberline {3-4}مجموعه داده‌های منتشر شده در پرسش‌وپاسخ تصویری}{21}{section.3.4}%
+\contentsline {paragraph}{}{21}{paragraph*.27}%
+\contentsline {section}{\numberline {3-5} مدل‌های از پیش آموزش‌ داده‌شده}{22}{section.3.5}%
+\contentsline {paragraph}{}{22}{paragraph*.28}%
+\contentsline {chapter}{\numberline {4}روش پیشنهادی}{23}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{23}{section.4.1}%
+\contentsline {paragraph}{}{23}{paragraph*.29}%
+\contentsline {section}{\numberline {4-2} معماری سیستم }{23}{section.4.2}%
+\contentsline {paragraph}{}{23}{paragraph*.30}%
+\contentsline {section}{\numberline {4-3} ورودی اولیه و خروجی نهایی }{24}{section.4.3}%
+\contentsline {paragraph}{}{24}{paragraph*.31}%
+\contentsline {section}{\numberline {4-4} مدل Encoder }{25}{section.4.4}%
+\contentsline {paragraph}{}{25}{paragraph*.32}%
+\contentsline {subsection}{\numberline {4-4-1} مدل LXMERT \cite {tan-bansal-2019-lxmert} }{25}{subsection.4.4.1}%
+\contentsline {paragraph}{}{25}{paragraph*.33}%
+\contentsline {subsection}{\numberline {4-4-2} مدل VisualBERT \cite {li-etal-2020-bert-vision} }{26}{subsection.4.4.2}%
+\contentsline {paragraph}{}{26}{paragraph*.34}%
+\contentsline {section}{\numberline {4-5} مدل Decoder }{26}{section.4.5}%
+\contentsline {paragraph}{}{26}{paragraph*.35}%
+\contentsline {section}{\numberline {4-6}جمع‌بندی}{27}{section.4.6}%
+\contentsline {paragraph}{}{27}{paragraph*.36}%
+\contentsline {chapter}{\numberline {5}ارزیابی روش پیشنهادی}{28}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{28}{section.5.1}%
+\contentsline {paragraph}{}{28}{paragraph*.37}%
+\contentsline {section}{\numberline {5-2} معیارهای برپایه شباهت نحوی }{28}{section.5.2}%
+\contentsline {paragraph}{}{28}{paragraph*.38}%
+\contentsline {section}{\numberline {5-3} معیارهای برپایه بردارهای تعبیه }{29}{section.5.3}%
+\contentsline {paragraph}{}{29}{paragraph*.39}%
+\contentsline {subsection}{\numberline {5-3-1} معیار BERTScore \cite {zhang2019bertscore} }{29}{subsection.5.3.1}%
+\contentsline {paragraph}{}{29}{paragraph*.40}%
+\contentsline {subsection}{\numberline {5-3-2} معیار Score Average }{29}{subsection.5.3.2}%
+\contentsline {paragraph}{}{29}{paragraph*.41}%
+\contentsline {section}{\numberline {5-4} مجموعه‌داده‌ی مورد استفاده }{30}{section.5.4}%
+\contentsline {paragraph}{}{30}{paragraph*.42}%
+\contentsline {section}{\numberline {5-5} نتایج ارزیابی سیستم پیشنهادی }{30}{section.5.5}%
+\contentsline {paragraph}{}{30}{paragraph*.43}%
+\contentsline {subsection}{\numberline {5-5-1}ارزیابی و مقایسه معماری‌های ارجح}{30}{subsection.5.5.1}%
+\contentsline {paragraph}{}{30}{paragraph*.44}%
+\contentsline {subsection}{\numberline {5-5-2}مقایسه شبکه‌های عصبی بازگشتی}{31}{subsection.5.5.2}%
+\contentsline {paragraph}{}{31}{paragraph*.45}%
+\contentsline {subsection}{\numberline {5-5-3}ارزیابی و مقایسه شبکه‌های عصبی بازگشتی و مکانیزم توجه سراسری}{31}{subsection.5.5.3}%
+\contentsline {paragraph}{}{31}{paragraph*.46}%
+\contentsline {subsection}{\numberline {5-5-4}ارزیابی و مقایسه مدل‌های برپایه تبدیل‌شونده‌ها}{32}{subsection.5.5.4}%
+\contentsline {paragraph}{}{32}{paragraph*.47}%
+\contentsline {section}{\numberline {5-6}ارزیابی انسانی}{33}{section.5.6}%
+\contentsline {paragraph}{}{33}{paragraph*.48}%
+\contentsline {section}{\numberline {5-7}جمع‌بندی}{36}{section.5.7}%
+\contentsline {paragraph}{}{36}{paragraph*.49}%
+\contentsline {chapter}{\numberline {6}نتیجه‌گیری و کارهای آینده}{37}{chapter.6}%
+\contentsline {section}{\numberline {6-1}نتیجه‌گیری}{37}{section.6.1}%
+\contentsline {paragraph}{}{37}{paragraph*.50}%
+\contentsline {section}{\numberline {6-2}دستاوردها}{38}{section.6.2}%
+\contentsline {paragraph}{}{38}{paragraph*.51}%
+\contentsline {section}{\numberline {6-3}کارهای آینده}{38}{section.6.3}%
+\contentsline {paragraph}{}{38}{paragraph*.52}%
+\contentsline {chapter}{واژه‌نامه فارسی به انگلیسی}{39}{chapter*.53}%
+\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{41}{chapter*.54}%
