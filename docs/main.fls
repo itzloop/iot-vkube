@@ -1263,9 +1263,12 @@ INPUT sections/basics.tex
 INPUT ./figs/kube_compontents.png
 INPUT ./figs/kube_compontents.png
 INPUT figs/kube_compontents.png
-INPUT ./figs/kublet.png
-INPUT ./figs/kublet.png
-INPUT figs/kublet.png
+INPUT ./figs/api.jpg
+INPUT ./figs/api.jpg
+INPUT figs/api.jpg
+INPUT ./figs/vkube.png
+INPUT ./figs/vkube.png
+INPUT figs/vkube.png
 INPUT ./figs/iot.jpg
 INPUT ./figs/iot.jpg
 INPUT figs/iot.jpg
@@ -1287,6 +1290,24 @@ INPUT ./sections/method.tex
 INPUT ./sections/method.tex
 INPUT sections/method.tex
 INPUT sections/method.tex
+INPUT ./figs/arch.png
+INPUT ./figs/arch.png
+INPUT figs/arch.png
+INPUT ./figs/model architecture.png
+INPUT ./figs/model architecture.png
+INPUT figs/model architecture.png
+INPUT ./figs/tokenization.png
+INPUT ./figs/tokenization.png
+INPUT figs/tokenization.png
+INPUT ./figs/lxmert.png
+INPUT ./figs/lxmert.png
+INPUT figs/lxmert.png
+INPUT ./figs/VisualBERT.png
+INPUT ./figs/VisualBERT.png
+INPUT figs/VisualBERT.png
+INPUT ./figs/Autoregressive.png
+INPUT ./figs/Autoregressive.png
+INPUT figs/Autoregressive.png
 INPUT ./sections/eval.tex
 INPUT ./sections/eval.tex
 INPUT ./sections/eval.tex
