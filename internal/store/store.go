@@ -20,6 +20,7 @@ type Store interface {
 type ReadOnlyStore interface {
 	GetDevice(ctx context.Context, controllerName, deviceName string) (types.Device, error)
 	GetDevices(ctx context.Context, controllerName string) ([]types.Device, error)
+	GetRangeDevices(ctx context.Context, controllerName string, from, to int64) ([]types.Device, error)
 	GetController(ctx context.Context, controllerName string) (types.Controller, error)
 	GetControllers(ctx context.Context) ([]types.Controller, error)
 	GetControllersMap(ctx context.Context) (map[string]types.Controller, error)
@@ -63,6 +64,24 @@ func (l *LocalStoreImpl) RegisterDevice(ctx context.Context, controllerName stri
 }
 
 func (l *LocalStoreImpl) GetDevices(ctx context.Context, controllerName string) ([]types.Device, error) {
+	//c, err := l.GetController(ctx, controllerName)
+	//if err != nil {
+	//	return nil, err
+	//}
+	//
+	//l.mu.Lock()
+	//defer l.mu.Unlock()
+	//
+	//if c.Devices == nil {
+	//	return []types.Device{}, nil
+	//}
+	//
+	//return c.Devices, nil
+
+	return l.GetRangeDevices(ctx, controllerName, -1, -1)
+}
+
+func (l *LocalStoreImpl) GetRangeDevices(ctx context.Context, controllerName string, from, to int64) ([]types.Device, error) {
 	c, err := l.GetController(ctx, controllerName)
 	if err != nil {
 		return nil, err
@@ -75,7 +94,19 @@ func (l *LocalStoreImpl) GetDevices(ctx context.Context, controllerName string) 
 		return []types.Device{}, nil
 	}
 
-	return c.Devices, nil
+	if to == -1 && from == -1 {
+		return c.Devices, nil
+	} else if from == -1 {
+		return c.Devices[:to], nil
+	} else if to == -1 {
+		return c.Devices[from:], nil
+	}
+
+	if from > to {
+		return nil, errors.New("from must be smaller that to")
+	}
+
+	return c.Devices[from:to], nil
 }
 
 func (l *LocalStoreImpl) GetDevice(ctx context.Context, controllerName, deviceName string) (types.Device, error) {

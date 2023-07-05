@@ -4,10 +4,12 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"github.com/itzloop/iot-vkube/internal/agent"
 	"github.com/itzloop/iot-vkube/internal/provider"
+	"github.com/itzloop/iot-vkube/internal/stats"
 	"github.com/itzloop/iot-vkube/internal/store"
-	"github.com/itzloop/iot-vkube/internal/utils"
+	"github.com/itzloop/iot-vkube/utils"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/virtual-kubelet/virtual-kubelet/log"
@@ -25,6 +27,7 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/record"
+	"net/http"
 	"os"
 	"os/signal"
 	"path"
@@ -91,10 +94,6 @@ func main() {
 
 	// create informer
 	informer := informers.NewSharedInformerFactoryWithOptions(client, time.Second*15, informers.WithNamespace(ns))
-	group.Go(func() error {
-		informer.Start(ctx.Done())
-		return nil
-	})
 
 	// create event recorded
 	eb := record.NewBroadcaster()
@@ -108,18 +107,20 @@ func main() {
 	}
 	selector := labels.NewSelector().Add(*requirement)
 
+	// setup gin
+	ginEngine, startGinEngineFunc := setupGin("localhost:5000")
+
+	// create stats provider	TODO
+	_ = stats.NewStatsHandler(informer.Core().V1().Pods().Lister(), informer.Core().V1().Nodes().Lister(), selector, ginEngine)
+
 	// create provider
 	st := store.NewLocalStoreImpl()
-	service := agent.NewService(st, ":8080", []string{"localhost:5000"})
+	service := agent.NewService(st)
 	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, st, eb)
 
 	// register callbacks
 	service.RegisterToCallbacks(p)
 	p.RegisterToCallbacks(service)
-
-	group.Go(func() error {
-		return service.Start(ctx)
-	})
 
 	// setup pod controller
 	pc, err := node.NewPodController(node.PodControllerConfig{
@@ -142,12 +143,29 @@ func main() {
 		panic(err)
 	}
 
+	// start informer
+	group.Go(func() error {
+		informer.Start(ctx.Done())
+		return nil
+	})
+
+	// start podController
 	group.Go(func() error {
 		return pc.Run(ctx, 5)
 	})
 
+	// start node controller
 	group.Go(func() error {
 		return nc.Run(ctx)
+	})
+
+	// start http server
+	group.Go(func() error {
+		return startGinEngineFunc(ctx)
+	})
+
+	group.Go(func() error {
+		return service.Start(ctx)
 	})
 
 	fmt.Println("setup complete")
@@ -157,6 +175,37 @@ func main() {
 		cancel()
 		utils.WaitWithThreeDots("cleaning up", time.Second*2)
 	}
+}
+
+func setupGin(addr string) (*gin.Engine, func(ctx context.Context) error) {
+	r := gin.Default()
+	r.Use(utils.CORSMiddleware())
+
+	startHTTPServer := func(ctx context.Context) error {
+		srv := &http.Server{
+			Addr:    addr,
+			Handler: r,
+		}
+		entry := utils.GetEntryFromContext(ctx)
+
+		go func() {
+			<-ctx.Done()
+			srv.Shutdown(context.Background())
+		}()
+
+		entry.WithField("addr", addr).Info("starting http server")
+		err := srv.ListenAndServe()
+		if err != nil {
+			if err == http.ErrServerClosed {
+				entry.WithField("error", err).Info("http server closed")
+				return nil
+			}
+		}
+
+		return nil
+	}
+
+	return r, startHTTPServer
 }
 
 func getNodeSpec(name, version string) (*corev1.Node, error) {

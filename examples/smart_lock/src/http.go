@@ -6,6 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/itzloop/iot-vkube/examples/smart_lock/src/routers"
 	store2 "github.com/itzloop/iot-vkube/internal/store"
+	"github.com/itzloop/iot-vkube/utils"
 	"io"
 	"k8s.io/apimachinery/pkg/util/json"
 	"log"
@@ -368,29 +369,13 @@ func (s *server) addController(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte{})
 }
 
-func CORSMiddleware() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
-		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
-		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
-		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, DELETE, PATCH")
-
-		if c.Request.Method == "OPTIONS" {
-			c.AbortWithStatus(204)
-			return
-		}
-
-		c.Next()
-	}
-}
-
 func RunServer(addr string) {
 	fmt.Printf("server is listening on %s\n", addr)
 	//srv := server{lcs: map[string]*LockController{}}
 
 	store := store2.NewLocalStoreImpl()
 	r := gin.Default()
-	r.Use(CORSMiddleware())
+	r.Use(utils.CORSMiddleware())
 	controllers := r.Group("/controllers")
 	{
 		controllersRouteHandlers := routers.NewControllersRouteHandler(store)
@@ -416,44 +401,6 @@ func RunServer(addr string) {
 			}
 		}
 	}
-
-	//r := mux.NewRouter()
-
-	//controllerRouter := r.
-	//	PathPrefix(fmt.Sprintf("/controllers/{controller_name}")).
-	//	Subrouter()
-	//
-	//devicesRouter := controllerRouter.
-	//	PathPrefix("/devices").
-	//	Subrouter()
-	//
-	//devicesRouter.
-	//	HandleFunc("", srv.add).
-	//	Methods(http.MethodPost)
-	//
-	//devicesRouter.
-	//	HandleFunc("/{device_name}", srv.get).
-	//	Methods(http.MethodGet)
-	//
-	//devicesRouter.
-	//	HandleFunc("/{device_name}", srv.update).
-	//	Methods(http.MethodPatch)
-	//
-	//controllerRouter.HandleFunc("", srv.list).
-	//	Methods(http.MethodGet)
-	//
-	//r.Use(loggingMiddleware)
-	//
-	//r.PathPrefix("/controllers").
-	//	HandlerFunc(srv.listControllers).
-	//	Methods(http.MethodGet, http.MethodOptions)
-	//
-	//r.PathPrefix("/controllers").
-	//	HandlerFunc(srv.addController).
-	//	Methods(http.MethodPost)
-
-	//http.Handle("/", r)
-	//log.Fatal(http.ListenAndServe(addr, nil))
 
 	log.Fatal(r.Run(addr))
 }

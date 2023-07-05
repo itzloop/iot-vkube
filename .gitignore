@@ -31,3 +31,5 @@
 vendor/
 
 build/
+
+*_generated.yaml

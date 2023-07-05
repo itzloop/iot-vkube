@@ -1,0 +1,31 @@
+{{- range $i := Iterate .Max -}}
+apiVersion: v1
+kind: Pod
+metadata:
+  # deviceName
+  name: {{ $.DeviceName }}{{ $i }}
+  annotations:
+    controllerName: {{ $.ControllerName }}
+    controllerAddress: {{ $.ControllerAddress }}
+    # TODO is this a better solution
+    # http://<controllerAddress>/<devicesPath>
+    # if this is defined a single endpoint will be used to get all the devices statuses
+    # if not then for each device we will call the following endpoint
+    # http://<controllerAddress>/controllers/<controllerName>/devices/<deviceName>
+    # devicesPath: /controllers/<controllerName>
+spec:
+  containers:
+    - image: sinashk/smart_lock
+      name: {{ $.DeviceName }}{{ $i }}
+  dnsPolicy: ClusterFirst
+  nodeSelector:
+    kubernetes.io/role: agent
+    kubernetes.io/os: linux
+    type: virtual-kubelet
+  tolerations:
+    - key: itzloop.dev/virtual-kubelet
+      operator: Exists
+---
+{{ end -}}
+
+

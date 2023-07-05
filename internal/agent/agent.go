@@ -2,28 +2,21 @@ package agent
 
 import (
 	"context"
-	"github.com/gorilla/mux"
 	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/store"
-	"github.com/itzloop/iot-vkube/internal/utils"
+	"github.com/itzloop/iot-vkube/utils"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sync/errgroup"
-	"net/http"
 	"time"
 )
 
 type Service struct {
-	store store.Store
-	addr  string
-
-	hooks []string
-
-	server    *http.Server
+	store     store.Store
 	callbacks *callback.ServiceCallBacks
 }
 
-func NewService(store store.Store, addr string, hooks []string) *Service {
-	srv := &Service{store: store, addr: addr, hooks: hooks}
+func NewService(store store.Store) *Service {
+	srv := &Service{store: store}
 
 	// register incoming callbacks
 	srv.RegisterCallbacks(nil)
@@ -85,15 +78,13 @@ func (service *Service) Start(ctx context.Context) error {
 
 // TODO
 func (service *Service) Close() error {
-	// TODO handle gracefull shutdown
-
 	// shutdown http server
-	err := service.server.Shutdown(context.Background())
-	if err != nil {
-		if err != http.ErrServerClosed {
-			return nil
-		}
-	}
+	//err := service.server.Shutdown(context.Background())
+	//if err != nil {
+	//	if err != http.ErrServerClosed {
+	//		return nil
+	//	}
+	//}
 
 	return nil
 }
@@ -131,54 +122,54 @@ func (service *Service) agentWorker(ctx context.Context, interval time.Duration)
 // TODO httpServer should handle following endpoints:
 // - register controller
 func (service *Service) httpServer() error {
-	spot := "agent/httpServer"
-	entry := logrus.WithFields(logrus.Fields{"spot": spot, "addr": service.addr})
-	entry.Info("server is starting...")
-
-	r := mux.NewRouter()
-	service.setupControllerRoutes(r.PathPrefix("/controllers").Subrouter())
-	r.Use(utils.LoggingMiddleware)
-
-	service.server = &http.Server{
-		Addr:    service.addr,
-		Handler: r,
-	}
-
-	err := service.server.ListenAndServe()
-	if err != nil {
-		if err == http.ErrServerClosed {
-			entry.WithField("error", err).Info("http server closed")
-			return nil
-		}
-	}
+	//spot := "agent/httpServer"
+	//entry := logrus.WithFields(logrus.Fields{"spot": spot, "addr": service.addr})
+	//entry.Info("server is starting...")
+	//
+	//r := mux.NewRouter()
+	////service.setupControllerRoutes(r.PathPrefix("/controllers").Subrouter())
+	//r.Use(utils.LoggingMiddleware)
+	//
+	//service.server = &http.Server{
+	//	Addr:    service.addr,
+	//	Handler: r,
+	//}
+	//
+	//err := service.server.ListenAndServe()
+	//if err != nil {
+	//	if err == http.ErrServerClosed {
+	//		entry.WithField("error", err).Info("http server closed")
+	//		return nil
+	//	}
+	//}
 
 	return nil
 }
 
-func (service *Service) setupControllerRoutes(controllerRoute *mux.Router) {
-	controllerService := NewControllerService(service.store)
-	controllerRoute.
-		Path("").
-		HandlerFunc(controllerService.RegisterController).
-		Methods(http.MethodPost)
-
-	controllerRoute.
-		Path("").
-		HandlerFunc(controllerService.ListControllers).
-		Methods(http.MethodGet)
-
-	controllerRoute.
-		Path("/{controllerName}").
-		HandlerFunc(controllerService.GetController).
-		Methods(http.MethodGet)
-
-	controllerRoute.
-		Path("/{controllerName}").
-		HandlerFunc(controllerService.DeleteController).
-		Methods(http.MethodDelete)
-
-	controllerRoute.
-		Path("/{controllerName}").
-		HandlerFunc(controllerService.UpdateController).
-		Methods(http.MethodPatch)
-}
+//func (service *Service) setupControllerRoutes(controllerRoute *mux.Router) {
+//	controllerService := NewControllerService(service.store)
+//	controllerRoute.
+//		Path("").
+//		HandlerFunc(controllerService.RegisterController).
+//		Methods(http.MethodPost)
+//
+//	controllerRoute.
+//		Path("").
+//		HandlerFunc(controllerService.ListControllers).
+//		Methods(http.MethodGet)
+//
+//	controllerRoute.
+//		Path("/{controllerName}").
+//		HandlerFunc(controllerService.GetController).
+//		Methods(http.MethodGet)
+//
+//	controllerRoute.
+//		Path("/{controllerName}").
+//		HandlerFunc(controllerService.DeleteController).
+//		Methods(http.MethodDelete)
+//
+//	controllerRoute.
+//		Path("/{controllerName}").
+//		HandlerFunc(controllerService.UpdateController).
+//		Methods(http.MethodPatch)
+//}

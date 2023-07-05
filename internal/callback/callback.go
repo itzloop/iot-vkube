@@ -2,8 +2,8 @@ package callback
 
 import (
 	"context"
-	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
+	"github.com/itzloop/iot-vkube/utils"
 )
 
 type Callback interface {

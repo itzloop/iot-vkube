@@ -3,8 +3,8 @@ package agent
 import (
 	"context"
 	"github.com/itzloop/iot-vkube/internal/callback"
-	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
+	"github.com/itzloop/iot-vkube/utils"
 )
 
 func (service *Service) ServiceCallBacks() *callback.ServiceCallBacks {

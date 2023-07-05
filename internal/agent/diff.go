@@ -3,8 +3,8 @@ package agent
 import (
 	"context"
 	"fmt"
-	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
+	"github.com/itzloop/iot-vkube/utils"
 )
 
 type controllerDiffModel struct {

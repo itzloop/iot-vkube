@@ -3,8 +3,8 @@ package provider
 import (
 	"context"
 	"github.com/itzloop/iot-vkube/internal/callback"
-	"github.com/itzloop/iot-vkube/internal/utils"
 	"github.com/itzloop/iot-vkube/types"
+	"github.com/itzloop/iot-vkube/utils"
 )
 
 func (p *PodLifecycleHandlerImpl) ServiceCallBacks() *callback.ServiceCallBacks {
