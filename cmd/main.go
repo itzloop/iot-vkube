@@ -108,7 +108,7 @@ func main() {
 	selector := labels.NewSelector().Add(*requirement)
 
 	// setup gin
-	ginEngine, startGinEngineFunc := setupGin("localhost:5000")
+	ginEngine, startGinEngineFunc := setupGin("localhost:5001")
 
 	// create stats provider	TODO
 	_ = stats.NewStatsHandler(informer.Core().V1().Pods().Lister(), informer.Core().V1().Nodes().Lister(), selector, ginEngine)
@@ -116,7 +116,10 @@ func main() {
 	// create provider
 	st := store.NewLocalStoreImpl()
 	service := agent.NewService(st)
-	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, st, eb)
+
+	// setup native node provider
+	nativeProvider := node.NewNaiveNodeProvider()
+	p := provider.NewPodLifecycleHandlerImpl("localhost:5000", informer.Core().V1().Pods().Lister(), selector, st, eb, n, nativeProvider)
 
 	// register callbacks
 	service.RegisterToCallbacks(p)
@@ -137,7 +140,6 @@ func main() {
 	}
 
 	// setup node controller
-	nativeProvider := node.NewNaiveNodeProvider()
 	nc, err := node.NewNodeController(nativeProvider, n, client.CoreV1().Nodes())
 	if err != nil {
 		panic(err)
@@ -214,6 +216,8 @@ func getNodeSpec(name, version string) (*corev1.Node, error) {
 		return nil, err
 	}
 
+	maxPods := 10000
+
 	return &corev1.Node{
 		ObjectMeta: v1.ObjectMeta{
 			Name: name,
@@ -235,14 +239,14 @@ func getNodeSpec(name, version string) (*corev1.Node, error) {
 				KubeletVersion:  version,
 			},
 			Capacity: corev1.ResourceList{
-				corev1.ResourceCPU:    resource.MustParse("2"),
+				corev1.ResourceCPU:    resource.MustParse(fmt.Sprint(runtime.NumCPU())),
 				corev1.ResourceMemory: resource.MustParse("4Gi"),
-				corev1.ResourcePods:   resource.MustParse("20"),
+				corev1.ResourcePods:   resource.MustParse(fmt.Sprint(maxPods)),
 			},
 			Allocatable: corev1.ResourceList{
-				corev1.ResourceCPU:    resource.MustParse("2"),
+				corev1.ResourceCPU:    resource.MustParse(fmt.Sprint(runtime.NumCPU())),
 				corev1.ResourceMemory: resource.MustParse("4Gi"),
-				corev1.ResourcePods:   resource.MustParse("20"),
+				corev1.ResourcePods:   resource.MustParse(fmt.Sprint(maxPods)),
 			},
 			Conditions:      nodeConditions(),
 			Addresses:       nil,
@@ -254,14 +258,6 @@ func getNodeSpec(name, version string) (*corev1.Node, error) {
 // TODO wtf?
 func nodeConditions() []corev1.NodeCondition {
 	return []corev1.NodeCondition{
-		{
-			Type:               "Readiness",
-			Status:             corev1.ConditionTrue,
-			LastHeartbeatTime:  v1.Now(),
-			LastTransitionTime: v1.Now(),
-			Reason:             "KubeletReady",
-			Message:            "kubelet is ready.",
-		},
 		{
 			Type:               "OutOfDisk",
 			Status:             corev1.ConditionFalse,
@@ -293,6 +289,22 @@ func nodeConditions() []corev1.NodeCondition {
 			LastTransitionTime: v1.Now(),
 			Reason:             "RouteCreated",
 			Message:            "RouteController created a route",
+		},
+		{
+			Type:               "PIDPressure",
+			Status:             corev1.ConditionFalse,
+			LastHeartbeatTime:  v1.Now(),
+			LastTransitionTime: v1.Now(),
+			Reason:             "NodeHasSufficientPID",
+			Message:            "NodeHasSufficientPID",
+		},
+		{
+			Type:               "Ready",
+			Status:             corev1.ConditionTrue,
+			LastHeartbeatTime:  v1.Now(),
+			LastTransitionTime: v1.Now(),
+			Reason:             "KubeletReady",
+			Message:            "kubelet is ready.",
 		},
 	}
 }

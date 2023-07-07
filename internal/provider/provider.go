@@ -3,17 +3,21 @@ package provider
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/types"
 	"github.com/itzloop/iot-vkube/utils"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+	"github.com/virtual-kubelet/virtual-kubelet/node"
 	corev1 "k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/api/resource"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/client-go/kubernetes/scheme"
 	v1 "k8s.io/client-go/listers/core/v1"
 	"k8s.io/client-go/tools/record"
+	"sync"
 )
 
 type PodLifecycleHandlerImpl struct {
@@ -27,6 +31,11 @@ type PodLifecycleHandlerImpl struct {
 
 	// event recorder
 	recorder record.EventRecorder
+
+	// node
+	updateNodeMu *sync.Mutex
+	node         *corev1.Node
+	nnp          *node.NaiveNodeProviderV2
 }
 
 func NewPodLifecycleHandlerImpl(
@@ -34,16 +43,21 @@ func NewPodLifecycleHandlerImpl(
 	lister v1.PodLister,
 	selector labels.Selector,
 	store store.ReadOnlyStore,
-	broadcaster record.EventBroadcaster) *PodLifecycleHandlerImpl {
+	broadcaster record.EventBroadcaster,
+	node *corev1.Node,
+	nnp *node.NaiveNodeProviderV2) *PodLifecycleHandlerImpl {
 
 	recorder := broadcaster.NewRecorder(scheme.Scheme, corev1.EventSource{Component: "IoT-Provider"})
 
 	p := &PodLifecycleHandlerImpl{
-		addr:      addr,
-		podLister: lister,
-		selector:  selector,
-		store:     store,
-		recorder:  recorder,
+		addr:         addr,
+		podLister:    lister,
+		selector:     selector,
+		store:        store,
+		recorder:     recorder,
+		updateNodeMu: &sync.Mutex{},
+		node:         node,
+		nnp:          nnp,
 	}
 
 	// register incoming callbacks
@@ -100,6 +114,11 @@ func (p *PodLifecycleHandlerImpl) CreatePod(ctx context.Context, pod *corev1.Pod
 	ctx = utils.ContextWithEntry(ctx, entry)
 	entry.Trace("creating pod")
 
+	if pod.Spec.NodeName != p.node.Name {
+		entry.Trace("sync node name")
+		pod.Spec.NodeName = p.node.Name
+	}
+
 	controllerName, ok := pod.Annotations["controllerName"]
 	if !ok {
 		err := errors.New("label 'controllerName' is missing")
@@ -146,7 +165,8 @@ func (p *PodLifecycleHandlerImpl) CreatePod(ctx context.Context, pod *corev1.Pod
 			return err
 		}
 
-		return nil
+		entry.Trace("updating node")
+		return p.updateNode(ctx, -1)
 	}
 
 	entry.Debug("device exists")
@@ -199,7 +219,13 @@ func (p *PodLifecycleHandlerImpl) DeletePod(ctx context.Context, pod *corev1.Pod
 	}
 
 	entry.Trace("deleting pod")
-	return p.cbs.OnDeviceDeleted(ctx, controllerName, device)
+	err = p.cbs.OnDeviceDeleted(ctx, controllerName, device)
+	if err != nil {
+		return err
+	}
+
+	entry.Trace("updating node")
+	return p.updateNode(ctx, 1)
 }
 
 // GetPod just uses the pod lister to get the pod from kuber
@@ -239,6 +265,16 @@ func (p *PodLifecycleHandlerImpl) GetPodStatus(ctx context.Context, namespace, n
 	if err != nil {
 		entry.WithField("error", err).Error("failed to get pod")
 		return nil, err
+	}
+
+	if pod == nil {
+		entry.Trace("pod was nil without error")
+		return nil, err
+	}
+
+	if pod.Spec.NodeName != p.node.Name {
+		entry.Trace("sync node name")
+		pod.Spec.NodeName = p.node.Name
 	}
 
 	controllerName, ok := pod.Annotations["controllerName"]
@@ -282,7 +318,6 @@ func (p *PodLifecycleHandlerImpl) GetPodStatus(ctx context.Context, namespace, n
 	}
 
 	return &pod.Status, nil
-
 }
 func (p *PodLifecycleHandlerImpl) GetPods(ctx context.Context) ([]*corev1.Pod, error) {
 	spot := "GetPods"
@@ -294,4 +329,38 @@ func (p *PodLifecycleHandlerImpl) GetPods(ctx context.Context) ([]*corev1.Pod, e
 	ctx = utils.ContextWithEntry(ctx, entry)
 	entry.Trace("listing pods")
 	return p.podLister.List(p.selector)
+}
+
+func (p *PodLifecycleHandlerImpl) updateNode(ctx context.Context, podsDelta int64) error {
+	p.updateNodeMu.Lock()
+	defer p.updateNodeMu.Unlock()
+
+	entry := utils.GetEntryFromContext(ctx)
+	entry = entry.WithField("spot", "PodLifecycleHandlerImpl.updateNode")
+
+	// copy the node first
+	n := new(corev1.Node)
+	p.node.DeepCopyInto(n)
+
+	// modify the node
+	pods, _ := n.Status.Allocatable.Pods().AsInt64()
+	pods += podsDelta
+
+	n.Status.Allocatable = corev1.ResourceList{
+		corev1.ResourceCPU:    n.Status.Allocatable.Cpu().DeepCopy(),
+		corev1.ResourceMemory: n.Status.Allocatable.Memory().DeepCopy(),
+		corev1.ResourcePods:   resource.MustParse(fmt.Sprint(pods)),
+	}
+
+	// store the updated node
+	p.node = n
+
+	// update the node
+	err := p.nnp.UpdateStatus(ctx, n)
+	if err != nil {
+		entry.WithError(err).Error("failed to update node")
+		return err
+	}
+
+	return nil
 }

@@ -2,9 +2,10 @@ import Controller from '@/components/Controller.vue'
 import ControllersVue from '@/components/Controllers.vue'
 import Devices from '@/components/Devices.vue'
 import Device from '@/components/Device.vue'
-import PodsVue from '@/components/Pods.vue'
+import NodesVue from '@/components/Nodes.vue'
 import { compile } from '@vue/compiler-dom'
 import { createRouter, createWebHistory } from 'vue-router'
+import Node from '@/components/Node.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,9 +33,14 @@ const router = createRouter({
       ]
     },
     {
-      path: '/pods',
-      name: 'pods',
-      component: PodsVue
+      path: '/nodes',
+      name: 'nodes',
+      component: NodesVue
+    },
+    {
+      path: '/nodes/:name',
+      name: 'node',
+      component: Node
     }
   ]
 })

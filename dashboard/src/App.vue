@@ -33,20 +33,20 @@ watch(router.currentRoute, (p) => {
 <template>
   <v-card>
     <v-app>
-      <v-navigation-drawer color="teal-lighten-5" v-model="drawer">
+      <v-navigation-drawer v-model="drawer">
         <v-list density="compact" nav>
           <v-list-item
             @click="$router.replace('/controllers')"
             prepend-icon="mdi-gamepad-up"
             title="Controllers"
-            value="home"
+            value="controllers"
           >
           </v-list-item>
           <v-list-item
-            @click="$router.replace('/pods')"
+            @click="$router.replace('/nodes')"
             prepend-icon="mdi-cube-outline"
-            title="Pods"
-            value="home"
+            title="Nodes"
+            value="nodes"
           ></v-list-item>
         </v-list>
       </v-navigation-drawer>

@@ -1,17 +1,18 @@
 import axios from 'axios'
-import type { Controller, Device, Pod } from './types'
+import type { Controller, Device, Pod, Node } from './types'
 import { Axios } from 'axios'
 import { def } from '@vue/shared'
 
 class Api {
-  private baseUrl: string
-
   public ControllersApi: ControllersApi
   public DevicesApi: DevicesApi
-  constructor(baseUrl: string, controllersApi: ControllersApi, devicesApi: DevicesApi) {
-    this.baseUrl = baseUrl
+  public NodesApi: NodesApi
+  public PodsApi: PodsApi
+  constructor(controllersApi: ControllersApi, devicesApi: DevicesApi, nodesApi: NodesApi, podsApi: PodsApi) {
     this.ControllersApi = controllersApi
     this.DevicesApi = devicesApi
+    this.NodesApi = nodesApi
+    this.PodsApi = podsApi
   }
 }
 
@@ -164,7 +165,7 @@ class PodsApi {
   async list(nodeName: string): Promise<Pod[]> {
     try {
       const res = await axios.request<Pod[]>({
-        url: `${this.baseUrl}/nodes/${nodeName}/pods`,
+        url: `${this.baseUrl}/stats/nodes/${nodeName}/pods`,
         method: 'get'
       })
       return res.data
@@ -184,7 +185,7 @@ class NodesApi {
     async list(): Promise<Node[]> {
         try {
           const res = await axios.request<Node[]>({
-            url: `${this.baseUrl}/nodes`,
+            url: `${this.baseUrl}/stats/nodes`,
             method: 'get'
           })
           return res.data
@@ -196,9 +197,10 @@ class NodesApi {
 }
 
 const API = new Api(
-  'http://localhost:5000',
   new ControllersApi('http://localhost:5000'),
-  new DevicesApi('http://localhost:5000')
+  new DevicesApi('http://localhost:5000'),
+  new NodesApi('http://localhost:5001'),
+  new PodsApi('http://localhost:5001'),
 )
 
 export default API

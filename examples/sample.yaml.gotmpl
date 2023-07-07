@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   # deviceName
-  name: {{ $.DeviceName }}{{ $i }}
+  name: {{ $.DeviceName }}-{{ $i }}
   annotations:
     controllerName: {{ $.ControllerName }}
     controllerAddress: {{ $.ControllerAddress }}

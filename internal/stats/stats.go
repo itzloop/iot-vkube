@@ -6,6 +6,7 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	v1 "k8s.io/client-go/listers/core/v1"
 	"net/http"
+	"sort"
 )
 
 type StatsHandler struct {
@@ -32,16 +33,42 @@ func (h *StatsHandler) ListNodes(c *gin.Context) {
 		return
 	}
 
-	// TODO extract needed info
-	vkubeNodes := []*corev1.Node{}
+	nodeResults := []struct {
+		Name            string `json:"name"`
+		Cpu             string `json:"cpu"`
+		Memory          string `json:"memory"`
+		AllocatablePods string `json:"allocatablePods"`
+		MaxPods         string `json:"maxPods"`
+		Readiness       bool   `json:"readiness"`
+	}{}
+
 	for _, node := range nodes {
-		for _, taint := range node.Spec.Taints {
-			if taint.Key == "itzloop.dev/virtual-kubelet" {
-				vkubeNodes = append(vkubeNodes, node)
+		var readiness bool
+		if len(node.Status.Conditions) > 0 {
+			cond := node.Status.Conditions[len(node.Status.Conditions)-1]
+			if cond.Type == corev1.NodeReady {
+				readiness = cond.Status == corev1.ConditionTrue
 			}
 		}
+
+		nodeResults = append(nodeResults, struct {
+			Name            string `json:"name"`
+			Cpu             string `json:"cpu"`
+			Memory          string `json:"memory"`
+			AllocatablePods string `json:"allocatablePods"`
+			MaxPods         string `json:"maxPods"`
+			Readiness       bool   `json:"readiness"`
+		}{
+			Name:            node.Name,
+			Cpu:             node.Status.Capacity.Cpu().String(),
+			Memory:          node.Status.Capacity.Memory().String(),
+			AllocatablePods: node.Status.Allocatable.Pods().String(),
+			MaxPods:         node.Status.Capacity.Pods().String(),
+			Readiness:       readiness,
+		})
 	}
-	c.JSON(http.StatusOK, vkubeNodes)
+
+	c.JSON(http.StatusOK, nodeResults)
 }
 
 func (h *StatsHandler) ListPods(c *gin.Context) {
@@ -52,14 +79,38 @@ func (h *StatsHandler) ListPods(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
+	podResults := []struct {
+		Name      string `json:"name"`
+		Namespace string `json:"namespace"`
+		Readiness bool   `json:"readiness"`
+	}{}
 
-	// TODO extract needed info
-	nodePods := []*corev1.Pod{}
 	for _, pod := range pods {
 		if pod.Spec.NodeName == nodeName {
-			nodePods = append(nodePods, pod)
+			var readiness bool
+			if len(pod.Status.Conditions) > 0 {
+				cond := pod.Status.Conditions[len(pod.Status.Conditions)-1]
+				if cond.Type == corev1.PodReady {
+					readiness = cond.Status == corev1.ConditionTrue
+				}
+			}
+
+			podResults = append(podResults, struct {
+				Name      string `json:"name"`
+				Namespace string `json:"namespace"`
+				Readiness bool   `json:"readiness"`
+			}{
+				Name:      pod.Name,
+				Namespace: pod.Namespace,
+				Readiness: readiness,
+			})
 		}
+
 	}
 
-	c.JSON(http.StatusOK, pods)
+	sort.Slice(podResults, func(i, j int) bool {
+		return podResults[i].Name < podResults[j].Name
+	})
+
+	c.JSON(http.StatusOK, podResults)
 }
