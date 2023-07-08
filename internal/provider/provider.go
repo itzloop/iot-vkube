@@ -2,7 +2,6 @@ package provider
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"github.com/itzloop/iot-vkube/internal/callback"
 	"github.com/itzloop/iot-vkube/internal/store"
@@ -241,12 +240,12 @@ func (p *PodLifecycleHandlerImpl) GetPod(ctx context.Context, namespace, name st
 	entry.Trace("getting pod")
 	pod, err := p.podLister.Pods(namespace).Get(name)
 
-	pJson, err := json.Marshal(pod)
-	if err != nil {
-		return nil, err
-	}
+	//pJson, err := json.Marshal(pod)
+	//if err != nil {
+	//	return nil, err
+	//}
 
-	entry.Trace(string(pJson))
+	//entry.Trace(string(pJson))
 	return pod, err
 }
 

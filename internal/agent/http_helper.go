@@ -14,7 +14,6 @@ type ControllerListBody struct {
 }
 
 type DeviceListBody struct {
-	ControllerBody
 	Devices []DeviceBody `json:"devices,omitempty"`
 }
 

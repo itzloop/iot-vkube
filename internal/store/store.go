@@ -106,6 +106,14 @@ func (l *LocalStoreImpl) GetRangeDevices(ctx context.Context, controllerName str
 		return nil, errors.New("from must be smaller that to")
 	}
 
+	if to > int64(len(c.Devices)) {
+		to = int64(len(c.Devices))
+	}
+
+	if from > int64(len(c.Devices)) {
+		return []types.Device{}, nil
+	}
+
 	return c.Devices[from:to], nil
 }
 
@@ -123,7 +131,7 @@ func (l *LocalStoreImpl) GetDevice(ctx context.Context, controllerName, deviceNa
 		}
 	}
 
-	return types.Device{}, errors.New("device not found")
+	return types.Device{}, errors.New("getDevice: device not found")
 }
 
 func (l *LocalStoreImpl) DeleteDevice(ctx context.Context, controllerName string, device types.Device) error {
@@ -143,7 +151,7 @@ func (l *LocalStoreImpl) DeleteDevice(ctx context.Context, controllerName string
 		}
 	}
 
-	return errors.New("device not found")
+	return errors.New("deleteDevice: device not found")
 }
 
 func (l *LocalStoreImpl) UpdateDevice(ctx context.Context, controllerName string, device types.Device) error {
@@ -163,7 +171,7 @@ func (l *LocalStoreImpl) UpdateDevice(ctx context.Context, controllerName string
 	}
 
 	if index == -1 {
-		return errors.New("device does not exist")
+		return errors.New("updateDevice: device does not exist")
 	}
 
 	// remove old device

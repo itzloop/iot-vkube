@@ -84,8 +84,9 @@ onUnmounted(() => {
     {{ alert.msg }}
   </v-alert>
 
-  <v-data-table-virtual
+  <v-data-table
     :headers="headers"
+    v-model:page="page"
     :items="podArray"
     :search="search"
     class="elevation-1"
@@ -99,7 +100,6 @@ onUnmounted(() => {
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="500px">
           <template v-slot:activator="{ props }">
-            <v-btn color="teal-darken-4" dark class="mb-2" v-bind="props"> Add </v-btn>
             <v-card color="grey-lighten-3" min-width="200">
               <v-card-text>
                 <v-text-field
@@ -121,5 +121,5 @@ onUnmounted(() => {
         {{ item.columns.readiness ? 'READY' : 'NOT-READY' }}
       </v-chip>
     </template>
-  </v-data-table-virtual>
+  </v-data-table>
 </template>

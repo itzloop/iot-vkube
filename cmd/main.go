@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/itzloop/iot-vkube/internal/agent"
+	"github.com/itzloop/iot-vkube/internal/pool"
 	"github.com/itzloop/iot-vkube/internal/provider"
 	"github.com/itzloop/iot-vkube/internal/stats"
 	"github.com/itzloop/iot-vkube/internal/store"
@@ -50,7 +51,7 @@ func main() {
 	flag.StringVar(&kubeConfigPath, "kubeconfig", "/home/loop/.kube/config", "kubernetes cluster config")
 	flag.StringVar(&ns, "namespace", "default", "kubernetes namespace")
 	flag.StringVar(&ns, "n", "default", "kubernetes namespace")
-	flag.StringVar(&logLevel, "log-level", logrus.TraceLevel.String(), "log level")
+	flag.StringVar(&logLevel, "log-level", logrus.InfoLevel.String(), "log level")
 	flag.Parse()
 
 	// set log level
@@ -83,7 +84,7 @@ func main() {
 	//}
 	//
 	//for _, namespace := range res.Items {
-	//	fmt.Println(namespace.Name)
+	//	logrus.Info(namespace.Name)
 	//}
 
 	// get node spec
@@ -113,9 +114,12 @@ func main() {
 	// create stats provider	TODO
 	_ = stats.NewStatsHandler(informer.Core().V1().Pods().Lister(), informer.Core().V1().Nodes().Lister(), selector, ginEngine)
 
+	// create worker pool
+	wp := pool.NewWorkerPool(runtime.NumCPU(), 4*runtime.NumCPU())
+
 	// create provider
 	st := store.NewLocalStoreImpl()
-	service := agent.NewService(st)
+	service := agent.NewService(st, wp)
 
 	// setup native node provider
 	nativeProvider := node.NewNaiveNodeProvider()
@@ -153,24 +157,62 @@ func main() {
 
 	// start podController
 	group.Go(func() error {
-		return pc.Run(ctx, 5)
+		err := pc.Run(ctx, runtime.NumCPU())
+		if err != nil {
+			logrus.Info("pod controller finished with err", err)
+		} else {
+			logrus.Info("pod controller finished")
+		}
+		return err
 	})
 
 	// start node controller
 	group.Go(func() error {
-		return nc.Run(ctx)
+		err := nc.Run(ctx)
+		if err != nil {
+			logrus.Info("node controller finished with err", err)
+		} else {
+			logrus.Info("node controller finished")
+		}
+		return err
 	})
 
 	// start http server
 	group.Go(func() error {
-		return startGinEngineFunc(ctx)
+		err := startGinEngineFunc(ctx)
+		if err != nil {
+			logrus.Info("gin finished with err", err)
+		} else {
+			logrus.Info("gin finished")
+		}
+		return err
 	})
 
 	group.Go(func() error {
-		return service.Start(ctx)
+		wp.Start(ctx)
+		<-ctx.Done()
+		err := wp.Close()
+		if err != nil {
+			logrus.Info("worker pool finished with err", err)
+		} else {
+			logrus.Info("worker pool finished")
+		}
+		return err
 	})
 
-	fmt.Println("setup complete")
+	group.Go(func() error {
+		err := service.Start(ctx)
+
+		if err != nil {
+			logrus.Info("service finished with err", err)
+		} else {
+			logrus.Info("service finished")
+		}
+
+		return err
+	})
+
+	logrus.Info("setup complete")
 
 	if err := group.Wait(); err != nil {
 		logrus.WithField("error", err).Error("one of goroutines has been stopped")

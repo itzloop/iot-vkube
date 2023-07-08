@@ -166,8 +166,9 @@ onMounted(() => {
     {{ alert.msg }}
   </v-alert>
 
-  <v-data-table-virtual
+  <v-data-table
     :headers="headers"
+    v-model:page="page"
     :items="deviceArray"
     :search="search"
     class="elevation-1"
@@ -245,5 +246,5 @@ onMounted(() => {
       <v-icon size="small" class="me-2" @click="updateDevice(item.raw)"> mdi-pencil </v-icon>
       <v-icon size="small" class="me-2" @click="deleteDevice(item.raw)"> mdi-delete </v-icon>
     </template>
-  </v-data-table-virtual>
+  </v-data-table>
 </template>

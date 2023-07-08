@@ -3,6 +3,7 @@ package agent
 import (
 	"context"
 	"github.com/itzloop/iot-vkube/internal/callback"
+	"github.com/itzloop/iot-vkube/internal/pool"
 	"github.com/itzloop/iot-vkube/internal/store"
 	"github.com/itzloop/iot-vkube/utils"
 	"github.com/sirupsen/logrus"
@@ -11,12 +12,13 @@ import (
 )
 
 type Service struct {
-	store     store.Store
-	callbacks *callback.ServiceCallBacks
+	store      store.Store
+	callbacks  *callback.ServiceCallBacks
+	workerPool *pool.WorkerPool
 }
 
-func NewService(store store.Store) *Service {
-	srv := &Service{store: store}
+func NewService(store store.Store, workerPool *pool.WorkerPool) *Service {
+	srv := &Service{store: store, workerPool: workerPool}
 
 	// register incoming callbacks
 	srv.RegisterCallbacks(nil)
@@ -62,10 +64,8 @@ func (service *Service) RegisterCallbacks(cb *callback.ServiceCallBacks) {
 	service.callbacks = cb
 }
 
-// TODO
 func (service *Service) Start(ctx context.Context) error {
 	group, groupCtx := errgroup.WithContext(ctx)
-	group.Go(service.httpServer)
 	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*10) })
 
 	go func() {
@@ -76,7 +76,6 @@ func (service *Service) Start(ctx context.Context) error {
 	return group.Wait()
 }
 
-// TODO
 func (service *Service) Close() error {
 	// shutdown http server
 	//err := service.server.Shutdown(context.Background())
@@ -104,8 +103,8 @@ func (service *Service) agentWorker(ctx context.Context, interval time.Duration)
 
 	ctx = utils.ContextWithEntry(ctx, entry)
 
-	entry.Info("starting hooks worker")
-	defer entry.Info("exiting hooks worker")
+	entry.Info("starting agent worker")
+	defer entry.Info("exiting agent worker")
 	for {
 		select {
 		case <-ticker:
@@ -118,58 +117,3 @@ func (service *Service) agentWorker(ctx context.Context, interval time.Duration)
 		}
 	}
 }
-
-// TODO httpServer should handle following endpoints:
-// - register controller
-func (service *Service) httpServer() error {
-	//spot := "agent/httpServer"
-	//entry := logrus.WithFields(logrus.Fields{"spot": spot, "addr": service.addr})
-	//entry.Info("server is starting...")
-	//
-	//r := mux.NewRouter()
-	////service.setupControllerRoutes(r.PathPrefix("/controllers").Subrouter())
-	//r.Use(utils.LoggingMiddleware)
-	//
-	//service.server = &http.Server{
-	//	Addr:    service.addr,
-	//	Handler: r,
-	//}
-	//
-	//err := service.server.ListenAndServe()
-	//if err != nil {
-	//	if err == http.ErrServerClosed {
-	//		entry.WithField("error", err).Info("http server closed")
-	//		return nil
-	//	}
-	//}
-
-	return nil
-}
-
-//func (service *Service) setupControllerRoutes(controllerRoute *mux.Router) {
-//	controllerService := NewControllerService(service.store)
-//	controllerRoute.
-//		Path("").
-//		HandlerFunc(controllerService.RegisterController).
-//		Methods(http.MethodPost)
-//
-//	controllerRoute.
-//		Path("").
-//		HandlerFunc(controllerService.ListControllers).
-//		Methods(http.MethodGet)
-//
-//	controllerRoute.
-//		Path("/{controllerName}").
-//		HandlerFunc(controllerService.GetController).
-//		Methods(http.MethodGet)
-//
-//	controllerRoute.
-//		Path("/{controllerName}").
-//		HandlerFunc(controllerService.DeleteController).
-//		Methods(http.MethodDelete)
-//
-//	controllerRoute.
-//		Path("/{controllerName}").
-//		HandlerFunc(controllerService.UpdateController).
-//		Methods(http.MethodPatch)
-//}
