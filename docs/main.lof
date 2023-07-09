@@ -1,16 +1,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2-1}{\ignorespaces معماری کلی کوبرنیتز}}{5}{figure.2.1}%
-\contentsline {figure}{\numberline {2-2}{\ignorespaces نمای کلی از رابط کاربردی قابل برنامه‌ریزی}}{9}{figure.2.2}%
-\contentsline {figure}{\numberline {2-3}{\ignorespaces کوبلت مجازی در یک خوشه کوبرنیتز}}{10}{figure.2.3}%
-\contentsline {figure}{\numberline {2-4}{\ignorespaces نمای کلی از اینترنت اشیاء}}{12}{figure.2.4}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces نمای کلی درخواست و پاسخ HTTP}}{9}{figure.2.2}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces نمای کلی از REST}}{12}{figure.2.3}%
+\contentsline {figure}{\numberline {2-4}{\ignorespaces نمای کلی از رابط کاربردی قابل برنامه‌ریزی}}{13}{figure.2.4}%
+\contentsline {figure}{\numberline {2-5}{\ignorespaces کوبلت مجازی در یک خوشه کوبرنیتز}}{15}{figure.2.5}%
+\contentsline {figure}{\numberline {2-6}{\ignorespaces نمای کلی از اینترنت اشیاء}}{17}{figure.2.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces نمای کلی معماری}}{15}{figure.4.1}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces شمای کلی سیستم پرسش‌و‌پاسخ تصویری}}{16}{figure.4.2}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces نمونه‌ای از کارکرد Tokenizer}}{17}{figure.4.3}%
-\contentsline {figure}{\numberline {4-4}{\ignorespaces معماری مدل LXMERT همراه با ورودی و خروجی}}{18}{figure.4.4}%
-\contentsline {figure}{\numberline {4-5}{\ignorespaces میزان توجه بخش متن به تصاویر در VisualBERT}}{19}{figure.4.5}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces ساختار مدل \lr {Autoregressive Decoder}}}{20}{figure.4.6}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces نمای کلی معماری}}{20}{figure.4.1}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces شمای کلی سیستم پرسش‌و‌پاسخ تصویری}}{21}{figure.4.2}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces نمونه‌ای از کارکرد Tokenizer}}{22}{figure.4.3}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces معماری مدل LXMERT همراه با ورودی و خروجی}}{23}{figure.4.4}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces میزان توجه بخش متن به تصاویر در VisualBERT}}{24}{figure.4.5}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces ساختار مدل \lr {Autoregressive Decoder}}}{25}{figure.4.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
