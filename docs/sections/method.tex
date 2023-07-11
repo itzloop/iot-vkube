@@ -18,8 +18,79 @@
         \label{fig:arch}
     \end{figure}
 }
+\subsection{پیاده‌سازی تامین‌کننده کوبلت مجازی}
+\label{subsec:provider}
+\paragraph{}
+{
+    کوبلت مجازی با در اختیار گذاشتن رابط‌هایی برای برنامه‌نویس، این امکان را می‌دهد که بتوانیم گره‌های کوبرنیتز با پشتوانه‌های
+    سفارشی‌سازی شده داشته باشیم. برای مثال رابط زیر چرخه وجودی یک پاد را نشان می‌دهد. حال با پیاده‌سازی این رابط، ما این امکان
+    را داریم که از ساخته‌شدن، بروزرسانی شدن، حذف شدن و حتی تغییر وضعیت‌های پاد‌های مورد نظر خود با خبر شویم.
+    \newpage
+    \begin{latin}
+    \begin{lstlisting}[caption=پاد وجودی چرخه کنترل‌کننده رابط]
+        type PodLifecycleHandler interface {
+            CreatePod(ctx context.Context, pod *corev1.Pod) error
+        
+            UpdatePod(ctx context.Context, pod *corev1.Pod) error
+        
+            DeletePod(ctx context.Context, pod *corev1.Pod) error
+        
+            GetPod(ctx context.Context, namespace, name string) (*corev1.Pod, error)
+        
+            GetPodStatus(ctx context.Context, namespace, name string) (*corev1.PodStatus, error)
+        
+            GetPods(context.Context) ([]*corev1.Pod, error)
+        }        
+    \end{lstlisting}
+    \end{latin}
 
-\section{نحوه استفاده}
+    پیاده‌سازی این رابط امکان این را می‌دهد که بتوانیم یک پاد بر روی کوبرنیتز اعمال کرده و سپس بوسیله کوبرنیتز فراخوانی شده تا پاد مورد نظر را بسازیم. در  این پروژه یک پاد نقش یک دستگاه اینترنت اشیاء را دارد.
+    همچنین برای ارسال وضعیت گره مجازی ساخته شده، نیاز به پیاده‌سازی رابط دیگری داریم.
+
+    \begin{latin}
+        \begin{lstlisting}[caption={گره وضعیت کنترل‌کننده رابط}]
+            type NodeProvider interface {
+                Ping(context.Context) error
+
+                NotifyNodeStatus(ctx context.Context, cb func(*corev1.Node))
+            }
+
+        \end{lstlisting}
+    \end{latin}
+
+    پیاده‌سازی این رابط باعث می‌شود هنگامی که کد مربوطه در حال اجرا می‌باشد، گره مورد در نظر در خوشه کوبرنیتز بصورت آماده ظاهر شود و اگه این کد متوقف شود، بصورت غیر آماده ظاهر شود.
+}
+
+\subsection{رابط برقراری ارتباط با کنترل‌کننده‌ها}
+\label{subsec:connector}
+\paragraph{}
+{
+    TODO
+}
+
+\subsection{سیستم فراخوانی برگشتی}
+\label{subsec:callbacks}
+\paragraph{}
+{
+    TODO
+}
+
+\subsection{شبیه‌ساز‍}
+\label{subsec:simulator}
+\paragraph{}
+{
+    TODO
+}
+
+\subsection{رابط گرافیکی}
+\label{subsec:gui}
+\paragraph{}
+{
+    TODO
+}
+
+
+\section{نحوه کارکرد}
 \paragraph{}{}
 
 \section{رابط کاربردی گرافیکی}
@@ -43,7 +114,6 @@
 \section{
   معماری سیستم
  }
-
 \paragraph{}{
     برای حل این مسسله از معماری کدگذار-کدگشا استفاده شده‌است به گونه‌ای 
     که از یک شبکه از پیش آموزش داده‌شده به عنوان کدگذار و از معماری‌های متفاوتی 

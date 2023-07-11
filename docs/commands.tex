@@ -19,6 +19,32 @@
 \usepackage{totcount}
 \regtotcounter{chapter}
 
+\usepackage[usenames,dvipsnames]{color,xcolor}
+
+\usepackage{listings}
+\usepackage{listings-golang} % import this package after listings
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Golang,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\linespread{1}\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 % در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
 \usepackage{amsthm,amssymb,amsmath}
 % بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
@@ -47,6 +73,7 @@
 
 % بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
 \usepackage[nottoc]{tocbibind}
+
 % دستورات مربوط به ایجاد نمایه
 \usepackage{makeidx}
 \makeindex

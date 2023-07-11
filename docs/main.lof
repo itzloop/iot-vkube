@@ -9,10 +9,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4-1}{\ignorespaces نمای کلی معماری}}{21}{figure.4.1}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces شمای کلی سیستم پرسش‌و‌پاسخ تصویری}}{22}{figure.4.2}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces نمونه‌ای از کارکرد Tokenizer}}{23}{figure.4.3}%
-\contentsline {figure}{\numberline {4-4}{\ignorespaces معماری مدل LXMERT همراه با ورودی و خروجی}}{24}{figure.4.4}%
-\contentsline {figure}{\numberline {4-5}{\ignorespaces میزان توجه بخش متن به تصاویر در VisualBERT}}{25}{figure.4.5}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces ساختار مدل \lr {Autoregressive Decoder}}}{26}{figure.4.6}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces شمای کلی سیستم پرسش‌و‌پاسخ تصویری}}{24}{figure.4.2}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces نمونه‌ای از کارکرد Tokenizer}}{25}{figure.4.3}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces معماری مدل LXMERT همراه با ورودی و خروجی}}{26}{figure.4.4}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces میزان توجه بخش متن به تصاویر در VisualBERT}}{27}{figure.4.5}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces ساختار مدل \lr {Autoregressive Decoder}}}{28}{figure.4.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
