@@ -1269,9 +1269,9 @@ INPUT figs/http.png
 INPUT ./figs/rest-crud.png
 INPUT ./figs/rest-crud.png
 INPUT figs/rest-crud.png
-INPUT ./figs/api.jpg
-INPUT ./figs/api.jpg
-INPUT figs/api.jpg
+INPUT ./figs/api.png
+INPUT ./figs/api.png
+INPUT figs/api.png
 INPUT ./figs/vkube.png
 INPUT ./figs/vkube.png
 INPUT figs/vkube.png

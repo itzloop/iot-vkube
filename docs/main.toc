@@ -24,65 +24,65 @@
 \contentsline {paragraph}{}{7}{paragraph*.12}%
 \contentsline {subsection}{\numberline {2-3-5}خوشه کوبرنیتز}{8}{subsection.2.3.5}%
 \contentsline {paragraph}{}{8}{paragraph*.13}%
-\contentsline {section}{\numberline {2-4}HTTP}{8}{section.2.4}%
+\contentsline {section}{\numberline {2-4}پیمان انتقال فرا متن}{8}{section.2.4}%
 \contentsline {paragraph}{}{8}{paragraph*.14}%
-\contentsline {subsection}{\numberline {2-4-1}توابع HTTP}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2-4-1}توابع پیمان انتقال فرا متن}{9}{subsection.2.4.1}%
 \contentsline {paragraph}{}{9}{paragraph*.15}%
-\contentsline {subsection}{\numberline {2-4-2}درخواست HTTP}{10}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2-4-2}درخواست پیمان انتقال فرا متن}{10}{subsection.2.4.2}%
 \contentsline {paragraph}{}{10}{paragraph*.16}%
-\contentsline {subsection}{\numberline {2-4-3}پاسخ‌ HTTP}{11}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2-4-3}پاسخ‌ پیمان انتقال فرا متن}{11}{subsection.2.4.3}%
 \contentsline {paragraph}{}{11}{paragraph*.17}%
-\contentsline {subsection}{\numberline {2-4-4}REST}{11}{subsection.2.4.4}%
-\contentsline {paragraph}{}{11}{paragraph*.18}%
-\contentsline {subsection}{\numberline {2-4-5}رابط کاربردی قابل برنامه‌ریزی}{12}{subsection.2.4.5}%
-\contentsline {paragraph}{}{12}{paragraph*.19}%
-\contentsline {section}{\numberline {2-5}معماری فن‌آوت}{13}{section.2.5}%
-\contentsline {paragraph}{}{13}{paragraph*.20}%
-\contentsline {section}{\numberline {2-6}کوبلت مجازی}{14}{section.2.6}%
-\contentsline {paragraph}{}{14}{paragraph*.21}%
-\contentsline {subsection}{\numberline {2-6-1}معماری کوبلت مجازی}{15}{subsection.2.6.1}%
-\contentsline {paragraph}{}{15}{paragraph*.22}%
+\contentsline {subsection}{\numberline {2-4-4}انتقال حالت نمایشی}{12}{subsection.2.4.4}%
+\contentsline {paragraph}{}{12}{paragraph*.18}%
+\contentsline {subsection}{\numberline {2-4-5}رابط کاربردی قابل برنامه‌ریزی}{13}{subsection.2.4.5}%
+\contentsline {paragraph}{}{13}{paragraph*.19}%
+\contentsline {section}{\numberline {2-5}معماری فن‌آوت}{14}{section.2.5}%
+\contentsline {paragraph}{}{14}{paragraph*.20}%
+\contentsline {section}{\numberline {2-6}کوبلت مجازی}{15}{section.2.6}%
+\contentsline {paragraph}{}{15}{paragraph*.21}%
+\contentsline {subsection}{\numberline {2-6-1}معماری کوبلت مجازی}{16}{subsection.2.6.1}%
+\contentsline {paragraph}{}{16}{paragraph*.22}%
 \contentsline {section}{\numberline {2-7}اینترنت اشیاء}{16}{section.2.7}%
 \contentsline {paragraph}{}{16}{paragraph*.23}%
-\contentsline {section}{\numberline {2-8}جمع‌بندی}{17}{section.2.8}%
-\contentsline {paragraph}{}{17}{paragraph*.24}%
-\contentsline {chapter}{\numberline {3}کارهای مرتبط}{18}{chapter.3}%
-\contentsline {section}{\numberline {3-1}مقدمه}{18}{section.3.1}%
-\contentsline {paragraph}{}{18}{paragraph*.25}%
-\contentsline {chapter}{\numberline {4}روش پیشنهادی}{19}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{19}{section.4.1}%
-\contentsline {paragraph}{}{19}{paragraph*.26}%
-\contentsline {section}{\numberline {4-2}معماری سامانه}{19}{section.4.2}%
-\contentsline {paragraph}{}{19}{paragraph*.27}%
-\contentsline {section}{\numberline {4-3}نحوه استفاده}{20}{section.4.3}%
-\contentsline {paragraph}{}{20}{paragraph*.28}%
-\contentsline {section}{\numberline {4-4}رابط کاربردی گرافیکی}{20}{section.4.4}%
-\contentsline {paragraph}{}{20}{paragraph*.29}%
-\contentsline {section}{\numberline {4-5}مقدمه}{21}{section.4.5}%
-\contentsline {paragraph}{}{21}{paragraph*.30}%
-\contentsline {section}{\numberline {4-6} معماری سیستم }{21}{section.4.6}%
-\contentsline {paragraph}{}{21}{paragraph*.31}%
-\contentsline {section}{\numberline {4-7} ورودی اولیه و خروجی نهایی }{22}{section.4.7}%
-\contentsline {paragraph}{}{22}{paragraph*.32}%
-\contentsline {section}{\numberline {4-8} مدل Encoder }{23}{section.4.8}%
-\contentsline {paragraph}{}{23}{paragraph*.33}%
-\contentsline {subsection}{\numberline {4-8-1} مدل LXMERT \cite {tan-bansal-2019-lxmert} }{23}{subsection.4.8.1}%
-\contentsline {paragraph}{}{23}{paragraph*.34}%
-\contentsline {subsection}{\numberline {4-8-2} مدل VisualBERT \cite {li-etal-2020-bert-vision} }{24}{subsection.4.8.2}%
-\contentsline {paragraph}{}{24}{paragraph*.35}%
-\contentsline {section}{\numberline {4-9} مدل Decoder }{24}{section.4.9}%
-\contentsline {paragraph}{}{24}{paragraph*.36}%
-\contentsline {section}{\numberline {4-10}جمع‌بندی}{25}{section.4.10}%
-\contentsline {paragraph}{}{25}{paragraph*.37}%
-\contentsline {chapter}{\numberline {5}ارزیابی روش پیشنهادی}{26}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{26}{section.5.1}%
-\contentsline {paragraph}{}{26}{paragraph*.38}%
-\contentsline {chapter}{\numberline {6}نتیجه‌گیری و کارهای آینده}{27}{chapter.6}%
-\contentsline {section}{\numberline {6-1}نتیجه‌گیری}{27}{section.6.1}%
-\contentsline {paragraph}{}{27}{paragraph*.39}%
-\contentsline {section}{\numberline {6-2}دستاوردها}{28}{section.6.2}%
-\contentsline {paragraph}{}{28}{paragraph*.40}%
-\contentsline {section}{\numberline {6-3}کارهای آینده}{28}{section.6.3}%
-\contentsline {paragraph}{}{28}{paragraph*.41}%
-\contentsline {chapter}{واژه‌نامه فارسی به انگلیسی}{29}{chapter*.42}%
-\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{31}{chapter*.43}%
+\contentsline {section}{\numberline {2-8}جمع‌بندی}{18}{section.2.8}%
+\contentsline {paragraph}{}{18}{paragraph*.24}%
+\contentsline {chapter}{\numberline {3}کارهای مرتبط}{19}{chapter.3}%
+\contentsline {section}{\numberline {3-1}مقدمه}{19}{section.3.1}%
+\contentsline {paragraph}{}{19}{paragraph*.25}%
+\contentsline {chapter}{\numberline {4}روش پیشنهادی}{20}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{20}{section.4.1}%
+\contentsline {paragraph}{}{20}{paragraph*.26}%
+\contentsline {section}{\numberline {4-2}معماری سامانه}{20}{section.4.2}%
+\contentsline {paragraph}{}{20}{paragraph*.27}%
+\contentsline {section}{\numberline {4-3}نحوه استفاده}{21}{section.4.3}%
+\contentsline {paragraph}{}{21}{paragraph*.28}%
+\contentsline {section}{\numberline {4-4}رابط کاربردی گرافیکی}{21}{section.4.4}%
+\contentsline {paragraph}{}{21}{paragraph*.29}%
+\contentsline {section}{\numberline {4-5}مقدمه}{22}{section.4.5}%
+\contentsline {paragraph}{}{22}{paragraph*.30}%
+\contentsline {section}{\numberline {4-6} معماری سیستم }{22}{section.4.6}%
+\contentsline {paragraph}{}{22}{paragraph*.31}%
+\contentsline {section}{\numberline {4-7} ورودی اولیه و خروجی نهایی }{23}{section.4.7}%
+\contentsline {paragraph}{}{23}{paragraph*.32}%
+\contentsline {section}{\numberline {4-8} مدل Encoder }{24}{section.4.8}%
+\contentsline {paragraph}{}{24}{paragraph*.33}%
+\contentsline {subsection}{\numberline {4-8-1} مدل LXMERT \cite {tan-bansal-2019-lxmert} }{24}{subsection.4.8.1}%
+\contentsline {paragraph}{}{24}{paragraph*.34}%
+\contentsline {subsection}{\numberline {4-8-2} مدل VisualBERT \cite {li-etal-2020-bert-vision} }{25}{subsection.4.8.2}%
+\contentsline {paragraph}{}{25}{paragraph*.35}%
+\contentsline {section}{\numberline {4-9} مدل Decoder }{25}{section.4.9}%
+\contentsline {paragraph}{}{25}{paragraph*.36}%
+\contentsline {section}{\numberline {4-10}جمع‌بندی}{26}{section.4.10}%
+\contentsline {paragraph}{}{26}{paragraph*.37}%
+\contentsline {chapter}{\numberline {5}ارزیابی روش پیشنهادی}{27}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{27}{section.5.1}%
+\contentsline {paragraph}{}{27}{paragraph*.38}%
+\contentsline {chapter}{\numberline {6}نتیجه‌گیری و کارهای آینده}{28}{chapter.6}%
+\contentsline {section}{\numberline {6-1}نتیجه‌گیری}{28}{section.6.1}%
+\contentsline {paragraph}{}{28}{paragraph*.39}%
+\contentsline {section}{\numberline {6-2}دستاوردها}{29}{section.6.2}%
+\contentsline {paragraph}{}{29}{paragraph*.40}%
+\contentsline {section}{\numberline {6-3}کارهای آینده}{29}{section.6.3}%
+\contentsline {paragraph}{}{29}{paragraph*.41}%
+\contentsline {chapter}{واژه‌نامه فارسی به انگلیسی}{30}{chapter*.42}%
+\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{32}{chapter*.43}%
