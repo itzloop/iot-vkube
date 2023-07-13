@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.13)  13 JUL 2023 16:29
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.13)  14 JUL 2023 00:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1361,14 +1361,8 @@ Font mapping `persian-tex-text.tec' for font `[IRNazaninBold.ttf]/OT:language=df
 
 ]
 
-Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page ج undefined on input line 79.
-
-
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page ج undefined on input line 81.
-
-
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 83.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 79.
 
 [6])
 \tf@toc=\write5
@@ -1379,10 +1373,7 @@ LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 27.
 
-[7] (./main.lof
-LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 16.
-)
+[7] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1601,13 +1592,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
+File: figs/fanout.png Graphic file (type bmp)
+<figs/fanout.png>
+
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 227.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 229.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 227.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 229.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1622,11 +1616,11 @@ File: figs/vkube.png Graphic file (type bmp)
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 238.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 243.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 238.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 243.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1638,11 +1632,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 248.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 253.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 248.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 253.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1654,11 +1648,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [16]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 267.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 272.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 267.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 272.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1670,7 +1664,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [17]
 File: figs/iot.jpg Graphic file (type bmp)
 <figs/iot.jpg>
-)
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 302.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 302.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18])
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
 (Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 36.
@@ -1686,17 +1696,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
+[19]
 \openout2 = `sections/related.aux'.
 
  (./sections/related.tex
 فصل 3.
-
-Overfull \hbox (8.98209pt too wide) in paragraph at lines 11--18
-[][] [][][][][][] \TU/IRNazanin.ttf(0)/m/it/12 در این فصل به معرفی کارهای مشابه و شرح رویکردهای مورد استفاده برای حل مساله‌ی پرسش‌و‌پاسخ تصویری می‌پردازیم.[]
- []
-
-) [19
+) [20
 
 
 
@@ -1713,7 +1718,7 @@ Overfull \hbox (23.63638pt too wide) in paragraph at lines 14--19
 [][] [][][][][][] \TU/IRNazanin.ttf(0)/m/it/12 اجزای اصلی سامانه متشکل از پیاده‌سازی تامین‌کننده کوبلت مجازی، رابط بین تامین‌کننده و کنترل‌کننده‌ها، کنترل‌کننده‌ها[]
  []
 
-[20
+[21
 
 
 
@@ -1734,42 +1739,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21]
+[22]
+LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 29.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 30.
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
 (Font)              scaled to size 10.95pt on input line 30.
+File: figs/vkube_node.png Graphic file (type bmp)
+<figs/vkube_node.png>
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 78.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 69.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 78.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22]
-
-Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 23 undefined on input line 105.
-
-
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 23 undefined on input line 107.
-
-File: figs/model architecture.png Graphic file (type bmp)
-<figs/model architecture.png>
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 134.
-
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 134.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 69.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1781,11 +1766,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 136.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 89.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 136.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 89.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1795,22 +1780,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-File: figs/tokenization.png Graphic file (type bmp)
-<figs/tokenization.png>
-
-
-Package natbib Warning: Citation `anderson2018bottom' on page 25 undefined on input line 175.
-
-
-Package natbib Warning: Citation `ren2015faster' on page 25 undefined on input line 178.
+File: figs/sim_api.png Graphic file (type bmp)
+<figs/sim_api.png>
+File: figs/dash_home.png Graphic file (type bmp)
+<figs/dash_home.png>
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 195.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 116.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 195.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 116.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1820,82 +1801,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-
-Package natbib Warning: Citation `tan-bansal-2019-lxmert' on page 26 undefined on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 198.
-
-File: figs/lxmert.png Graphic file (type bmp)
-<figs/lxmert.png>
-
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 26 undefined on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 225.
-
-
-Package natbib Warning: Citation `li-etal-2020-bert-vision' on page 26 undefined on input line 234.
-
-File: figs/VisualBERT.png Graphic file (type bmp)
-<figs/VisualBERT.png>
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 249.
+File: figs/dash_nodes.png Graphic file (type bmp)
+<figs/dash_nodes.png>
+File: figs/dash_controllers.png Graphic file (type bmp)
+<figs/dash_controllers.png>
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 249.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 129.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 129.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1905,16 +1822,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
-File: figs/Autoregressive.png Graphic file (type bmp)
-<figs/Autoregressive.png>
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 139.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 273.
-
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 273.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 139.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1923,14 +1837,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27])
+[27]
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 165.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 165.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1940,33 +1854,58 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
-\openout2 = `sections/eval.aux'.
-
- (./sections/eval.tex
-فصل 5.
-) [29
-
-
-
-
-]
-\openout2 = `sections/concl.aux'.
-
- (./sections/concl.tex
-فصل 6.
-[30
-
-
-
-
-])
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 40.
+File: figs/dash_devices.png Graphic file (type bmp)
+<figs/dash_devices.png>
+File: figs/dash_pod_lock_main_not_ready.png Graphic file (type bmp)
+<figs/dash_pod_lock_main_not_ready.png>
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 40.
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 178.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 178.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+File: figs/dash_pod_lock_main_ready.png Graphic file (type bmp)
+<figs/dash_pod_lock_main_ready.png>
+File: figs/dash_lock_main_change_readiness.png Graphic file (type bmp)
+<figs/dash_lock_main_change_readiness.png>
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 190.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 190.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+File: figs/dash_pod_lock_main_not_ready.png Graphic file (type bmp)
+<figs/dash_pod_lock_main_not_ready.png>
+)
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
+
+
+LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
+(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 38.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1976,6 +1915,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31]
+\openout2 = `sections/eval.aux'.
+
+ (./sections/eval.tex
+فصل 5.
+) [32
+
+
+
+
+]
+\openout2 = `sections/concl.aux'.
+
+ (./sections/concl.tex
+فصل 6.
+) [33
+
+
+
+
+]
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX,Scale=0.8].
@@ -2000,33 +1959,12 @@ Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 LaTeX Info: Redefining \latinfont on input line 47.
 \openout2 = `dicfa2en.aux'.
 
- (./dicfa2en.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 4--62
-[][]
- []
-
-[32
+ (./dicfa2en.tex) [34
 
 
 
 
 ]
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 62.
-
-
-LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(0)/m/sl' undefined
-(Font)              using `TU/IRNazanin.ttf(0)/m/it' instead on input line 62.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
 \openout2 = `dicen2fa.aux'.
 
  (./dicen2fa.tex)
@@ -2034,22 +1972,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--63
 [][]
  []
 
-[34
+[35
 
 
 
 
 ] (./main.ind) (./enTitle.tex
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 31.
+(Font)              scaled to size 17.28pt on input line 32.
 
 
 LaTeX Font Warning: Font shape `TU/IRNazanin.ttf(1)/b/n' undefined
-(Font)              using `TU/IRNazanin.ttf(1)/m/n' instead on input line 31.
+(Font)              using `TU/IRNazanin.ttf(1)/m/n' instead on input line 32.
 
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 31.
-[35
+(Font)              scaled to size 12.0pt on input line 32.
+[36
 
 
 
@@ -2057,33 +1995,29 @@ LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
 File: logo-en.pdf Graphic file (type pdf)
 <use logo-en.pdf>
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 31.
+(Font)              scaled to size 14.4pt on input line 32.
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 31.
+(Font)              scaled to size 14.4pt on input line 32.
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 31.
+(Font)              scaled to size 24.88pt on input line 32.
 LaTeX Font Info:    Font shape `TU/IRNazanin.ttf(1)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 31.
- [36])
-
-Package natbib Warning: There were undefined citations.
-
-
+(Font)              scaled to size 17.28pt on input line 32.
+ [37]) 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux (./sections/intro.aux) (./sections/basics.aux) (./sections/related.aux) (./sections/method.aux) (./sections/eval.aux) (./sections/concl.aux) (./dicfa2en.aux) (./dicen2fa.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6E10A271F47CCCA29430EC38A1F45C8C;9380.
+(rerunfilecheck)             Checksum: 9E09611D9EBB464EBC1A26234C96DC8D;7381.
  ) 
 Here is how much of TeX's memory you used:
- 24648 strings out of 476683
- 455750 string characters out of 5809790
+ 24736 strings out of 476683
+ 457689 string characters out of 5809790
  1878018 words of memory out of 5000000
- 44292 multiletter control sequences out of 15000+600000
+ 44375 multiletter control sequences out of 15000+600000
  518273 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 92i,11n,115p,1427b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 92i,12n,115p,1427b,1212s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.xdv (46 pages, 577648 bytes).
+Output written on main.xdv (47 pages, 494508 bytes).

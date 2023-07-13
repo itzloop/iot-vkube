@@ -294,7 +294,7 @@ func (service *Service) processControllerDiff(ctx context.Context, d controllerD
 		}
 		// update local store
 		missingController.Readiness = false
-		if err = service.store.UpdateController(ctx, missingController); err != nil {
+		if err = service.store.UpdateController(ctx, missingController.Name, missingController); err != nil {
 			return
 		}
 	}
@@ -306,7 +306,7 @@ func (service *Service) processControllerDiff(ctx context.Context, d controllerD
 			return
 		}
 		// update local store
-		if err = service.store.UpdateController(ctx, existingController); err != nil {
+		if err = service.store.UpdateController(ctx, existingController.Name, existingController); err != nil {
 			return
 		}
 	}

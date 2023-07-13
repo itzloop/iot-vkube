@@ -12,7 +12,7 @@ type Store interface {
 	RegisterController(ctx context.Context, controller types.Controller) error
 	RegisterDevice(ctx context.Context, controllerName string, device types.Device) error
 	UpdateDevice(ctx context.Context, controllerName string, device types.Device) error
-	UpdateController(ctx context.Context, controller types.Controller) error
+	UpdateController(ctx context.Context, name string, controller types.Controller) error
 	DeleteDevice(ctx context.Context, name string, device types.Device) error
 	DeleteController(ctx context.Context, name string) error
 }
@@ -60,7 +60,7 @@ func (l *LocalStoreImpl) RegisterDevice(ctx context.Context, controllerName stri
 	l.mu.Lock()
 	defer l.mu.Unlock()
 	c.Devices = append(c.Devices, device)
-	return l.updateControllerUnsafe(ctx, c)
+	return l.updateControllerUnsafe(ctx, c.Name, c)
 }
 
 func (l *LocalStoreImpl) GetDevices(ctx context.Context, controllerName string) ([]types.Device, error) {
@@ -177,7 +177,7 @@ func (l *LocalStoreImpl) UpdateDevice(ctx context.Context, controllerName string
 	// remove old device
 	controller.Devices = append(controller.Devices[:index], controller.Devices[index+1:]...)
 	controller.Devices = append(controller.Devices, device)
-	return l.updateControllerUnsafe(ctx, controller)
+	return l.updateControllerUnsafe(ctx, controllerName, controller)
 }
 
 func (l *LocalStoreImpl) GetControllers(ctx context.Context) ([]types.Controller, error) {
@@ -212,11 +212,11 @@ func (l *LocalStoreImpl) GetController(ctx context.Context, controllerName strin
 
 	return v.(types.Controller), nil
 }
-func (l *LocalStoreImpl) UpdateController(ctx context.Context, controller types.Controller) error {
+func (l *LocalStoreImpl) UpdateController(ctx context.Context, name string, controller types.Controller) error {
 	l.mu.Lock()
 	defer l.mu.Unlock()
 
-	return l.updateControllerUnsafe(ctx, controller)
+	return l.updateControllerUnsafe(ctx, name, controller)
 }
 
 func (l *LocalStoreImpl) DeleteController(ctx context.Context, name string) error {
@@ -228,10 +228,14 @@ func (l *LocalStoreImpl) DeleteController(ctx context.Context, name string) erro
 	return nil
 }
 
-func (l *LocalStoreImpl) updateControllerUnsafe(ctx context.Context, controller types.Controller) error {
-	_, loaded := l.db.Load(controller.Name)
+func (l *LocalStoreImpl) updateControllerUnsafe(ctx context.Context, name string, controller types.Controller) error {
+	_, loaded := l.db.Load(name)
 	if !loaded {
 		return errors.New("controller does not exist")
+	}
+
+	if name != controller.Name {
+		l.db.Delete(name)
 	}
 
 	l.db.Store(controller.Name, controller)

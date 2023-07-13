@@ -65,9 +65,16 @@ function getControllers() {
 
 function addOrEditController() {
   if (editedIndex.value !== -1) {
+    // get old name
+    const oldName = controllerArray.value[editedIndex.value].name
+
     // edit
-    API.ControllersApi.update(editedController.value)
+    API.ControllersApi.update(oldName, editedController.value)
       .then((res) => {
+        if (oldName !== editedController.value.name) {
+          controllers.value.delete(oldName)
+        }
+
         controllers.value.set(editedController.value.name, editedController.value)
         close()
       })
@@ -98,7 +105,6 @@ function updateController(controller: Controller) {
   editedController.value = Object.assign({}, controller)
   editedIndex.value = controllerArray.value.indexOf(controller)
   dialog.value = true
-  console.log('updateController', controller)
 }
 
 function deleteController(controller: Controller) {

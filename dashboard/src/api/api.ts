@@ -73,10 +73,10 @@ class ControllersApi {
     }
   }
 
-  async update(controller: Controller): Promise<void> {
+  async update(oldName: string, controller: Controller): Promise<void> {
     try {
       await axios.request<Controller>({
-        url: `${this.baseUrl}/controllers/${controller.name}`,
+        url: `${this.baseUrl}/controllers/${oldName}`,
         method: 'PATCH',
         data: JSON.stringify(controller)
       })

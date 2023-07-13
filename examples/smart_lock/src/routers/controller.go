@@ -70,7 +70,7 @@ func (router *ControllersRouteHandler) Delete(c *gin.Context) {
 }
 
 func (router *ControllersRouteHandler) Update(c *gin.Context) {
-	//controllerName := c.Param("controller_name")
+	controllerName := c.Param("controller_name")
 	body := struct {
 		Name      string `json:"name" binding:"required"`
 		Host      string `json:"host" binding:"required"`
@@ -82,7 +82,7 @@ func (router *ControllersRouteHandler) Update(c *gin.Context) {
 		return
 	}
 
-	if err := router.store.UpdateController(context.Background(), types.Controller{
+	if err := router.store.UpdateController(context.Background(), controllerName, types.Controller{
 		Host:      body.Host,
 		Name:      body.Name,
 		Readiness: *body.Readiness,
