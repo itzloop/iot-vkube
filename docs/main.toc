@@ -24,13 +24,13 @@
 \contentsline {paragraph}{}{7}{paragraph*.12}%
 \contentsline {subsection}{\numberline {2-3-5}خوشه کوبرنیتز}{8}{subsection.2.3.5}%
 \contentsline {paragraph}{}{8}{paragraph*.13}%
-\contentsline {section}{\numberline {2-4}پیمان انتقال فرا متن}{8}{section.2.4}%
+\contentsline {section}{\numberline {2-4}قرارداد انتقال فرا متن}{8}{section.2.4}%
 \contentsline {paragraph}{}{8}{paragraph*.14}%
-\contentsline {subsection}{\numberline {2-4-1}توابع پیمان انتقال فرا متن}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2-4-1}توابع قرارداد انتقال فرا متن}{9}{subsection.2.4.1}%
 \contentsline {paragraph}{}{9}{paragraph*.15}%
-\contentsline {subsection}{\numberline {2-4-2}درخواست پیمان انتقال فرا متن}{10}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2-4-2}درخواست قرارداد انتقال فرا متن}{10}{subsection.2.4.2}%
 \contentsline {paragraph}{}{10}{paragraph*.16}%
-\contentsline {subsection}{\numberline {2-4-3}پاسخ‌ پیمان انتقال فرا متن}{11}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2-4-3}پاسخ‌ قرارداد انتقال فرا متن}{11}{subsection.2.4.3}%
 \contentsline {paragraph}{}{11}{paragraph*.17}%
 \contentsline {subsection}{\numberline {2-4-4}انتقال حالت نمایشی}{12}{subsection.2.4.4}%
 \contentsline {paragraph}{}{12}{paragraph*.18}%
@@ -42,8 +42,8 @@
 \contentsline {paragraph}{}{15}{paragraph*.21}%
 \contentsline {subsection}{\numberline {2-6-1}معماری کوبلت مجازی}{16}{subsection.2.6.1}%
 \contentsline {paragraph}{}{16}{paragraph*.22}%
-\contentsline {section}{\numberline {2-7}اینترنت اشیاء}{16}{section.2.7}%
-\contentsline {paragraph}{}{16}{paragraph*.23}%
+\contentsline {section}{\numberline {2-7}اینترنت اشیاء}{17}{section.2.7}%
+\contentsline {paragraph}{}{17}{paragraph*.23}%
 \contentsline {section}{\numberline {2-8}جمع‌بندی}{18}{section.2.8}%
 \contentsline {paragraph}{}{18}{paragraph*.24}%
 \contentsline {chapter}{\numberline {3}کارهای مرتبط}{19}{chapter.3}%
