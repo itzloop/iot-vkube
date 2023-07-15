@@ -1365,6 +1365,12 @@ INPUT ./sections/related.tex
 INPUT ./sections/related.tex
 INPUT sections/related.tex
 INPUT sections/related.tex
+INPUT ./figs/ref_figs/blockchain_monitoring.png
+INPUT ./figs/ref_figs/blockchain_monitoring.png
+INPUT figs/ref_figs/blockchain_monitoring.png
+INPUT ./figs/ref_figs/iot_monitoring.png
+INPUT ./figs/ref_figs/iot_monitoring.png
+INPUT figs/ref_figs/iot_monitoring.png
 INPUT ./sections/method.tex
 INPUT ./sections/method.tex
 INPUT ./sections/method.tex
@@ -1425,6 +1431,9 @@ INPUT ./sections/concl.tex
 INPUT ./sections/concl.tex
 INPUT sections/concl.tex
 INPUT sections/concl.tex
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT main.bbl
 INPUT ./dicfa2en.tex
 INPUT ./dicfa2en.tex
 INPUT ./dicfa2en.tex

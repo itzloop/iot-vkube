@@ -1,5 +1,5 @@
 \contentsline {chapter}{فهرست تصاویر}{ح}{section*.1}%
-\contentsline {chapter}{فهرست جداول}{خ}{section*.2}%
+\contentsline {chapter}{فهرست جداول}{د}{section*.2}%
 \contentsline {chapter}{\numberline {1}مقدمه}{1}{chapter.1}%
 \contentsline {section}{\numberline {1-1}شرح مسأله}{1}{section.1.1}%
 \contentsline {paragraph}{}{1}{paragraph*.3}%
@@ -12,7 +12,7 @@
 \contentsline {paragraph}{}{3}{paragraph*.6}%
 \contentsline {section}{\numberline {2-2}بستر ابری}{3}{section.2.2}%
 \contentsline {paragraph}{}{3}{paragraph*.7}%
-\contentsline {section}{\numberline {2-3}سکوی کوبرنیتز}{4}{section.2.3}%
+\contentsline {section}{\numberline {2-3} سکوی کوبرنیتز \cite {44843} }{4}{section.2.3}%
 \contentsline {paragraph}{}{4}{paragraph*.8}%
 \contentsline {subsection}{\numberline {2-3-1}کانتینر‌}{5}{subsection.2.3.1}%
 \contentsline {paragraph}{}{5}{paragraph*.9}%
@@ -51,29 +51,42 @@
 \contentsline {chapter}{\numberline {3}کارهای مرتبط}{20}{chapter.3}%
 \contentsline {section}{\numberline {3-1}مقدمه}{20}{section.3.1}%
 \contentsline {paragraph}{}{20}{paragraph*.26}%
-\contentsline {chapter}{\numberline {4}روش پیشنهادی}{21}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{21}{section.4.1}%
-\contentsline {paragraph}{}{21}{paragraph*.27}%
-\contentsline {section}{\numberline {4-2}معماری سامانه}{21}{section.4.2}%
-\contentsline {paragraph}{}{21}{paragraph*.28}%
-\contentsline {subsection}{\numberline {4-2-1}پیاده‌سازی تامین‌کننده کوبلت مجازی}{22}{subsection.4.2.1}%
-\contentsline {paragraph}{}{22}{paragraph*.29}%
-\contentsline {subsection}{\numberline {4-2-2}رابط برقراری ارتباط با کنترل‌کننده‌ها}{24}{subsection.4.2.2}%
-\contentsline {paragraph}{}{24}{paragraph*.30}%
-\contentsline {subsection}{\numberline {4-2-3}شبیه‌ساز‍}{24}{subsection.4.2.3}%
-\contentsline {paragraph}{}{24}{paragraph*.31}%
-\contentsline {subsection}{\numberline {4-2-4}رابط گرافیکی}{25}{subsection.4.2.4}%
-\contentsline {paragraph}{}{25}{paragraph*.32}%
-\contentsline {section}{\numberline {4-3}نحوه کارکرد}{27}{section.4.3}%
-\contentsline {paragraph}{}{27}{paragraph*.33}%
-\contentsline {chapter}{\numberline {5}ارزیابی روش پیشنهادی}{32}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{32}{section.5.1}%
-\contentsline {paragraph}{}{32}{paragraph*.34}%
-\contentsline {chapter}{\numberline {6}نتیجه‌گیری و کارهای آینده}{33}{chapter.6}%
-\contentsline {section}{\numberline {6-1}نتیجه‌گیری}{33}{section.6.1}%
-\contentsline {paragraph}{}{33}{paragraph*.35}%
-\contentsline {section}{\numberline {6-2}دستاوردها}{33}{section.6.2}%
-\contentsline {paragraph}{}{33}{paragraph*.36}%
-\contentsline {section}{\numberline {6-3}کارهای آینده}{33}{section.6.3}%
-\contentsline {paragraph}{}{33}{paragraph*.37}%
-\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{35}{chapter*.39}%
+\contentsline {section}{\numberline {3-2} روش‌های متفاوت حل مسئله کنترل و پایش دستگاه‌های اینترنت اشیاء }{20}{section.3.2}%
+\contentsline {paragraph}{}{20}{paragraph*.27}%
+\contentsline {subsection}{\numberline {3-2-1} کنترل و پایش دستگاه‌های اینترنت اشیاء بر پایه زنجیره‌ی بلوکی }{20}{subsection.3.2.1}%
+\contentsline {paragraph}{}{20}{paragraph*.28}%
+\contentsline {subsection}{\numberline {3-2-2} گسترش کوبرنیتز بر روی دستگا‌های لبه }{21}{subsection.3.2.2}%
+\contentsline {paragraph}{}{21}{paragraph*.29}%
+\contentsline {subsection}{\numberline {3-2-3} پایش خانه هوشمند به کمک دستگاه‌های اینترنت اشیاء }{22}{subsection.3.2.3}%
+\contentsline {paragraph}{}{22}{paragraph*.30}%
+\contentsline {subsection}{\numberline {3-2-4} پایش دستگاه‌های اینترنت اشیاء بر پایه کوبرنیتز }{22}{subsection.3.2.4}%
+\contentsline {paragraph}{}{22}{paragraph*.31}%
+\contentsline {chapter}{\numberline {4}روش پیشنهادی}{24}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{24}{section.4.1}%
+\contentsline {paragraph}{}{24}{paragraph*.32}%
+\contentsline {section}{\numberline {4-2}معماری سامانه}{24}{section.4.2}%
+\contentsline {paragraph}{}{24}{paragraph*.33}%
+\contentsline {subsection}{\numberline {4-2-1}پیاده‌سازی تامین‌کننده کوبلت مجازی}{25}{subsection.4.2.1}%
+\contentsline {paragraph}{}{25}{paragraph*.34}%
+\contentsline {subsection}{\numberline {4-2-2}رابط برقراری ارتباط با کنترل‌کننده‌ها}{27}{subsection.4.2.2}%
+\contentsline {paragraph}{}{27}{paragraph*.35}%
+\contentsline {subsection}{\numberline {4-2-3}شبیه‌ساز‍}{27}{subsection.4.2.3}%
+\contentsline {paragraph}{}{27}{paragraph*.36}%
+\contentsline {subsection}{\numberline {4-2-4}رابط گرافیکی}{28}{subsection.4.2.4}%
+\contentsline {paragraph}{}{28}{paragraph*.37}%
+\contentsline {section}{\numberline {4-3}نحوه کارکرد}{30}{section.4.3}%
+\contentsline {paragraph}{}{30}{paragraph*.38}%
+\contentsline {chapter}{\numberline {5}ارزیابی روش پیشنهادی}{35}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{35}{section.5.1}%
+\contentsline {paragraph}{}{35}{paragraph*.39}%
+\contentsline {subsection}{\numberline {5-1-1}ارزیابی و مقایسه معماری‌های ارجح}{35}{subsection.5.1.1}%
+\contentsline {paragraph}{}{35}{paragraph*.40}%
+\contentsline {chapter}{\numberline {6}نتیجه‌گیری و کارهای آینده}{37}{chapter.6}%
+\contentsline {section}{\numberline {6-1}نتیجه‌گیری}{37}{section.6.1}%
+\contentsline {paragraph}{}{37}{paragraph*.41}%
+\contentsline {section}{\numberline {6-2}دستاوردها}{37}{section.6.2}%
+\contentsline {paragraph}{}{37}{paragraph*.42}%
+\contentsline {section}{\numberline {6-3}کارهای آینده}{37}{section.6.3}%
+\contentsline {paragraph}{}{37}{paragraph*.43}%
+\contentsline {chapter}{کتاب‌نامه}{38}{chapter*.44}%
+\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{40}{chapter*.46}%

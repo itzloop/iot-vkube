@@ -153,65 +153,65 @@
 %     قرار گرفته‌‌شده‌ است. 
 % }
 
-% \subsection{ارزیابی و مقایسه معماری‌های ارجح}
-% \paragraph{}{
-%     پس از بدست آوردن نتایج،‌ به مقایسه معماری‌های مورد استفاده پرداخته‌شده است. 
-%     با توجه به جدول
-%     \ref{table1}
-%     همان‌طوری که انتظار می رفت، شبکه‌های عصبی 
-%     Transformers
-%     همراه با شبکه LXMERT
-%     به عنوان کدگذار بهترین عملکرد را داشت. اگر اندکی نتایج را وارسی کنیم
-%     متوجه بالا بودن امتیازها می‌شویم که 
-%     نسبت به مدل‌های مشابه در توضیح تصاویر مقادیر بسیار بالایی دارند. مطابق با آنچه در بخش
-%     \ref{sec:dset}
-%     بحث شد، یکی از دلایل را می‌توان ساده‌ بودن مجموعه داده در نظر گرفت. از آنجایی 
-%     که مجموعه داده از قوانین از پیش تعیین شده و بصورت خودکار تولید شده‌اند، مدل‌ها 
-%     و به خصوص کدگشا ممکن است این الگوها را آموزش دیده باشند. با این حال در 
-%     همه حالات از دقتی که نویسندگان مجموعه داده گزارش کرده‌ بودند عملکرد بهتری داشته‌ایم. 
+\subsection{ارزیابی و مقایسه معماری‌های ارجح}
+\paragraph{}{
+    پس از بدست آوردن نتایج،‌ به مقایسه معماری‌های مورد استفاده پرداخته‌شده است. 
+    با توجه به جدول
+    \ref{table1}
+    همان‌طوری که انتظار می رفت، شبکه‌های عصبی 
+    Transformers
+    همراه با شبکه LXMERT
+    به عنوان کدگذار بهترین عملکرد را داشت. اگر اندکی نتایج را وارسی کنیم
+    متوجه بالا بودن امتیازها می‌شویم که 
+    نسبت به مدل‌های مشابه در توضیح تصاویر مقادیر بسیار بالایی دارند. مطابق با آنچه در بخش
+    \ref{sec:dset}
+    بحث شد، یکی از دلایل را می‌توان ساده‌ بودن مجموعه داده در نظر گرفت. از آنجایی 
+    که مجموعه داده از قوانین از پیش تعیین شده و بصورت خودکار تولید شده‌اند، مدل‌ها 
+    و به خصوص کدگشا ممکن است این الگوها را آموزش دیده باشند. با این حال در 
+    همه حالات از دقتی که نویسندگان مجموعه داده گزارش کرده‌ بودند عملکرد بهتری داشته‌ایم. 
     
-%     \begin{table}[h]
-%         \centering
-%         \tiny
-%         \resizebox{\textwidth}{!}{
-%         \begin{tabular}{llccccccc}
-%             \hline
-%             \multicolumn{2}{l}{Method} &  & \multicolumn{3}{c}{Word-based} &  & \multicolumn{2}{c}{Embedding-based}\\ 
-%             \cline{0-1} \cline{4-6} \cline{8-9}
-%             Encoder & Decoder & & BLEU & METEOR & ROUGE-L& & \lr{Average Score} & \lr{BERT Score} \\
-%             \hline
-%             \lr{LSTM Q+I} & \lr{LSTM} & & \lr{23.9} & \lr{23.3} & - &  & - & - \\
-%             \hline
-%             \multirow{7}{*}{LXMERT} 
-%             & \lr{1-LSTM} & & \lr{32.19} & \lr{56.65} & \lr{56.38} & & \lr{86.50} & \lr{79.19} \\
-%             & \lr{1-GRU} & & \lr{39.37} & \lr{62.99} & \lr{61.50} & & \lr{89.63} & \lr{82.07} \\
-%              \cline{2-3}
-%              & \lr{1-LSTM+Bahdanau attention} & & \lr{79.03} & \lr{86.43} & \lr{85.49} & & \lr{95.94} & \lr{91.84} \\
-%              & \lr{1-LSTM+Luong(general) attention} & & \lr{79.54} & \lr{86.96} & \lr{86.25} &  & \underline{\lr{96.11}} & \lr{91.90} \\
-%               & \lr{1-GRU+Bahdanau attention} & & \lr{71.40} & \lr{83.26} & \lr{82.62} &  & \lr{95.42} & \lr{89.32} \\
-%               & \lr{1-GRU+Luong(dot) attention} & & \lr{73.92} & \lr{84.71} & \lr{83.84} &  & \lr{95.73} & \lr{90.37} \\
-%              \cline{2-3}
-%              & \lr{3-Transformer Decoder} & & \textbf{\underline{\lr{86.73}}} & \textbf{ \underline{\lr{91.18}}} & \textbf{\underline{\lr{90.60}}} &  & \lr{90.20} & \textbf{\underline{\lr{95.01}}} \\
-%             \hline
-%             \multirow{7}{*}{\lr{VisualBERT}} & \lr{1-LSTM} & & \lr{18.62} & \lr{38.00} & \lr{38.35} &  & \lr{84.83} & \lr{69.20} \\
-%             & \lr{1-GRU} & & \lr{22.51} & \lr{44.24} & \lr{43.72} &  & \lr{87.74} & \lr{73.59}\\
-%              \cline{2-3}
-%              & \lr{1-LSTM+Bahdanau attention} & & \lr{84.27} & \lr{88.07} & \lr{87.28} &  & \lr{97.11} & \lr{93.50}\\
-%              & \lr{1-LSTM+Luong(concat) attention} & & \lr{82.90} & \lr{87.71} & \lr{86.90} &  & \textbf{\underline{\lr{97.17}}} & \lr{93.11}\\
-%              & \lr{1-GRU+Bahdanau attention}& & \lr{72.20} & \lr{82.87} & \lr{82.40} &  & \lr{96.10} & \lr{89.26}\\
-%              & \lr{1-GRU+Luong(dot) attention} & & \lr{79.65} & \lr{86.17} & \lr{85.23} &  & \lr{96.93} & \lr{91.81}\\
-%               \cline{2-3}
-%             & \lr{3-Transformer Decoder} & & \underline{\lr{85.95}} & \underline{\lr{89.76}} & \underline{\lr{89.09}} &  & \lr{91.94} & \underline{\lr{94.44}} \\
-%             \hline
-%         \end{tabular}
-%         }
-%         \caption{نتایج معماری‌های متفاوت بر مجموعه داده \lr{FSVQA}.
-%                 اعداد موجود در نام کدگشا نشانگر تعداد لایه‌های آن است. }
-%         \label{table1}
-%         % \vspace{-2mm}    
-%     \end{table}
+    \begin{table}[h]
+        \centering
+        \tiny
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{llccccccc}
+            \hline
+            \multicolumn{2}{l}{Method} &  & \multicolumn{3}{c}{Word-based} &  & \multicolumn{2}{c}{Embedding-based}\\ 
+            \cline{0-1} \cline{4-6} \cline{8-9}
+            Encoder & Decoder & & BLEU & METEOR & ROUGE-L& & \lr{Average Score} & \lr{BERT Score} \\
+            \hline
+            \lr{LSTM Q+I} & \lr{LSTM} & & \lr{23.9} & \lr{23.3} & - &  & - & - \\
+            \hline
+            \multirow{7}{*}{LXMERT} 
+            & \lr{1-LSTM} & & \lr{32.19} & \lr{56.65} & \lr{56.38} & & \lr{86.50} & \lr{79.19} \\
+            & \lr{1-GRU} & & \lr{39.37} & \lr{62.99} & \lr{61.50} & & \lr{89.63} & \lr{82.07} \\
+             \cline{2-3}
+             & \lr{1-LSTM+Bahdanau attention} & & \lr{79.03} & \lr{86.43} & \lr{85.49} & & \lr{95.94} & \lr{91.84} \\
+             & \lr{1-LSTM+Luong(general) attention} & & \lr{79.54} & \lr{86.96} & \lr{86.25} &  & \underline{\lr{96.11}} & \lr{91.90} \\
+              & \lr{1-GRU+Bahdanau attention} & & \lr{71.40} & \lr{83.26} & \lr{82.62} &  & \lr{95.42} & \lr{89.32} \\
+              & \lr{1-GRU+Luong(dot) attention} & & \lr{73.92} & \lr{84.71} & \lr{83.84} &  & \lr{95.73} & \lr{90.37} \\
+             \cline{2-3}
+             & \lr{3-Transformer Decoder} & & \textbf{\underline{\lr{86.73}}} & \textbf{ \underline{\lr{91.18}}} & \textbf{\underline{\lr{90.60}}} &  & \lr{90.20} & \textbf{\underline{\lr{95.01}}} \\
+            \hline
+            \multirow{7}{*}{\lr{VisualBERT}} & \lr{1-LSTM} & & \lr{18.62} & \lr{38.00} & \lr{38.35} &  & \lr{84.83} & \lr{69.20} \\
+            & \lr{1-GRU} & & \lr{22.51} & \lr{44.24} & \lr{43.72} &  & \lr{87.74} & \lr{73.59}\\
+             \cline{2-3}
+             & \lr{1-LSTM+Bahdanau attention} & & \lr{84.27} & \lr{88.07} & \lr{87.28} &  & \lr{97.11} & \lr{93.50}\\
+             & \lr{1-LSTM+Luong(concat) attention} & & \lr{82.90} & \lr{87.71} & \lr{86.90} &  & \textbf{\underline{\lr{97.17}}} & \lr{93.11}\\
+             & \lr{1-GRU+Bahdanau attention}& & \lr{72.20} & \lr{82.87} & \lr{82.40} &  & \lr{96.10} & \lr{89.26}\\
+             & \lr{1-GRU+Luong(dot) attention} & & \lr{79.65} & \lr{86.17} & \lr{85.23} &  & \lr{96.93} & \lr{91.81}\\
+              \cline{2-3}
+            & \lr{3-Transformer Decoder} & & \underline{\lr{85.95}} & \underline{\lr{89.76}} & \underline{\lr{89.09}} &  & \lr{91.94} & \underline{\lr{94.44}} \\
+            \hline
+        \end{tabular}
+        }
+        \caption{نتایج معماری‌های متفاوت بر مجموعه داده \lr{FSVQA}.
+                اعداد موجود در نام کدگشا نشانگر تعداد لایه‌های آن است. }
+        \label{table12}
+        % \vspace{-2mm}    
+    \end{table}
     
-% }
+}
 
 % \subsection{مقایسه شبکه‌های عصبی بازگشتی}
 % \label{subsec:analysis-rnn}
