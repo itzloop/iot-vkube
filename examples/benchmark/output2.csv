@@ -1,0 +1,7 @@
+Controllers,Time,Description
+1,316.631433ms,"Controllers: 1, DevicesPerController: 1, Duration: 5s"
+10,340.973697ms,"Controllers: 10, DevicesPerController: 1, Duration: 5s"
+100,632.569765ms,"Controllers: 100, DevicesPerController: 1, Duration: 5s"
+1000,3.487017751s,"Controllers: 1000, DevicesPerController: 1, Duration: 5s"
+10000,34.187790534s,"Controllers: 10000, DevicesPerController: 1, Duration: 1m0s"
+100000,45.409622456s,"Controllers: 100000, DevicesPerController: 1, Duration: 2m0s"

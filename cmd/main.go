@@ -116,10 +116,11 @@ func main() {
 
 	// create worker pool
 	wp := pool.NewWorkerPool(runtime.NumCPU(), 4*runtime.NumCPU())
+	diffWP := pool.NewWorkerPool(runtime.NumCPU(), 4*runtime.NumCPU())
 
 	// create provider
 	st := store.NewLocalStoreImpl()
-	service := agent.NewService(st, wp)
+	service := agent.NewService(st, wp, diffWP, 10*time.Second)
 
 	// setup native node provider
 	nativeProvider := node.NewNaiveNodeProvider()
@@ -192,6 +193,18 @@ func main() {
 		wp.Start(ctx)
 		<-ctx.Done()
 		err := wp.Close()
+		if err != nil {
+			logrus.Info("worker pool finished with err", err)
+		} else {
+			logrus.Info("worker pool finished")
+		}
+		return err
+	})
+
+	group.Go(func() error {
+		diffWP.Start(ctx)
+		<-ctx.Done()
+		err := diffWP.Close()
 		if err != nil {
 			logrus.Info("worker pool finished with err", err)
 		} else {

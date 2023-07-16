@@ -1,12 +1,15 @@
 package smart_lock
 
 import (
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/mux"
 	"github.com/itzloop/iot-vkube/examples/smart_lock/src/routers"
 	store2 "github.com/itzloop/iot-vkube/internal/store"
+	"github.com/itzloop/iot-vkube/types"
 	"github.com/itzloop/iot-vkube/utils"
+	"github.com/sirupsen/logrus"
 	"io"
 	"k8s.io/apimachinery/pkg/util/json"
 	"log"
@@ -369,11 +372,32 @@ func (s *server) addController(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte{})
 }
 
-func RunServer(addr string) {
+func RunServer(addr string, controllersCount, devicesPerController int) {
 	fmt.Printf("server is listening on %s\n", addr)
 	//srv := server{lcs: map[string]*LockController{}}
-
+	ctx := context.Background()
 	store := store2.NewLocalStoreImpl()
+	for i := 0; i < controllersCount; i++ {
+		cname := fmt.Sprintf("controller-%d", i)
+		c := types.Controller{
+			Host:      fmt.Sprintf("%s.local", cname),
+			Name:      cname,
+			Readiness: true,
+			Devices:   make([]types.Device, 0, devicesPerController),
+		}
+		for i := 0; i < devicesPerController; i++ {
+			c.Devices = append(c.Devices, types.Device{
+				Name:      fmt.Sprintf("device-%d", i),
+				Readiness: true,
+			})
+		}
+
+		err := store.RegisterController(ctx, c)
+		if err != nil {
+			logrus.Panic(err)
+		}
+	}
+
 	r := gin.Default()
 	r.Use(utils.CORSMiddleware())
 	controllers := r.Group("/controllers")

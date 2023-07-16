@@ -12,13 +12,15 @@ import (
 )
 
 type Service struct {
-	store      store.Store
-	callbacks  *callback.ServiceCallBacks
-	workerPool *pool.WorkerPool
+	store               store.Store
+	callbacks           *callback.ServiceCallBacks
+	httpFetchWorkerPool *pool.WorkerPool
+	diffWorkerPool      *pool.WorkerPool
+	interval            time.Duration
 }
 
-func NewService(store store.Store, workerPool *pool.WorkerPool) *Service {
-	srv := &Service{store: store, workerPool: workerPool}
+func NewService(store store.Store, workerPool *pool.WorkerPool, diffWorkerPool *pool.WorkerPool, interval time.Duration) *Service {
+	srv := &Service{store: store, httpFetchWorkerPool: workerPool, diffWorkerPool: diffWorkerPool, interval: interval}
 
 	// register incoming callbacks
 	srv.RegisterCallbacks(nil)
@@ -66,7 +68,7 @@ func (service *Service) RegisterCallbacks(cb *callback.ServiceCallBacks) {
 
 func (service *Service) Start(ctx context.Context) error {
 	group, groupCtx := errgroup.WithContext(ctx)
-	group.Go(func() error { return service.agentWorker(groupCtx, time.Second*10) })
+	group.Go(func() error { return service.agentWorker(groupCtx, service.interval) })
 
 	go func() {
 		<-groupCtx.Done()
@@ -105,6 +107,21 @@ func (service *Service) agentWorker(ctx context.Context, interval time.Duration)
 
 	entry.Info("starting agent worker")
 	defer entry.Info("exiting agent worker")
+
+	if ticker == nil {
+		for {
+			select {
+			case <-ctx.Done():
+				return nil
+			default:
+				entry.Info("updating state")
+				if err := service.diff(ctx); err != nil {
+					continue
+				}
+			}
+		}
+	}
+
 	for {
 		select {
 		case <-ticker:

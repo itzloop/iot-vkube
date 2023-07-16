@@ -29,7 +29,6 @@ type httpFetchJob struct {
 	jobsBufferCount int64
 }
 
-//goland:noinspection GoUnreachableCode
 func (h *httpFetchJob) Run(ctx context.Context) error {
 	spot := "httpFetchJob.Run"
 	ctx = utils.ContextWithSpot(ctx, spot)
@@ -49,7 +48,7 @@ func (h *httpFetchJob) Run(ctx context.Context) error {
 		close(jobsChan)
 	}()
 
-	errChan, err := h.service.workerPool.ExecuteBatch(jobsChan)
+	errChan, err := h.workerPool.ExecuteBatch(jobsChan)
 	if err != nil {
 		entry.WithField("error", err).
 			Error("failed to execute jobs in batch")
@@ -72,7 +71,7 @@ func (h *httpFetchJob) Run(ctx context.Context) error {
 			devicesUrl := fmt.Sprintf("http://%s/controllers/%s/devices?itr=%d&count=%d", h.controller.Host, h.controller.Name, itr, h.batchCount)
 			if err := doGetRequest(devicesUrl, &remoteDevices); err != nil {
 				entry.WithField("error", err).
-					Debug("failed to get remote devices, change readiness of all devices connected to this controller")
+					Error("failed to get remote devices, change readiness of all devices connected to this controller")
 				// change readiness of all devices connected to this controller
 				for _, device := range h.controller.Devices {
 					remoteDevicesMap[device.Name] = types.Device{
@@ -89,11 +88,15 @@ func (h *httpFetchJob) Run(ctx context.Context) error {
 				goto afterLoop
 			}
 
-			jobsChan <- &diffJob{
+			select {
+			case jobsChan <- &diffJob{
 				controller:       h.controller,
 				service:          h.service,
 				remoteDevices:    remoteDevices,
 				remoteDevicesMap: remoteDevicesMap,
+			}:
+			case <-ctx.Done():
+				return nil
 			}
 		}
 	}
@@ -196,7 +199,7 @@ func (service *Service) diff(ctx context.Context) error {
 		close(jobsChan)
 	}()
 
-	errChan, err := service.workerPool.ExecuteBatch(jobsChan)
+	errChan, err := service.httpFetchWorkerPool.ExecuteBatch(jobsChan)
 	if err != nil {
 		entry.WithField("error", err).
 			Error("failed to execute jobs in batch")
@@ -204,12 +207,16 @@ func (service *Service) diff(ctx context.Context) error {
 	}
 
 	for _, controller := range controllers {
-		jobsChan <- &httpFetchJob{
-			workerPool:      service.workerPool,
+		select {
+		case jobsChan <- &httpFetchJob{
+			workerPool:      service.diffWorkerPool,
 			controller:      controller,
 			service:         service,
 			batchCount:      httpFetchBatchCountDefault,
 			jobsBufferCount: jobsBufferCountDefault,
+		}:
+		case <-ctx.Done():
+			return nil
 		}
 	}
 

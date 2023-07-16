@@ -1422,6 +1422,12 @@ INPUT ./sections/eval.tex
 INPUT ./sections/eval.tex
 INPUT sections/eval.tex
 INPUT sections/eval.tex
+INPUT ./figs/different_devices_plot.png
+INPUT ./figs/different_devices_plot.png
+INPUT figs/different_devices_plot.png
+INPUT ./figs/different_controllers_plot.png
+INPUT ./figs/different_controllers_plot.png
+INPUT figs/different_controllers_plot.png
 INPUT ./sections/concl.tex
 INPUT ./sections/concl.tex
 INPUT ./sections/concl.tex
