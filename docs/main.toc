@@ -36,7 +36,7 @@
 \contentsline {paragraph}{}{12}{paragraph*.18}%
 \contentsline {subsection}{\numberline {2-4-5}رابط کاربردی قابل برنامه‌ریزی}{13}{subsection.2.4.5}%
 \contentsline {paragraph}{}{13}{paragraph*.19}%
-\contentsline {section}{\numberline {2-5}معماری فن‌آوت}{14}{section.2.5}%
+\contentsline {section}{\numberline {2-5}معماری Fan-Out}{14}{section.2.5}%
 \contentsline {paragraph}{}{14}{paragraph*.20}%
 \contentsline {section}{\numberline {2-6}کوبلت مجازی}{15}{section.2.6}%
 \contentsline {paragraph}{}{15}{paragraph*.21}%
@@ -90,7 +90,14 @@
 \contentsline {paragraph}{}{39}{paragraph*.43}%
 \contentsline {section}{\numberline {6-2}دستاوردها}{39}{section.6.2}%
 \contentsline {paragraph}{}{39}{paragraph*.44}%
-\contentsline {section}{\numberline {6-3}کارهای آینده}{39}{section.6.3}%
-\contentsline {paragraph}{}{39}{paragraph*.45}%
-\contentsline {chapter}{کتاب‌نامه}{40}{chapter*.46}%
-\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{42}{chapter*.48}%
+\contentsline {section}{\numberline {6-3}کارهای آینده}{40}{section.6.3}%
+\contentsline {paragraph}{}{40}{paragraph*.45}%
+\contentsline {subsection}{\numberline {6-3-1}امنیت}{40}{subsection.6.3.1}%
+\contentsline {paragraph}{}{40}{paragraph*.46}%
+\contentsline {subsection}{\numberline {6-3-2}استفاده از فناوری‌های بروز تر}{40}{subsection.6.3.2}%
+\contentsline {paragraph}{}{40}{paragraph*.47}%
+\contentsline {subsection}{\numberline {6-3-3}چارچوب}{41}{subsection.6.3.3}%
+\contentsline {paragraph}{}{41}{paragraph*.48}%
+\contentsline {chapter}{کتاب‌نامه}{42}{chapter*.49}%
+\contentsline {chapter}{واژه‌نامه فارسی به انگلیسی}{43}{chapter*.50}%
+\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{45}{chapter*.51}%
