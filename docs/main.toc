@@ -2,7 +2,7 @@
 \contentsline {chapter}{فهرست جداول}{د}{section*.2}%
 \contentsline {chapter}{\numberline {1}مقدمه}{1}{chapter.1}%
 \contentsline {paragraph}{}{1}{paragraph*.3}%
-\contentsline {section}{\numberline {1-1}شرح مسأله}{2}{section.1.1}%
+\contentsline {section}{\numberline {1-1}شرح مسئله}{2}{section.1.1}%
 \contentsline {paragraph}{}{2}{paragraph*.4}%
 \contentsline {section}{\numberline {1-2}اهداف پروژه}{2}{section.1.2}%
 \contentsline {paragraph}{}{2}{paragraph*.5}%
